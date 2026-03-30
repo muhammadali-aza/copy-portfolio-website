@@ -1,37 +1,105 @@
-/* Base card */
+/* Main container */
+.experience-container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+    font-family: Arial, sans-serif;
+    margin-top: 70px;
+}
+
+/* Left Big Card */
+.experience-main-card {
+  background: linear-gradient(45deg, rgb(6, 6, 6), rgb(119, 19, 19));
+  padding: 50px 30px 30px;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.experience-number {
+  font-size: 160px;
+  font-weight: bold;
+  color: #FF014F;
+  line-height: 1;
+  padding-left: 30px;
+  font-family: sans-serif;
+}
+
+.experience-label {
+  font-size: 45px;
+  color: #fff;
+  font-weight: bold;
+  margin: 0;
+}
+
+.experience-description {
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.6;
+  grid-column: 1 / -1;
+  margin: 35px 25px;
+  font-family: sans-serif;
+}
+
+/* Right Stats Cards Container */
+.experience-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* Each Stat Card */
 .stat-card {
+    background-color: #181717;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+
+.stat-number {
+    font-size: 47px;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.stat-label {
+    font-size: 15px;
+    color: #a4a3a3;
+    font-family: sans-serif;
+}
+
+/* Service card for directional hover border */
+.service-card {
   position: relative;
   overflow: hidden;
 }
 
-/* Create pseudo-elements for border effect */
-.stat-card::before {
+.service-card::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  border: 1px solid transparent;
-  border-radius: 1rem;
+  inset: 0;
+  border: 2px solid transparent;
+  border-radius: 10px;
   pointer-events: none;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 
-/* Directional borders on hover based on React state class */
-.stat-card.left-top::before {
-  border-left-color: #FF014F;
-  border-top-color: #FF014F;
-}
+.service-card.left::before { border-left-color: #FF014F; }
+.service-card.right::before { border-right-color: #FF014F; }
+.service-card.top::before { border-top-color: #FF014F; }
+.service-card.bottom::before { border-bottom-color: #FF014F; }
 
-.stat-card.left-bottom::before {
-  border-left-color: #FF014F;
-  border-bottom-color: #FF014F;
-}
-
-.stat-card.right-top::before {
-  border-right-color: #FF014F;
-  border-top-color: #FF014F;
-}
-
-.stat-card.right-bottom::before {
-  border-right-color: #FF014F;
-  border-bottom-color: #FF014F;
-}

@@ -1,4 +1,6 @@
+
 import { motion } from 'framer-motion';
+import './skill.css';
 
 export default function Skill() {
     const designSkills = [
@@ -22,23 +24,23 @@ export default function Skill() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.6, delay, ease: 'easeOut' }}
-                className="mb-6"
+                className="skill-bar"
             >
-                <div className="flex justify-between items-center mb-4">
-                    <span className="text-white font-rubik font-extralight uppercase text-sm lg:text-[14px] tracking-[1px]">
+                <div className="skill-bar-header">
+                    <span className="skill-bar-title">
                         {name}
                     </span>
-                    <span className="text-sm lg:text-base">
+                    <span className="skill-bar-percentage">
                         {percentage}%
                     </span>
                 </div>
-                <div className="w-full bg-[#2a2a2a] rounded-full h-2 lg:h-2 overflow-hidden">
+                <div className="skill-bar-bg">
                     <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: `${percentage}%` }}
                         viewport={{ once: true, amount: 0.2 }}
                         transition={{ duration: 1.2, delay: delay + 0.2, ease: 'easeOut' }}
-                        className="bg-[#FF014F] h-full rounded-full"
+                        className="skill-bar-fill"
                     />
                 </div>
             </motion.div>
@@ -55,12 +57,11 @@ export default function Skill() {
     };
 
     return (
-        <div className="w-full bg-[#0a0a0a] py-16 lg:py-24">
-            <section className="max-w-[1440px] mx-auto px-4 lg:px-8 xl:px-[45px]">
+        <div className="skill-container">
+            <section className="skill-section">
                 {/* Section Title */}
-
                 {/* Skills Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-3">
+                <div className="skill-grid">
                     {/* Design Skills Column */}
                     <motion.div
                         initial="hidden"
@@ -69,11 +70,11 @@ export default function Skill() {
                         custom={0}
                         variants={cardVariants}
                     >
-                        <div className="rounded-2xl  p-8 lg:p-3">
-                            <h3 className="text-2xl lg:text-3xl font-bold text-white mb-8">
-                                <span className="text-[#fff]">Design</span> Skills
+                        <div className="skill-card">
+                            <h3 className="skill-title">
+                                <span>Design</span> Skills
                             </h3>
-                            <div>
+                            <div className="skill-list">
                                 {designSkills.map((skill, index) => (
                                     <SkillBar
                                         key={index}
@@ -94,11 +95,11 @@ export default function Skill() {
                         custom={1}
                         variants={cardVariants}
                     >
-                        <div className="rounded-2xl p-8 lg:p-3">
-                            <h3 className="text-2xl lg:text-3xl font-bold text-white mb-8">
-                                <span className="text-[#FFF]">Development</span> Skills
+                        <div className="skill-card">
+                            <h3 className="skill-title">
+                                <span>Development</span> Skills
                             </h3>
-                            <div>
+                            <div className="skill-list">
                                 {developmentSkills.map((skill, index) => (
                                     <SkillBar
                                         key={index}

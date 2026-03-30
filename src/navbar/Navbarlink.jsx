@@ -191,7 +191,7 @@ export default function NavbarLink() {
             {[FaInstagram, FaLinkedinIn, FaTwitter, FaFacebookF].map(
               (Icon, index) => (
                 <Link key={index} className="social-icon">
-                  <Icon size={15} />
+                  <Icon size={16} />
                 </Link>
               ),
             )}

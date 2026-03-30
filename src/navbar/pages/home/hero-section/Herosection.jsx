@@ -10,6 +10,8 @@ import ScrollAnimationWrapper from "../scroll-animation/ScrollAnimationWrapper";
 import Latestervices from "../latestServices/LatestServices";
 import Education from "../education/Education";
 import Experiencehome from "../experience/Experiencehome";
+import Support_company from "../support-company/Support_company";
+import Latest_portfolio from "../latest-portfolio/Latest_portfolio";
 
 export default function Herosection() {
   return (
@@ -17,8 +19,10 @@ export default function Herosection() {
       <div className="hero-grid">
         <div className="hero-left-content">
           <h1 className="hero-title hero-title-sm">HELLO</h1>
-          <p className="hero-subtitle">i'm Jane Cooper a</p>
-          <TypeEffect />
+        <div className="hero-subtitle-wrapper">
+  <p className="hero-subtitle">i'm Jane Cooper a</p>
+  <TypeEffect />
+</div>
           <p className="hero-description">
             I am a Senior Full Stack Developer at heart and, i create features
             that are best suited for the job at hand.
@@ -57,6 +61,12 @@ export default function Herosection() {
       </ScrollAnimationWrapper>
       <ScrollAnimationWrapper>
         <Experiencehome />
+      </ScrollAnimationWrapper>
+      <ScrollAnimationWrapper>
+        <Support_company />
+      </ScrollAnimationWrapper>
+       <ScrollAnimationWrapper>
+        <Latest_portfolio />
       </ScrollAnimationWrapper>
     </>
   );

@@ -1,28 +1,135 @@
 .hero-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 200px;
-    max-width: 1300px;
-    margin: 0 auto;
+    max-width: 1355px;
+    margin-left: auto;
+    margin-right: 20px;
     height: 100vh;
     align-items: center;
 }
 
 .hero-title {
     font-weight: bold;
-    font-size: 30px;
-    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.hero-left-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 38px;
+}
+
+.hero-subtitle-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
 }
 
 .hero-subtitle {
-    font-size: 45px;
+    font-size: 54px;
     font-weight: bold;
-    margin-bottom: 5px;
 }
 
 .hero-description {
-    font-size: 18px;
+    font-size: 17px;
     font-family: sans-serif;
     color: #9f9f9f;
-    margin-top: 27px;
+    width: 580px;
+    margin-top: 18px;
+}
+
+.hero-button-wrapper {
+    margin-top: 18px;
+}
+
+.profile {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 30px;
+    background-color: #FF014F;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+    cursor: pointer;
+    font-family: sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile svg {
+    position: relative;
+    right: 0;
+    transition: transform 0.4s ease;
+}
+
+.profile:hover svg {
+    transform: translateX(-130px);
+    /* left move */
+}
+
+.profile:hover span {
+    transform: translateX(10px);
+}
+
+
+.hero-right-content {
+    justify-self: end;
+    text-align: right;
+}
+
+.hero-image {
+    position: relative;
+    z-index: 2;
+    transform: translateY(20px);
+}
+
+
+.hero-float-text,
+.hero-float-text-bottom {
+    position: absolute;
+    left: 0;
+    right: 82px;
+    font-size: 90px;
+    font-weight: bold;
+
+    z-index: 1;
+}
+
+.hero-float-text {
+    top: 40%;
+    animation: slideFadeInTop 1s infinite alternate;
+    animation-delay: 0.3s;
+}
+
+.hero-float-text-bottom {
+    top: 99%;
+    z-index: 3;
+    color: transparent;
+    -webkit-text-stroke: 2px #fff;
+    animation: slideFadeInBottom 1s infinite alternate;
+}
+
+@keyframes slideFadeInTop {
+    0% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideFadeInBottom {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }

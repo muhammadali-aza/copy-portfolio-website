@@ -1,5 +1,4 @@
-import { r as __toESM } from "./chunk-BoAXSpZd.js";
-import { t as require_react } from "./react.js";
+import { i as __toESM, t as require_react } from "./react-3_O8oni9.js";
 //#region node_modules/react-icons/lib/iconContext.mjs
 var import_react = /* @__PURE__ */ __toESM(require_react(), 1);
 var DefaultContext = {
@@ -117,4 +116,4 @@ function IconBase(props) {
 //#endregion
 export { GenIcon as t };
 
-//# sourceMappingURL=iconBase-9cr0OYL4.js.map
+//# sourceMappingURL=iconBase-Cnfr9KUr.js.map

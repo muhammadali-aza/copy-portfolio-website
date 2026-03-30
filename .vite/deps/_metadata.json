@@ -1,95 +1,117 @@
 {
-  "hash": "773494df",
+  "hash": "cd428a04",
   "configHash": "22b4aa3f",
-  "lockfileHash": "84f4ebe8",
-  "browserHash": "6eeff9b1",
+  "lockfileHash": "3189318c",
+  "browserHash": "78d44810",
   "optimized": {
     "framer-motion": {
       "src": "../../node_modules/framer-motion/dist/es/index.mjs",
       "file": "framer-motion.js",
-      "fileHash": "d119d1ad",
+      "fileHash": "9df67cce",
       "needsInterop": false
     },
-    "postcss/lib/list": {
-      "src": "../../node_modules/postcss/lib/list.js",
-      "file": "postcss_lib_list.js",
-      "fileHash": "fd9d9631",
-      "needsInterop": true
+    "framer-motion/client": {
+      "src": "../../node_modules/framer-motion/dist/es/client.mjs",
+      "file": "framer-motion_client.js",
+      "fileHash": "06f6d454",
+      "needsInterop": false
+    },
+    "lucide-react": {
+      "src": "../../node_modules/lucide-react/dist/esm/lucide-react.js",
+      "file": "lucide-react.js",
+      "fileHash": "7f61b4ef",
+      "needsInterop": false
     },
     "react-dom": {
       "src": "../../node_modules/react-dom/index.js",
       "file": "react-dom.js",
-      "fileHash": "6eb827ed",
+      "fileHash": "de3d4b8e",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "f993f75e",
+      "fileHash": "17b236d9",
       "needsInterop": true
     },
     "react-icons/ci": {
       "src": "../../node_modules/react-icons/ci/index.mjs",
       "file": "react-icons_ci.js",
-      "fileHash": "313c408e",
+      "fileHash": "b8b552f2",
       "needsInterop": false
     },
     "react-icons/fa": {
       "src": "../../node_modules/react-icons/fa/index.mjs",
       "file": "react-icons_fa.js",
-      "fileHash": "8fc0b485",
+      "fileHash": "583c2553",
       "needsInterop": false
     },
     "react-icons/fa6": {
       "src": "../../node_modules/react-icons/fa6/index.mjs",
       "file": "react-icons_fa6.js",
-      "fileHash": "ede49c3c",
+      "fileHash": "98498039",
+      "needsInterop": false
+    },
+    "react-icons/fi": {
+      "src": "../../node_modules/react-icons/fi/index.mjs",
+      "file": "react-icons_fi.js",
+      "fileHash": "a3f2118e",
+      "needsInterop": false
+    },
+    "react-icons/io": {
+      "src": "../../node_modules/react-icons/io/index.mjs",
+      "file": "react-icons_io.js",
+      "fileHash": "99c158f3",
       "needsInterop": false
     },
     "react-icons/lia": {
       "src": "../../node_modules/react-icons/lia/index.mjs",
       "file": "react-icons_lia.js",
-      "fileHash": "bf21bbdf",
+      "fileHash": "a30ef0c8",
       "needsInterop": false
     },
     "react-icons/md": {
       "src": "../../node_modules/react-icons/md/index.mjs",
       "file": "react-icons_md.js",
-      "fileHash": "3c475509",
+      "fileHash": "f0a728b2",
       "needsInterop": false
     },
     "react-router-dom": {
       "src": "../../node_modules/react-router-dom/dist/index.mjs",
       "file": "react-router-dom.js",
-      "fileHash": "775430a3",
+      "fileHash": "542727ed",
       "needsInterop": false
     },
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "c8611d1c",
+      "fileHash": "a83eac7a",
       "needsInterop": true
     },
     "react/jsx-dev-runtime": {
       "src": "../../node_modules/react/jsx-dev-runtime.js",
       "file": "react_jsx-dev-runtime.js",
-      "fileHash": "37dc28fb",
+      "fileHash": "214f527f",
       "needsInterop": true
     },
     "react/jsx-runtime": {
       "src": "../../node_modules/react/jsx-runtime.js",
       "file": "react_jsx-runtime.js",
-      "fileHash": "47a4e4a3",
+      "fileHash": "8ac499b7",
       "needsInterop": true
     }
   },
   "chunks": {
-    "chunk-BoAXSpZd": {
-      "file": "chunk-BoAXSpZd.js",
+    "feature-bundle-DAewiyVT": {
+      "file": "feature-bundle-DAewiyVT.js",
       "isDynamicEntry": false
     },
-    "iconBase-9cr0OYL4": {
-      "file": "iconBase-9cr0OYL4.js",
+    "iconBase-Cnfr9KUr": {
+      "file": "iconBase-Cnfr9KUr.js",
+      "isDynamicEntry": false
+    },
+    "react-3_O8oni9": {
+      "file": "react-3_O8oni9.js",
       "isDynamicEntry": false
     }
   }

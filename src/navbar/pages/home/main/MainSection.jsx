@@ -17,26 +17,23 @@ const AnimatedCard = ({ card, index }) => {
   return (
     <div
       ref={ref}
-      className={`group flex flex-col items-center text-center min-h-[250px] justify-center border border-[#431422] rounded-2xl bg-transparent cursor-default transition-all duration-600 ${
-        isInView ? 'animate-slide-up-fade ' + delayClass : 'opacity-0 translate-y-[30px]'
-      }`}
+      className={`animated-card${isInView ? ' in-view animate-slide-up-fade' : ''} ${delayClass}`}
     >
       {/* Icon Container */}
-      <div className="text-7xl text-[#FF014F] mb-6">
+      <div className="animated-card-icon">
         {card.icon}
       </div>
 
       {/* Title */}
       <Link
-    to="#"
-    className="link-underline cursor-pointer text-xl lg:text-2xl font-bold text-white mb-2 
-               hover:text-[#FF014F] transition-colors duration-300"
->
-    {card.title}
-</Link>
+        to="#"
+        className="link-underline animated-card-title"
+      >
+        {card.title}
+      </Link>
 
       {/* Counter */}
-      <p className="text-[#9f9f9f] text-[15px] font-medium font-rubik">
+      <p className="animated-card-count">
         {card.count}
       </p>
     </div>
@@ -52,14 +49,14 @@ export default function MainSection() {
     ];
 
     return (
-        <div className="w-full bg-[#0a0a0a] py-20 font-sans">
-            <section className="max-w-[1440px] mx-auto px-4 lg:px-8 xl:px-[80px]">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {cards.map((card, index) => (
-                        <AnimatedCard key={index} card={card} index={index} />
-                    ))}
-                </div>
-            </section>
-        </div>
+      <div className="main-section-container">
+        <section className="main-section">
+          <div className="main-section-grid">
+            {cards.map((card, index) => (
+              <AnimatedCard key={index} card={card} index={index} />
+            ))}
+          </div>
+        </section>
+      </div>
     );
 }

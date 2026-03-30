@@ -1,37 +1,87 @@
-/* Base service card */
-.service-card {
+/* Container */
+.experience-containers {
+  max-width: 1270px;
+  margin: 0 auto;
+}
+
+/* Grid Layout */
+.experience-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* left = text, right = image */
+  gap: 2rem;
   position: relative;
-  overflow: hidden;
 }
 
-/* Create pseudo-elements for border effect */
-.service-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  border: 1px solid transparent;
+/* Heading spans both columns */
+.experience-heading {
+  grid-column: 1 / -1;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Left column - Text Cards */
+.experience-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.experience-card {
   border-radius: 1rem;
-  pointer-events: none;
-  transition: all 0.5s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Directional borders on hover based on React state class */
-.service-card.left-top::before {
-  border-left-color: #FF014F;
-  border-top-color: #FF014F;
+.experience-card:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
 }
 
-.service-card.left-bottom::before {
-  border-left-color: #FF014F;
-  border-bottom-color: #FF014F;
+.experience-card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #fff;
 }
 
-.service-card.right-top::before {
-  border-right-color: #FF014F;
-  border-top-color: #FF014F;
+.experience-card-number {
+  color: red;
+  font-weight: bold;
+  font-size: 15px;
+margin-bottom: 4px;
+  font-family: sans-serif;
 }
 
-.service-card.right-bottom::before {
-  border-right-color: #FF014F;
-  border-bottom-color: #FF014F;
+.experience-card-description {
+  color: #bab6b6;
+  line-height: 1.6;
+  width: 450px;
+  font-size: 0.95rem;
+  font-family: sans-serif;
+}
+
+/* Right column - Image */
+.experience-image-container {
+  display: flex;
+  justify-content: center; /* horizontally center */
+  align-items: flex-end;   /* bottom alignment inside flex */
+  margin-top: auto;        /* push to bottom of grid row */
+}
+
+.experience-image {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+/* Responsive - Stack on small screens */
+@media screen and (max-width: 1024px) {
+  .experience-content {
+    grid-template-columns: 1fr; /* single column */
+  }
+
+  .experience-image-container {
+    margin-top: 2rem; /* spacing below text cards */
+    align-items: center; /* center image horizontally */
+  }
 }

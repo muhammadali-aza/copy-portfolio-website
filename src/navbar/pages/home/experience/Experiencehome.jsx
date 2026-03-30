@@ -1,115 +1,61 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import educationImage from '../../../../assets/experience/experience.webp';
 import './experiencehome.css';
-import { comma } from 'postcss/lib/list';
 
 const servicesData = [
     {
         experience: 'experience',
-        company: 'Soft Tech (2 Years)',
-        role: 'UI/UX Designer'
+        company: 'Cognita-Innovative Solutions',
+        role: 'FULL STACK LEAD ENGINEER',
+        description: 'Verseeing the development of enterprise-grade web applications using Next.js, Laravel, and AWS. Responsible for technical architecture, mentoring engineers, and driving innovation across product development.'
     },
     {
-        number: '02',
-        title: 'Business Strategy',
-        description: 'My work is driven by the belief that thoughtful design and strategic planning can empower brands, transform businesses'
-    },
-    {
-        number: '03',
-        title: 'Digital Excellence',
-        description: 'Leverage cutting-edge technology to deliver exceptional digital solutions tailored to your needs.'
+        experience: 'experience',
+        company: 'Jans Group',
+        role: 'FULL STACK LEAD ENGINEER',
+        description: 'Led the design and development of multi-tenant platforms. Worked on real-time dashboards, authentication flows, and database optimization, ensuring seamless integration between frontend and backend systems.'
     }
 ];
 
 export default function Experiencehome() {
-    const [borderState, setBorderState] = useState({});
     const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 1024);
 
     useEffect(() => {
         const handleResize = () => {
             setIsLargeScreen(window.innerWidth >= 1024);
         };
-
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    const handleMouseMove = (e, index) => {
-        const rect = e.currentTarget.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-
-        const horizontal = x < rect.width / 2 ? 'left' : 'right';
-        const vertical = y < rect.height / 2 ? 'top' : 'bottom';
-
-        setBorderState((prevState) => ({ ...prevState, [index]: `${horizontal}-${vertical}` }));
-    };
-
-    const handleMouseLeave = (index) => {
-        setBorderState((prevState) => ({ ...prevState, [index]: '' }));
-    };
-
-    // Variants for large screens - slide from left to right
-    const lgCardVariants = {
-        hidden: { opacity: 0, x: -123 },
-        visible: (i) => ({
-            opacity: 1,
-            x: 0,
-            transition: { delay: i * 0.15, duration: 0.6, ease: 'easeOut' },
-        }),
-    };
-
-    // Variants for small screens - slide from top
-    const smCardVariants = {
-        hidden: { opacity: 0, y: 30 },
-        visible: (i) => ({
-            opacity: 1,
-            y: 0,
-            transition: { delay: i * 0.15, duration: 0.6, ease: 'easeOut' },
-        }),
-    };
-
-    const cardVariants = isLargeScreen ? lgCardVariants : smCardVariants;
-
     return (
-        <div className="bg-black py-16 px-4 md:px-8">
-            <h1 className='font-bold text-3xl lg:pl-[70px] mb-[30px]'>Experiences</h1>
-            <div className="flex flex-col lg:flex-row gap-8 max-w-7xl mx-auto">
-                {/* Left Column - Service Cards */}
-                <div className="w-full lg:w-1/2 flex flex-col gap-6">
+        <div className="experience-containers">
+            <div className="experience-content">
+                <h1 className="experience-heading">Experiences</h1>
+                
+                {/* Left Column - Text Cards */}
+                <div className="experience-cards">
                     {servicesData.map((service, index) => (
-                        <motion.div
-                            key={index}
-                            onMouseMove={(e) => handleMouseMove(e, index)}
-                            onMouseLeave={() => handleMouseLeave(index)}
-                            className={`service-card bg-[#141414] rounded-2xl p-6  hover:bg-[#1a1a1a] transition-colors duration-300 ${borderState[index] || ''}`}
-                            initial="hidden"
-                            animate="visible"
-                            custom={index}
-                            variants={cardVariants}
-                        >
-                            <h3 className="text-white font-bold text-xl md:text-2xl flex gap-5 mb-5  lg:px-[18px]">
-                                <span>{service.number}.</span> {service.title}
+                        <div key={index} className="experience-card">
+                            <h3 className="experience-card-title">
+                                <p className="experience-card-number">{service.experience}.</p>
+                                <p className='role'> {service.role}</p>
+                                    <p className='company'>{service.company}</p>
                             </h3>
-                            <p className="text-gray-400 text-sm md:text-base mb-5  lg:px-[18px] font-rubik leading-relaxed">
-                                {service.description}
-                            </p>
-                        </motion.div>
+                            <p className="experience-card-description">{service.description}</p>
+                        </div>
                     ))}
                 </div>
 
-                {/* Right Column - Image Container */}
-                <div className="w-full lg:w-1/2 flex justify-end">
-                    <div className="relative w-auto">
-                        <img 
-                            src={educationImage}
-                            alt="Latest Services" 
-                            className="w-full lg:w-[570px] h-auto object-cover rounded-2xl shadow-2xl"
-                        />
-                    </div>
+                {/* Right Column - Image */}
+                <div className="experience-image-container">
+                    <img
+                        src={educationImage}
+                        alt="Experience Illustration"
+                        className="experience-image"
+                    />
                 </div>
             </div>
         </div>
-    )
+    );
 }
