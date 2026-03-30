@@ -1,0 +1,185 @@
+.navbar {
+  width: 100%;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1310px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.nav-list {
+    display: flex;
+     align-items: center;
+    gap: 10px;
+}
+
+.nav-link {
+    display: flex;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+.nav-link:hover {
+    color: #FF014F;
+    background: #210D13;
+    transition: all 0.4s ease-in-out;
+    border-radius: 5px;
+}
+.desktop-nav {
+  display: flex;
+  align-items: center;
+}
+
+.right-side {
+    display: flex;
+    gap: 25px;
+}
+
+/* Dropdown Container */
+.dropdown-item {
+  position: relative;
+}
+
+.dropdown-label {
+  display: flex;
+  align-items: center;
+  /* gap: 6px; */
+  font-weight: bold;
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 15px;
+  border-radius: 8px;
+}
+
+.dropdown-label:hover {
+  color: #FF014F;
+  background: #210D13;
+}
+
+.dropdown-label.active {
+  color: #FF014F;
+  font-weight: bold;
+}
+
+.dropdown-arrow {
+  transition: transform 0.3s ease;
+  font-size: 18px;
+}
+
+.dropdown-arrow.open {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Menu - Clean Modern UI */
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+  min-width: 220px;
+  background: black;
+  border-radius: 12px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.02);
+  list-style: none;
+  margin: 0;
+  padding: 8px 10px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px) scale(0.95);
+
+  transition: 
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0.3s;
+
+  z-index: 100
+}
+
+.dropdown-menu.visible {
+  opacity: 1;
+  visibility: visible;
+   transform: translateY(0) scale(1);
+}
+
+.dropdown-menu.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+}
+
+/* Dropdown Items */
+.dropdown-item-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.dropdown-item-link:hover {
+  background: #210D13;
+  color: #FF014F;
+  padding-left: 22px;
+}
+
+.dropdown-arrow-icon {
+  font-size: 14px;
+  /* color: #cbd5e0; */
+  transition: transform 0.2s ease;
+}
+
+.dropdown-item-link:hover .dropdown-arrow-icon {
+  transform: translateX(4px);
+  color: #ff6b6b;
+}
+
+/* Optional: Add a subtle triangle arrow on dropdown */
+.dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 20px;
+  width: 12px;
+  height: 12px;
+  /* background: #ffffff; */
+  transform: rotate(45deg);
+  border-top: 1px solid rgba(0, 0, 0, 0.02);
+  border-left: 1px solid rgba(0, 0, 0, 0.02);
+  pointer-events: none;
+}
+
+.social-icons {
+    display: flex;
+    gap: 3px;
+}
+
+.social-icon {
+    padding: 14px;
+    border-radius: 50%;
+}
+
+.social-icon:hover {
+    background: #FF014F;
+    transition: all 0.4s ease-in-out;
+}
+
+.hamburger-btn {
+    background: #FF014F;
+    padding: 11px;
+    border-radius: 50%;
+}
+
+.hamburger-icon {
+    font-weight: bold;
+    font-size: 20px;
+}
