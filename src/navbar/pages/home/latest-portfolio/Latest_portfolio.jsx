@@ -6,7 +6,7 @@ export default function Latest_portfolio() {
   return (
     <div>
     <section className="portfolio-section">
-      <div className="portfolio-container">
+      <div className="portfolio-sectionportfolio-section">
         <h5 className="portfolio-subtitle">LATEST PORTFOLIO</h5>
         <h2 className="portfolio-title">
           Transforming Ideas into <br /> Exceptional

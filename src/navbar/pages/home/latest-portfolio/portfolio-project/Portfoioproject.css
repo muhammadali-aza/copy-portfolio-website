@@ -1,11 +1,11 @@
 /* Container Layout Updated to Grid */
-.portfolio-container {
+.portfolio-containers {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    gap: 50px;
     background-color: #000;
     max-width: 1270px;
-    margin: 0 auto;
+    margin: 80px auto;
 }
 
 .project-wrapper {

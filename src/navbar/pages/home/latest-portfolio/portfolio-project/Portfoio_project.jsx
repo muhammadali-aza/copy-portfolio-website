@@ -20,7 +20,7 @@ export default function Portfolio_project() {
     ];
 
     return (
-        <div className="portfolio-container">
+        <div className="portfolio-containers">
             {projects.map((project, index) => (
                 <div key={index} className="project-wrapper">
                     <div className="project-card">
