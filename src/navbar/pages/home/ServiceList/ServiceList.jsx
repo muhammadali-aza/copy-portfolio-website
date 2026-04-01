@@ -3,27 +3,28 @@ import './ServiceList.css';
 import { FaBuildingColumns } from "react-icons/fa6";
 import { CiCalendar } from "react-icons/ci";
 import { FaPenNib } from "react-icons/fa";
+import { LiaAngleRightSolid } from "react-icons/lia";
 
 const services = [
   {
     id: 1,
     title: "Ui/Visual Design",
     count: "21 Done",
-    description: "My work is driven by the belief that thoughtful design and strategic planning can empower brands.",
+    description: "My work is driven by the belief that thoughtful design and strategic planning can empower brands strategic planning can empower brands",
     icon: <FaBuildingColumns />// Aap yahan FontAwesome ya Lucide icons use kar sakte hain
   },
   {
     id: 2,
     title: "Ui/Visual Design",
     count: "21 Done",
-    description: "In this portfolio, you'll find a curated selection of projects that highlight my skills in responsive web design.",
+    description: "In this portfolio, you’ll find a curated selection of projects that highlight my skills in [Main Areas, e.g., responsive web design",
     icon: <CiCalendar />
   },
-  {
+  { 
     id: 3,
     title: "Motion Design",
     count: "20 Done",
-    description: "Each project here showcases my commitment to excellence and adaptability, tailored to meet each client's unique needs.",
+    description: "Each project here showcases my commitment to excellence and adaptability, tailored to meet each client’s unique needs",
     icon: <FaPenNib />
   }
 ];
@@ -41,7 +42,7 @@ export default function ServiceList() {
         >
           <div className="service-icon-wrapper">
             <div className="icon-circles">
-               <span>{service.icon}</span>
+               <span className='serivces-icon'>{service.icon}</span>
             </div>
           </div>
 
@@ -56,7 +57,7 @@ export default function ServiceList() {
 
           <div className="service-link-section">
             <a href="#" className="read-more">
-              READ MORE <span className="arrow">→</span>
+              READ MORE <span ><LiaAngleRightSolid className="arrow"/></span>
             </a>
           </div>
         </div>

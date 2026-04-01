@@ -5,10 +5,10 @@
     padding: 40px 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 26px;
     align-items: start;
     font-family: Arial, sans-serif;
-    margin-top: 70px;
+    margin-top: 91px;
 }
 
 /* Left Big Card */

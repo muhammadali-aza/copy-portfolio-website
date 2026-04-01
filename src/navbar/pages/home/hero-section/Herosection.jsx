@@ -14,16 +14,21 @@ import Support_company from "../support-company/Support_company";
 import Latest_portfolio from "../latest-portfolio/Latest_portfolio";
 import My_skill from "../my_skill/my_skill";
 import ServiceList from "../ServiceList/ServiceList";
+import Reviews from "../Reviews/Reviews";
+import ContactSection from "../ContactSection/ContactSection";
+import HomeBlog from "../homeblog/homeblog";
+import Homeblogcard from "../homeblog/homeblogcard/homeblogcard";
+
 export default function Herosection() {
   return (
     <>
-      <div className="hero-grid">
-        <div className="hero-left-content">
-          <h1 className="hero-title hero-title-sm">HELLO</h1>
-        <div className="hero-subtitle-wrapper">
-  <p className="hero-subtitle">i'm Jane Cooper a</p>
-  <TypeEffect />
-</div>
+      <div className="hero-grids">
+        <div className="hero-left-contents">
+          <h1 className="hero-titles hero-title-sm">HELLO</h1>
+          <div className="hero-subtitle-wrapper">
+            <p className="hero-subtitle">i'm Jane Cooper a</p>
+            <TypeEffect />
+          </div>
           <p className="hero-description">
             I am a Senior Full Stack Developer at heart and, i create features
             that are best suited for the job at hand.
@@ -66,7 +71,7 @@ export default function Herosection() {
       <ScrollAnimationWrapper>
         <Support_company />
       </ScrollAnimationWrapper>
-       <ScrollAnimationWrapper>
+      <ScrollAnimationWrapper>
         <Latest_portfolio />
       </ScrollAnimationWrapper>
       <ScrollAnimationWrapper>
@@ -74,7 +79,19 @@ export default function Herosection() {
       </ScrollAnimationWrapper>
       <ScrollAnimationWrapper>
         <ServiceList />
-        </ScrollAnimationWrapper>
+      </ScrollAnimationWrapper>
+      <ScrollAnimationWrapper>
+        <Reviews />
+      </ScrollAnimationWrapper>
+       <ScrollAnimationWrapper>
+        <ContactSection />
+      </ScrollAnimationWrapper>
+       <ScrollAnimationWrapper>
+        <HomeBlog />
+      </ScrollAnimationWrapper>
+        <ScrollAnimationWrapper>
+        <Homeblogcard />
+      </ScrollAnimationWrapper>
     </>
   );
 }

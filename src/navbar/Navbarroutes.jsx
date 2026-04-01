@@ -13,6 +13,7 @@ import Contact from "./pages/contact/Contact";
 import Projectdetail2 from "./pages/project/projectdetails/projectdetail2/Projectdetail2";
 import Projectdetail3 from "./pages/project/projectdetails/projectdetail3/projectdetail3";
 import Projectdetails4 from "./pages/project/projectdetails/projectdetails4/projectdetails4";
+import HomeBlogDetails from "./pages/blog/Blogdetails/homeblogdetails/homeblogdetails";
 
 export default function Navbarroutes() {
     const route = createBrowserRouter([
@@ -27,6 +28,7 @@ export default function Navbarroutes() {
                 { path: "blog", element: <Blog /> },
                 { path: "blog/blogclassic", element: <Blogclassic /> },
                 { path: "blog/blogdetails", element: <BlogDetails /> },
+                { path: "blog/blogdetails/homeblogdetails", element: <HomeBlogDetails /> },
                 { path: "project", element: <Project /> },
                 { path: "project/projectdetails", element: <Projectdetails /> },
                 { path: "project/projectdetails2", element: <Projectdetails /> },

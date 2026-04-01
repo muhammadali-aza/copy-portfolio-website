@@ -49,7 +49,7 @@ export default function MainSection() {
     ];
 
     return (
-      <div className="main-section-container">
+      <div className="main-section-containers">
         <section className="main-section">
           <div className="main-section-grid">
             {cards.map((card, index) => (

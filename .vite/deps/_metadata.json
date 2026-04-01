@@ -2,7 +2,7 @@
   "hash": "45f0ee69",
   "configHash": "75a212f1",
   "lockfileHash": "3189318c",
-  "browserHash": "cbf040df",
+  "browserHash": "3f842a0d",
   "optimized": {
     "framer-motion": {
       "src": "../../node_modules/framer-motion/dist/es/index.mjs",
@@ -14,6 +14,12 @@
       "src": "../../node_modules/framer-motion/dist/es/client.mjs",
       "file": "framer-motion_client.js",
       "fileHash": "4b927701",
+      "needsInterop": false
+    },
+    "lucide-react": {
+      "src": "../../node_modules/lucide-react/dist/esm/lucide-react.js",
+      "file": "lucide-react.js",
+      "fileHash": "0ee6c027",
       "needsInterop": false
     },
     "react-dom": {

@@ -10,10 +10,10 @@
   align-items: center;
   border-bottom: 1px solid #333;
 transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
-  cursor: pointer;
-  max-width: 1280px;
+  max-width: 1270px;
   margin: auto;
-  height: 148px;
+  height: 168px;
+  gap: 128px;
 }
 
 /* Active State (Pink Background) */
@@ -31,18 +31,20 @@ transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
   font-size: 24px;
 }
 
+/* .service-title-section {
+  margin-left: 80px;
+} */
 
 .service-title-section h3 {
-  font-size: 24px;
+  font-size: 30px;
   margin: 0;
   font-weight: 700;
-  text-transform: uppercase;
 }
 
 .service-count {
-  margin: 5px 0 0;
   color: #aaa;
-  font-size: 14px;
+  font-size: 16px;
+  font-family: sans-serif;
 }
 
 .active .service-count {
@@ -52,7 +54,8 @@ transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
 .service-desc-section p {
   color: #ccc;
   line-height: 1.6;
-  max-width: 450px;
+  font-weight: 500;
+  font-family: sans-serif;
   margin: 0;
 }
 
@@ -69,16 +72,20 @@ transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  font-size: 13px;
+  font-size: 15px;
   letter-spacing: 1px;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  margin-left: 30px;
+}
+
+
+.serivces-icon {
+  font-size: 33px;
 }
 
 .arrow {
-  margin-left: 8px;
-  font-size: 18px;
+  font-size: 17px;
 }
 
 /* Mobile Responsive */

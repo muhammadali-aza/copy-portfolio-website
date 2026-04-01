@@ -1,8 +1,10 @@
 /* Container jo poori width cover karega */
-.skill-container {
+.skill-containers {
     background-color: #000000; /* Deep Black */
     font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
     align-items: center;
+    margin-top: 120px;
+    margin-bottom: 50px;
 }
 
 .skill-content {

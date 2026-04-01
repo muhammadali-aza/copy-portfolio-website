@@ -1,23 +1,23 @@
-.hero-grid {
+.hero-grids {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    max-width: 1355px;
+    max-width: 1378px;
     margin-left: auto;
     margin-right: 20px;
     height: 100vh;
     align-items: center;
 }
 
-.hero-title {
+.hero-titles {
     font-weight: bold;
     font-size: 28px;
 }
 
-.hero-left-content {
+.hero-left-contents {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-top: 38px;
+    margin-top: 125px;
 }
 
 .hero-subtitle-wrapper {
