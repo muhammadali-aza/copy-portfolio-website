@@ -1,15 +1,15 @@
 import React from 'react';
-import './Projectdetails.css';
+import './projectdetail3.css';
 import { FaAngleRight } from "react-icons/fa6";
-import ProjectHero from './projecthero/ProjectHero';
+import Project3hero from './project3hero/project3hero';
 
-export default function Projectdetails() {
+export default function Projectdetail3() {
   return (
     <div className='projectdetails'>
       <section className="hero-container">
         <div className="hero-overlay"></div>
         <div className="hero-content">
-          <h1 className="hero-title">Digital Transformation Advisors</h1>
+          <h1 className="hero-title">Education Template For Vue Nuxt Template</h1>
           <nav className="breadcrumb">
             <a href="/" className="breadcrumb-link">Home</a>
             <span><FaAngleRight className="breadcrumb-separator" /></span>
@@ -17,7 +17,7 @@ export default function Projectdetails() {
           </nav>
         </div>
       </section>
-      <ProjectHero />
+      <Project3hero />
     </div>
   );
 }

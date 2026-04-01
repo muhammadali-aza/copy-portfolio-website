@@ -1,0 +1,42 @@
+/* Container jo poori width cover karega */
+.skill-container {
+    background-color: #000000; /* Deep Black */
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+    align-items: center;
+}
+
+.skill-content {
+    max-width: 1270px;
+    margin: auto;
+}
+
+/* Chhota red text upar wala */
+.skill-subtitle {
+    color: #f9004d; /* Pinkish Red shade */
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Main Heading */
+.skill-title {
+    color: #ffffff;
+    font-size: 49px; /* Bada heading size */
+    font-weight: 800;
+    line-height: 1.2; /* Line height tight rakhne ke liye */
+    margin: 0;
+    letter-spacing: -1px; /* Modern look ke liye */
+}
+
+/* Responsive adjustment mobile ke liye */
+@media (max-width: 768px) {
+    .skill-title {
+        font-size: 36px;
+    }
+    .skill-container {
+        padding: 60px 20px;
+    }
+}

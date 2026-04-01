@@ -10,6 +10,9 @@ import BlogDetails from "./pages/blog/blogdetails/BlogDetails";
 import Project from "./pages/project/Project";
 import Projectdetails from "./pages/project/projectdetails/Projectdetails";
 import Contact from "./pages/contact/Contact";
+import Projectdetail2 from "./pages/project/projectdetails/projectdetail2/Projectdetail2";
+import Projectdetail3 from "./pages/project/projectdetails/projectdetail3/projectdetail3";
+import Projectdetails4 from "./pages/project/projectdetails/projectdetails4/projectdetails4";
 
 export default function Navbarroutes() {
     const route = createBrowserRouter([
@@ -24,8 +27,13 @@ export default function Navbarroutes() {
                 { path: "blog", element: <Blog /> },
                 { path: "blog/blogclassic", element: <Blogclassic /> },
                 { path: "blog/blogdetails", element: <BlogDetails /> },
-                 { path: "project", element: <Project /> },
+                { path: "project", element: <Project /> },
                 { path: "project/projectdetails", element: <Projectdetails /> },
+                { path: "project/projectdetails2", element: <Projectdetails /> },
+                // App.jsx ya main route file mein check karein
+                { path: "/project/projectdetails/projectdetails2", element: <Projectdetail2 /> },
+                { path: "project/projectdetails/projectdetails3", element: <Projectdetail3 /> },
+                { path: "project/projectdetails/projectdetails4", element: <Projectdetails4 /> },
                 { path: "contact", element: <Contact /> },
             ]
         }

@@ -116,4 +116,4 @@ function IconBase(props) {
 //#endregion
 export { GenIcon as t };
 
-//# sourceMappingURL=iconBase-Cnfr9KUr.js.map
+//# sourceMappingURL=iconBase-DrFnXZP3.js.map

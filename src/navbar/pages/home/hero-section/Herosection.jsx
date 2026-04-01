@@ -12,7 +12,8 @@ import Education from "../education/Education";
 import Experiencehome from "../experience/Experiencehome";
 import Support_company from "../support-company/Support_company";
 import Latest_portfolio from "../latest-portfolio/Latest_portfolio";
-
+import My_skill from "../my_skill/my_skill";
+import ServiceList from "../ServiceList/ServiceList";
 export default function Herosection() {
   return (
     <>
@@ -68,6 +69,12 @@ export default function Herosection() {
        <ScrollAnimationWrapper>
         <Latest_portfolio />
       </ScrollAnimationWrapper>
+      <ScrollAnimationWrapper>
+        <My_skill />
+      </ScrollAnimationWrapper>
+      <ScrollAnimationWrapper>
+        <ServiceList />
+        </ScrollAnimationWrapper>
     </>
   );
 }

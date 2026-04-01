@@ -3,9 +3,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
-    background-color: #000;
     max-width: 1270px;
-    margin: 80px auto;
+    margin: 80px auto 18px;
 }
 
 .project-wrapper {
@@ -39,8 +38,9 @@
 
 .card-label {
     color: #fff;
-    font-size: 1.2rem;
-    font-weight: 500;
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: sans-serif;
     margin-bottom: 20px;
 }
 
