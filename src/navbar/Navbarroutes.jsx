@@ -7,6 +7,8 @@ import ServicesDetails from "./pages/services/servicesDetails/ServicesDetails";
 import Blog from "./pages/blog/Blog";
 import Blogclassic from "./pages/blog/blogclassic/Blogclassic";
 import BlogDetails from "./pages/blog/blogdetails/BlogDetails";
+import HomeBlogDetails_2 from "./pages/blog/Blogdetails/homeblogdetails_2/homeblogdetails_2";
+import HomeBlogDetails_3 from "./pages/blog/Blogdetails/homeblogdetails_3/homeblogdetails_3";
 import Project from "./pages/project/Project";
 import Projectdetails from "./pages/project/projectdetails/Projectdetails";
 import Contact from "./pages/contact/Contact";
@@ -29,6 +31,8 @@ export default function Navbarroutes() {
                 { path: "blog/blogclassic", element: <Blogclassic /> },
                 { path: "blog/blogdetails", element: <BlogDetails /> },
                 { path: "blog/blogdetails/homeblogdetails", element: <HomeBlogDetails /> },
+                { path: "blog/blogdetails/homeblogdetails_2", element: <HomeBlogDetails_2 /> },
+                { path: "blog/blogdetails/homeblogdetails_3", element: <HomeBlogDetails_3 /> },
                 { path: "project", element: <Project /> },
                 { path: "project/projectdetails", element: <Projectdetails /> },
                 { path: "project/projectdetails2", element: <Projectdetails /> },

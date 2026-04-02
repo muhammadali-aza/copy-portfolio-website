@@ -1,109 +1,121 @@
 {
-  "hash": "45f0ee69",
+  "hash": "fbfbfb10",
   "configHash": "75a212f1",
-  "lockfileHash": "3189318c",
-  "browserHash": "3f842a0d",
+  "lockfileHash": "97f37031",
+  "browserHash": "28b58f80",
   "optimized": {
     "framer-motion": {
       "src": "../../node_modules/framer-motion/dist/es/index.mjs",
       "file": "framer-motion.js",
-      "fileHash": "3b6851ee",
+      "fileHash": "85470a3f",
       "needsInterop": false
     },
     "framer-motion/client": {
       "src": "../../node_modules/framer-motion/dist/es/client.mjs",
       "file": "framer-motion_client.js",
-      "fileHash": "4b927701",
+      "fileHash": "26c67c6b",
       "needsInterop": false
     },
     "lucide-react": {
       "src": "../../node_modules/lucide-react/dist/esm/lucide-react.js",
       "file": "lucide-react.js",
-      "fileHash": "0ee6c027",
+      "fileHash": "fcaf9ade",
       "needsInterop": false
+    },
+    "react-countup": {
+      "src": "../../node_modules/react-countup/build/index.js",
+      "file": "react-countup.js",
+      "fileHash": "21bc1213",
+      "needsInterop": true
     },
     "react-dom": {
       "src": "../../node_modules/react-dom/index.js",
       "file": "react-dom.js",
-      "fileHash": "50a2454f",
+      "fileHash": "69924f4a",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "aa66a95f",
+      "fileHash": "048607c7",
       "needsInterop": true
     },
     "react-icons/ci": {
       "src": "../../node_modules/react-icons/ci/index.mjs",
       "file": "react-icons_ci.js",
-      "fileHash": "5a6cca62",
+      "fileHash": "a3c9c019",
       "needsInterop": false
     },
     "react-icons/fa": {
       "src": "../../node_modules/react-icons/fa/index.mjs",
       "file": "react-icons_fa.js",
-      "fileHash": "48adad70",
+      "fileHash": "6e87d598",
       "needsInterop": false
     },
     "react-icons/fa6": {
       "src": "../../node_modules/react-icons/fa6/index.mjs",
       "file": "react-icons_fa6.js",
-      "fileHash": "735c0a58",
+      "fileHash": "4854b2e2",
       "needsInterop": false
     },
     "react-icons/fi": {
       "src": "../../node_modules/react-icons/fi/index.mjs",
       "file": "react-icons_fi.js",
-      "fileHash": "3b5fb590",
+      "fileHash": "634b8699",
       "needsInterop": false
     },
     "react-icons/go": {
       "src": "../../node_modules/react-icons/go/index.mjs",
       "file": "react-icons_go.js",
-      "fileHash": "6bcb4161",
+      "fileHash": "6f4a2880",
       "needsInterop": false
     },
     "react-icons/lia": {
       "src": "../../node_modules/react-icons/lia/index.mjs",
       "file": "react-icons_lia.js",
-      "fileHash": "5fe3e6e0",
+      "fileHash": "2c281032",
       "needsInterop": false
     },
     "react-icons/md": {
       "src": "../../node_modules/react-icons/md/index.mjs",
       "file": "react-icons_md.js",
-      "fileHash": "766343b4",
+      "fileHash": "c7c45fd2",
       "needsInterop": false
     },
     "react-icons/ti": {
       "src": "../../node_modules/react-icons/ti/index.mjs",
       "file": "react-icons_ti.js",
-      "fileHash": "d679f484",
+      "fileHash": "0aa50381",
+      "needsInterop": false
+    },
+    "react-intersection-observer": {
+      "src": "../../node_modules/react-intersection-observer/dist/index.mjs",
+      "file": "react-intersection-observer.js",
+      "fileHash": "4710cf02",
       "needsInterop": false
     },
     "react-router-dom": {
       "src": "../../node_modules/react-router-dom/dist/index.mjs",
       "file": "react-router-dom.js",
-      "fileHash": "e0f3998a",
+      "fileHash": "402485c8",
       "needsInterop": false
     },
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "22010092",
+      "fileHash": "5c3a7a9c",
       "needsInterop": true
     },
     "react/jsx-dev-runtime": {
       "src": "../../node_modules/react/jsx-dev-runtime.js",
       "file": "react_jsx-dev-runtime.js",
-      "fileHash": "6394a40c",
+      "fileHash": "3396408e",
       "needsInterop": true
     },
     "react/jsx-runtime": {
       "src": "../../node_modules/react/jsx-runtime.js",
       "file": "react_jsx-runtime.js",
-      "fileHash": "925dcaec",
+      "fileHash": "ece287fe",
       "needsInterop": true
     }
   },

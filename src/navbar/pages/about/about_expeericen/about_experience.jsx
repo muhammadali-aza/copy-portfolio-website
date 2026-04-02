@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
-import '../experience/Experience.css';
+import './about_experience.css';
 
-export default function Experience() {
+export default function About_experience() {
     const [borderState, setBorderState] = useState({});
     const [animatedNumbers, setAnimatedNumbers] = useState({});
     const [isVisible, setIsVisible] = useState(false);
@@ -49,7 +49,6 @@ export default function Experience() {
     }, []);
 
     // Counting animation function
-
     const animateNumber = (targetNumber, key, duration = 2000) => {
         const start = performance.now();
         const startValue = 0;
@@ -62,20 +61,15 @@ export default function Experience() {
         }
 
         const endValue = Number(cleanValue) * multiplier;
+        
         const animate = (currentTime) => {
             const elapsed = currentTime - start;
             const progress = Math.min(elapsed / duration, 1);
 
             const easeOut = 1 - Math.pow(1 - progress, 3);
             const currentValue = Math.floor(startValue + (endValue - startValue) * easeOut);
-
-            setAnimatedNumbers(prev => ({
-                ...prev,
-                [key]: displayValue
-
-            }));
+            
             let displayValue;
-
             if (targetNumber.toLowerCase().includes('k')) {
                 displayValue = Math.floor(currentValue / 1000) + 'k';
             } else {
@@ -85,6 +79,11 @@ export default function Experience() {
             if (targetNumber.includes('+')) {
                 displayValue += '+';
             }
+
+            setAnimatedNumbers(prev => ({
+                ...prev,
+                [key]: displayValue
+            }));
 
             if (progress < 1) {
                 requestAnimationFrame(animate);
@@ -97,17 +96,17 @@ export default function Experience() {
     // Trigger counting animations when component becomes visible
     useEffect(() => {
         if (isVisible) {
-            const stats = [
+            const statsData = [
                 { number: "20k+", label: "Our Projects Completed" },
                 { number: "10k+", label: "Our Natural Products" },
                 { number: "200+", label: "Clients Reviews" },
                 { number: "1,000+", label: "Our Satisfied Clients" }
             ];
 
-            stats.forEach((item, index) => {
+            statsData.forEach((item, index) => {
                 setTimeout(() => {
                     animateNumber(item.number, `stat-${index}`);
-                }, index * 200); // Stagger animations
+                }, index * 200);
             });
 
             // Animate the main experience number
@@ -126,7 +125,6 @@ export default function Experience() {
 
     return (
         <div ref={containerRef} className="experience-container">
-
             {/* Left Big Card */}
             <div className="experience-main-card">
                 <h1 className="experience-years">

@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import './educationdetails.css';
 
 const servicesData = [
     {
@@ -25,7 +24,7 @@ const servicesData = [
     }
 ];
 
-export default function Educationdetails() {
+export default function About_education() {
     const [borderState, setBorderState] = useState({});
     const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 1024);
 

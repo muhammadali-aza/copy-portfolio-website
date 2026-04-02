@@ -21,7 +21,7 @@ const blogData = [
         date: "April 10",
         title: "Let's bring your ideas to life! Contact me, and let's",
         imgSrc: img2,
-        link: "#"
+        link: "/blog/blogdetails/homeblogdetails_2"
     },
     {
         id: 3,
@@ -29,7 +29,7 @@ const blogData = [
         date: "April 10",
         title: "Each one showcases our approach and dedication man",
         imgSrc: img3,
-        link: "#"
+        link: "/blog/blogdetails/homeblogdetails_3"
     }
 ];
 
@@ -57,7 +57,7 @@ export default function Homeblogcard() {
 
                         {/* Card Content */}
                         <div className="blog-content">
-                            <h3 className="blog-title">{blog.title}</h3>
+                            <h3 className="blogs-title">{blog.title}</h3>
                             
                             <a href={blog.link} className="blog-read-more">
                                 READ MORE <FaChevronRight className="read-more-icon" />

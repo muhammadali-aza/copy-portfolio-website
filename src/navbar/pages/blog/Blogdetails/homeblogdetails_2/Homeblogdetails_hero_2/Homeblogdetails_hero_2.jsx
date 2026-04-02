@@ -2,8 +2,7 @@ import { useState } from 'react';
 import { Search, ArrowRight, User, Tag, MessageSquare, Calendar } from 'lucide-react'
 import { FaInstagram, FaLinkedinIn, FaTwitter, FaFacebookF, FaArrowRight } from 'react-icons/fa';;
 import { FaRegFolderOpen } from "react-icons/fa6";
-import './homeblogdetails_hero.css';
-import img from '../.././../../../../assets/blog-img-1.webp'
+import img from '../.././../../../../assets/blog-img-2.webp'
 import reactImg1 from '../../../../../../assets/single-post-card-img-1.webp'
 import reactImg2 from '../../../../../../assets/single-post-card-img-2.webp'
 import reactImg3 from '../../../../../../assets/single-post-card-img-3.webp'
@@ -13,7 +12,7 @@ import comment1 from '../../../../../../assets/about-me-user-img.webp'
 import comment2 from '../../../../../../assets/comments-img-2.webp'
 
 
-export default function Homeblogdetails_hero() {
+export default function Homeblogdetails_hero_2() {
        const [blogFormHoverClass, setBlogFormHoverClass] = useState('');
        const [searchWidgetHoverClass, setSearchWidgetHoverClass] = useState('');
        const [categoryWidgetHoverClass, setCategoryWidgetHoverClass] = useState('');
@@ -170,7 +169,7 @@ export default function Homeblogdetails_hero() {
 
                     {/* Title and Description */}
                     <h1 className="blog-title">
-                        Inspiring the World, One Project at a Time for the man
+                      Let's bring your ideas to life! Contact me, and let's
                     </h1>
                     <p className="blog-description">
                         Aliquam eros justo, posuere loborti viverra laoreet matti ullamcorper posuere viverra .Aliquam eros justo, posuere
