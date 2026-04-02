@@ -124,7 +124,7 @@ export default function About_experience() {
     ];
 
     return (
-        <div ref={containerRef} className="experience-container">
+        <div ref={containerRef} className="experience-containers">
             {/* Left Big Card */}
             <div className="experience-main-card">
                 <h1 className="experience-years">

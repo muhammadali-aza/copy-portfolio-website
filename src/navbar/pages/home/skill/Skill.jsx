@@ -72,7 +72,7 @@ export default function Skill() {
                     >
                         <div className="skill-card">
                             <h3 className="skill-title">
-                                <span>Design</span> Skills
+                                Design Skills
                             </h3>
                             <div className="skill-list">
                                 {designSkills.map((skill, index) => (

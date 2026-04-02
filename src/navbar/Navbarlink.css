@@ -7,26 +7,26 @@
     background: transparent; /* Background color hata dein */
     z-index: 10; /* Sabse upar dikhne ke liye */
 }
-
+ 
 .navbar-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 1310px;
   margin: 0 auto;
-  padding: 17px 18px;
-}
+  padding: 19px 17px;
+} 
 
 .nav-list {
     display: flex;
      align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 .nav-link {
     display: flex;
     font-weight: bold;
-    padding: 5px 10px;
+    padding: 5px 8px;
 }
 
 .nav-link:hover {
@@ -42,7 +42,7 @@
 
 .right-side {
     display: flex;
-    gap: 22px;
+    gap: 26px;
 }
 
 /* Dropdown Container */
@@ -54,11 +54,12 @@
   display: flex;
   align-items: center;
   /* gap: 6px; */
-  font-weight: bold;
-  padding: 8px 10px;
+  font-weight: 700;
+  padding: 8px 9px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 15px;
+  font-size: 16px;
+  font-family: Rajdhani;
   border-radius: 8px;
 }
 
@@ -74,7 +75,7 @@
 
 .dropdown-arrow {
   transition: transform 0.3s ease;
-  font-size: 18px;
+  font-size: 19px;
 }
 
 .dropdown-arrow.open {
@@ -84,7 +85,7 @@
 /* Dropdown Menu - Clean Modern UI */
 .dropdown-menu {
   position: absolute;
-  top: calc(100% + 2px);
+  top: calc(100% + 0px);
   left: 0;
   min-width: 220px;
   background: black;
@@ -127,7 +128,7 @@
   text-decoration: none;
   color: #fff;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: bold;
   transition: all 0.2s ease;
   white-space: nowrap;
 }
@@ -181,11 +182,79 @@
 
 .hamburger-btn {
     background: #FF014F;
-    padding: 11px;
+    width: 25px;
+    height: 45px;
     border-radius: 50%;
 }
 
 .hamburger-icon {
     font-weight: bold;
     font-size: 20px;
+}
+
+/* Hamburger Button container ko perfectly round aur pink banayein */
+.hamburger-btn {
+    background-color: #FF014F; /* Bright Pink */
+    width: 40px;               /* Width badha di hai circle ke liye */
+    height: 40px;              /* Height same honi chahiye */
+    border-radius: 50%;        /* Perfect Circle */
+    border: none;
+    display: flex;             /* Icon center karne ke liye */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(255, 1, 79, 0.2); /* Subtle glow */
+}
+
+.hamburger-btn:hover {
+    transform: scale(1.05);
+    background-color: #d90042; /* Hover par thoda dark pink */
+}
+
+/* Icon ki styling */
+.hamburger-icon {
+    color: white;              /* White lines */
+    font-size: 24px;           /* Size thodi badi image ke hisaab se */
+    display: block;
+}
+
+/* Social icons alignment fix (Optional: agar wo round nahi dikh rahe) */
+.social-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #1a1a1a;       /* Dark grey background as per image */
+    color: #fff;
+    transition: 0.3s;
+}
+
+.social-icon:hover {
+    background: #FF014F;
+    color: #fff;
+}
+
+@media (max-width: 1200px) {
+  .navbar-container {
+    max-width: 942px;
+    margin: auto;
+    padding: 8px 0;
+  }
+
+  .nav-link, .dropdown-label{
+    display: none;
+  }
+
+  .hamburger-btn {
+    font-family: 10px;
+  }
+  
+  .hamburger-btn {
+    width: 37px;
+    height: 37px;
+  }
+
 }

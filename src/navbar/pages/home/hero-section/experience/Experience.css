@@ -1,14 +1,14 @@
 /* Main container */
 .experience-container {
-    max-width: 1320px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 26px;
-    align-items: start;
-    font-family: Arial, sans-serif;
-    margin-top: 91px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+  align-items: start;
+  font-family: Arial, sans-serif;
+  margin-top: 91px;
 }
 
 /* Left Big Card */
@@ -52,34 +52,34 @@
 
 /* Right Stats Cards Container */
 .experience-stats {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
 }
-
+ 
 /* Each Stat Card */
 .stat-card {
-    background-color: #181717;
-    padding: 30px 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: default;
+  background-color: #181717;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
 }
 
 .stat-number {
-    font-size: 47px;
-    font-weight: bold;
-    color: #fff;
-    display: flex;
-    justify-content: center;
+  font-size: 47px;
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  justify-content: center;
 }
 
 .stat-label {
-    font-size: 15px;
-    color: #a4a3a3;
-    font-family: sans-serif;
+  font-size: 15px;
+  color: #a4a3a3;
+  font-family: sans-serif;
 }
 
 /* Service card for directional hover border */
@@ -104,6 +104,7 @@
     transform: translateY(100px);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -124,7 +125,41 @@
   transition: transform 0.6s ease-out, opacity 0.6s ease-out;
 }
 
+
+
+.service-card.left::before {
+  border-left-color: #FF014F;
+}
+
+.service-card.right::before {
+  border-right-color: #FF014F;
+}
+
+.service-card.top::before {
+  border-top-color: #FF014F;
+}
+
+.service-card.bottom::before {
+  border-bottom-color: #FF014F;
+}
+
+
 /* Responsive Design */
+
+@media (max-width: 1200px) {
+  .experience-container {
+    max-width: 975px;
+    margin: auto;
+    margin-top: 91px;
+  }
+
+  .experience-number {
+    font-size: 150px;
+    padding-left: 0;
+  }
+
+
+}
 @media (max-width: 768px) {
   .experience-container {
     grid-template-columns: 1fr;
@@ -168,9 +203,3 @@
     font-size: 14px;
   }
 }
-
-.service-card.left::before { border-left-color: #FF014F; }
-.service-card.right::before { border-right-color: #FF014F; }
-.service-card.top::before { border-top-color: #FF014F; }
-.service-card.bottom::before { border-bottom-color: #FF014F; }
-

@@ -3,7 +3,7 @@
   margin: auto;
   /* margin-top: 300px; */
 }
-
+ 
 .main-section-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -69,4 +69,11 @@
   font-size: 16px;
   margin-top: 8px;
   color: #9F9F9F;
+}
+
+@media (max-width: 1200px) {
+  .main-section-grid {
+        max-width: 945px;
+        margin: auto;
+  }
 }

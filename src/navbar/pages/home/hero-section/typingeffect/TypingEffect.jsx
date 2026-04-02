@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 export default function TypeEffect() {
-  const words = ["Senior Full Stack Developer.", "Web Designer.", "AI Developer.", "Team Lead."];
+  const words = ["Web Designer.", "AI Developer.", "Team Lead."];
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
   const [reverse, setReverse] = useState(false);

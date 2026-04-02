@@ -23,7 +23,7 @@ export default function About() {
                 </span>
                 <span className="about-breadcrumb-item current">About Me</span>
               </nav>
-            </div>
+            </div> 
           </section>
           <About_hero />
           <AboutSkill />

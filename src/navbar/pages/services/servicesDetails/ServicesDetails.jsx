@@ -5,4 +5,4 @@ export default function ServicesDetails() {
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300">Learn more about our specific services and offerings.</p>
         </div>
     )
-}
+} 

@@ -18,38 +18,126 @@ import Reviews from "../Reviews/Reviews";
 import ContactSection from "../ContactSection/ContactSection";
 import HomeBlog from "../homeblog/homeblog";
 import Homeblogcard from "../homeblog/homeblogcard/homeblogcard";
-
+import { motion } from 'framer-motion';
+ 
 export default function Herosection() {
+  const container = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.2
+    }
+  }
+};
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6 }
+  }
+};
+
+const slideLeft = {
+  hidden: { opacity: 0, x: -80 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.8 }
+  }
+};
+
+const imageAnim = {
+  hidden: { opacity: 0, y: 80, scale: 0.9 },
+  show: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.8 }
+  }
+};
   return (
     <>
-      <div className="hero-grids">
-        <div className="hero-left-contents">
-          <h1 className="hero-titles hero-title-sm">HELLO</h1>
-          <div className="hero-subtitle-wrapper">
-            <p className="hero-subtitle">i'm Jane Cooper a</p>
-            <TypeEffect />
-          </div>
-          <p className="hero-description">
-            I am a Senior Full Stack Developer at heart and, i create features
-            that are best suited for the job at hand.
-          </p>
+     <motion.div
+  className="hero-grids"
+  variants={container}
+  initial="hidden"
+  animate="show"
+>
 
-          <div className="hero-button-wrapper">
-            <button className="profile">
-              <span>View Portfolio</span>
-              <FaArrowRight />
-            </button>
-          </div>
-        </div>
+  {/* LEFT SIDE */}
+  <motion.div className="hero-left-contents" variants={slideLeft}>
+    
+    <motion.h1
+      className="hero-titles hero-title-sm"
+      variants={fadeUp}
+    >
+      HELLO
+    </motion.h1>
 
-        <div className="hero-right-content">
-          <p className="hero-float-text">WEB DESIGNER</p>
+    <motion.div
+      className="hero-subtitle-wrapper"
+      variants={fadeUp}
+    >
+      <p className="hero-subtitle">i'm Jane Cooper a</p>
+      <TypeEffect />
+    </motion.div>
 
-          {/* Hero Image */}
-          <img src={HeroSrc} alt="Jane Cooper" className="hero-image" />
-          <p className="hero-float-text-bottom text-stroke">WEB DESIGNER</p>
-        </div>
-      </div>
+    <motion.p
+      className="hero-description"
+      variants={fadeUp}
+    >
+      I am a Senior Full Stack Developer at heart and, i create features
+      that are best suited for the job at hand.
+    </motion.p>
+
+    <motion.div
+      className="hero-button-wrapper"
+      variants={fadeUp}
+    >
+      <motion.button
+        className="profile"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <span>View Portfolio</span>
+        <FaArrowRight />
+      </motion.button>
+    </motion.div>
+
+  </motion.div>
+
+  {/* RIGHT SIDE */}
+  <motion.div
+    className="hero-right-content"
+    variants={imageAnim}
+  >
+    
+    <motion.p
+      className="hero-float-text"
+      variants={fadeUp}
+    >
+      WEB DESIGNER
+    </motion.p>
+
+    <motion.img
+      src={HeroSrc}
+      alt="Jane Cooper"
+      className="hero-image"
+      variants={imageAnim}
+    />
+
+    <motion.p
+      className="hero-float-text-bottom text-stroke"
+      variants={fadeUp}
+    >
+      WEB DESIGNER
+    </motion.p>
+
+  </motion.div>
+
+</motion.div>
       <ScrollAnimationWrapper>
         <MainSection />
       </ScrollAnimationWrapper>

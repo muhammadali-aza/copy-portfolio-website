@@ -7,6 +7,7 @@
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
+ 
 
 @media (min-width: 1024px) {
   .skill-container {
@@ -14,6 +15,21 @@
     padding-bottom: 6rem;
   }
 }
+
+
+@media (max-width: 1200px) {
+  .skill-container {
+    max-width: 1020px;
+    margin: auto;
+    padding-top: 4rem;
+  }
+
+  .skill-title {
+    font-size: 1.5rem;
+  }
+
+}
+
 
 .skill-section {
   max-width: 1440px;
@@ -84,9 +100,6 @@
   color: #fff;
 }
 
-.skill-list {
-  /* No extra styles needed, but class for clarity */
-}
 
 .skill-bar {
   margin-bottom: 1.5rem;

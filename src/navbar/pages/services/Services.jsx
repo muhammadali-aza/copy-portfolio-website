@@ -1,8 +1,27 @@
+import { FaAngleRight } from "react-icons/fa6";
+import Services_cards from "./services_cards/services_cards";
+import About_price_plan from "../about/about_price_plan/about_price_plan";
+import About_price_detils from "../about/about_price_plan/about_price_detils/about_price_detils";
+
 export default function Services() {
     return (
-        <div className="p-4 sm:p-6 md:p-8 lg:p-10 max-w-7xl mx-auto">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Services Page</h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300">Discover the services we offer to help you succeed.</p>
+     <div className='about-details-wrapper'>
+          <section className="about-page-header">
+            <div className="about-header-overlay"></div>
+            <div className="about-header-content">
+              <h1 className="about-header-title">Service</h1>
+              <nav className="about-breadcrumb-nav">
+                <a href="/" className="about-breadcrumb-item link">Home</a>
+                <span className="about-breadcrumb-icon">
+                  <FaAngleRight />
+                </span>
+                <span className="about-breadcrumb-item current">Service</span>
+              </nav>
+            </div> 
+          </section>
+          <Services_cards />
+          <About_price_plan />
+          <About_price_detils />
         </div>
     )
 }

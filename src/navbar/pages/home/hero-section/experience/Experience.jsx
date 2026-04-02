@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import '../experience/Experience.css';
+import './Experience.css';
 
 export default function Experience() {
     const [borderState, setBorderState] = useState({});
@@ -11,7 +11,7 @@ export default function Experience() {
         const rect = e.currentTarget.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
-
+ 
         const classes = [];
         if (x < rect.width / 2) classes.push('left');
         else classes.push('right');
