@@ -1,48 +1,64 @@
+
+
 /* Ye change Navbar ki main CSS file mein karein */
 .navbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: transparent; /* Background color hata dein */
-    z-index: 10; /* Sabse upar dikhne ke liye */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-image: url('../assets/banner-background-one.jpg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  z-index: 999;
+  transition: all 0.4s ease-in-out;
+  /* Sabse upar dikhne ke liye */
 }
- 
+
+/* Jab page scroll hoga tab background image hata kar black bg dikhane ke liye */
+.navbar.shadow {
+  background-image: none;
+  background-color: black;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+}
+
 .navbar-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1310px;
+  max-width: 1309px;
   margin: 0 auto;
   padding: 19px 17px;
-} 
+}
 
 .nav-list {
-    display: flex;
-     align-items: center;
-    gap: 12px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
 }
 
 .nav-link {
-    display: flex;
-    font-weight: bold;
-    padding: 5px 8px;
+  display: flex;
+  font-weight: bold;
+  padding: 5px 12px;
 }
 
 .nav-link:hover {
-    color: #FF014F;
-    background: #210D13;
-    transition: all 0.4s ease-in-out;
-    border-radius: 5px;
+  color: #FF014F;
+  background: #210D13;
+  transition: all 0.4s ease-in-out;
+  border-radius: 5px;
 }
+
 .desktop-nav {
   display: flex;
   align-items: center;
 }
 
 .right-side {
-    display: flex;
-    gap: 26px;
+  display: flex;
+  gap: 26px;
 }
 
 /* Dropdown Container */
@@ -53,9 +69,9 @@
 .dropdown-label {
   display: flex;
   align-items: center;
-  /* gap: 6px; */
+  /* gap: 0px; */
   font-weight: 700;
-  padding: 8px 9px;
+  padding: 8px 8px;
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 16px;
@@ -98,7 +114,7 @@
   visibility: hidden;
   transform: translateY(-10px) scale(0.95);
 
-  transition: 
+  transition:
     opacity 0.3s ease,
     transform 0.3s ease,
     visibility 0.3s;
@@ -109,7 +125,7 @@
 .dropdown-menu.visible {
   opacity: 1;
   visibility: visible;
-   transform: translateY(0) scale(1);
+  transform: translateY(0) scale(1);
 }
 
 .dropdown-menu.hidden {
@@ -166,75 +182,82 @@
 }
 
 .social-icons {
-    display: flex;
-    gap: 3px;
-  }
-  
-  .social-icon {
-    padding: 14px;
-    border-radius: 50%;
+  display: flex;
+  gap: 3px;
+}
+
+.social-icon {
+  padding: 13px;
+  border-radius: 50%;
 }
 
 .social-icon:hover {
-    background: #FF014F;
-    transition: all 0.4s ease-in-out;
+  background: #FF014F;
+  transition: all 0.4s ease-in-out;
 }
 
-.hamburger-btn {
-    background: #FF014F;
-    width: 25px;
-    height: 45px;
-    border-radius: 50%;
-}
 
 .hamburger-icon {
-    font-weight: bold;
-    font-size: 20px;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 /* Hamburger Button container ko perfectly round aur pink banayein */
 .hamburger-btn {
-    background-color: #FF014F; /* Bright Pink */
-    width: 40px;               /* Width badha di hai circle ke liye */
-    height: 40px;              /* Height same honi chahiye */
-    border-radius: 50%;        /* Perfect Circle */
-    border: none;
-    display: flex;             /* Icon center karne ke liye */
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 4px 15px rgba(255, 1, 79, 0.2); /* Subtle glow */
+  background-color: #FF014F;
+  /* Bright Pink */
+  width: 40px;
+  /* Width badha di hai circle ke liye */
+  height: 40px;
+  /* Height same honi chahiye */
+  border-radius: 50%;
+  /* Perfect Circle */
+  border: none;
+  display: flex;
+  /* Icon center karne ke liye */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(255, 1, 79, 0.2);
+  /* Subtle glow */
 }
 
 .hamburger-btn:hover {
-    transform: scale(1.05);
-    background-color: #d90042; /* Hover par thoda dark pink */
+  background-color: transparent;
+  border: 2px solid #FF014F;
 }
 
 /* Icon ki styling */
 .hamburger-icon {
-    color: white;              /* White lines */
-    font-size: 24px;           /* Size thodi badi image ke hisaab se */
-    display: block;
+  color: white;
+  /* White lines */
+  font-size: 24px;
+  /* Size thodi badi image ke hisaab se */
+  display: block;
+}
+
+.hamburger-icon:hover {
+  color: #FF014F;
 }
 
 /* Social icons alignment fix (Optional: agar wo round nahi dikh rahe) */
 .social-icon {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: #1a1a1a;       /* Dark grey background as per image */
-    color: #fff;
-    transition: 0.3s;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #1a1a1a;
+  /* Dark grey background as per image */
+  color: #fff;
+  transition: 0.3s;
 }
 
 .social-icon:hover {
-    background: #FF014F;
-    color: #fff;
+  background: #FF014F;
+  color: #fff;
 }
 
 @media (max-width: 1200px) {
@@ -244,17 +267,61 @@
     padding: 8px 0;
   }
 
-  .nav-link, .dropdown-label{
+  .nav-link,
+  .dropdown-label {
     display: none;
   }
 
   .hamburger-btn {
     font-family: 10px;
   }
-  
+
   .hamburger-btn {
     width: 37px;
     height: 37px;
   }
 
+}
+
+@media (max-width: 992px) {
+  .navbar-container {
+    max-width: 700px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    max-width: 520px;
+    margin: auto;
+  }
+
+  .right-side .social-icons {
+    display: none !important;
+  }
+
+  .logo-img {
+    width: 60px;
+    height: 49px;
+  }
+}
+
+@media (max-width: 765px) {
+  .navbar-container {
+    max-width: 500px;
+    margin: auto;
+  }
+
+  .logo-img {
+    width: 122px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 574px) {
+  .navbar-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 10px;
+  }
 }

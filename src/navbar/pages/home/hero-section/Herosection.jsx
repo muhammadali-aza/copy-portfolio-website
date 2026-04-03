@@ -59,6 +59,7 @@ const imageAnim = {
 };
   return (
     <>
+    <div className="hero-bg-image">
      <motion.div
   className="hero-grids"
   variants={container}
@@ -138,6 +139,7 @@ const imageAnim = {
   </motion.div>
 
 </motion.div>
+  </div>
       <ScrollAnimationWrapper>
         <MainSection />
       </ScrollAnimationWrapper>

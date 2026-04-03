@@ -1,8 +1,23 @@
-export default function Blog() {
+import { FaAngleRight } from "react-icons/fa6";
+import Blog_header from "./blog_header/blog_header";
+
+export default function Blogclassic() {
     return (
-        <div className="p-4 sm:p-6 md:p-8 lg:p-10 max-w-7xl mx-auto">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">Blog Page</h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300">Read our latest blog posts and articles.</p>
+     <div className='about-details-wrapper'>
+          <section className="about-page-header">
+            <div className="about-header-overlay"></div>
+            <div className="about-header-content">
+              <h1 className="about-header-title">Blog Classic</h1>
+              <nav className="about-breadcrumb-nav">
+                <a href="/" className="about-breadcrumb-item link">Home</a>
+                <span className="about-breadcrumb-icon">
+                  <FaAngleRight />
+                </span>
+                <span className="about-breadcrumb-item current">Blog Classic</span>
+              </nav>
+            </div> 
+          </section>
+          <Blog_header />
         </div>
     )
 }

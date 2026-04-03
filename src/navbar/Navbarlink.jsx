@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { RiMenu3Fill } from "react-icons/ri";
 import { MdOutlineKeyboardArrowDown, MdKeyboardArrowRight, MdClose, MdPhone, } from "react-icons/md";
 import { FaInstagram, FaLinkedinIn, FaFacebookF, FaTwitter, } from "react-icons/fa6";
-import { CiMenuFries } from "react-icons/ci";
 import Logo from "./pages/logo/Logo";
 import logoSrc from "../assets/logo/white-logo-reeni (1).webp";
 import manImage from "../assets/man (1).png";
@@ -40,6 +40,7 @@ export default function NavbarLink() {
   };
 
   return (
+    <div className="nav-bg-img">
     <div className={`navbar ${scrollPosition > 10 ? "shadow" : ""}`}>
       <div className="navbar-container">
         {/* Logo */}
@@ -94,7 +95,7 @@ export default function NavbarLink() {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/service-details" className="dropdown-item-link">
+                  <Link to="/services-details" className="dropdown-item-link">
                     Service Details
                     <MdKeyboardArrowRight className="dropdown-arrow-icon" />
                   </Link>
@@ -129,7 +130,7 @@ export default function NavbarLink() {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/blog-details" className="dropdown-item-link">
+                  <Link to="/blog/blogdetails" className="dropdown-item-link">
                     Blog Details
                     <MdKeyboardArrowRight className="dropdown-arrow-icon" />
                   </Link>
@@ -168,7 +169,7 @@ export default function NavbarLink() {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/project-details" className="dropdown-item-link">
+                  <Link to="/project/projectdetails" className="dropdown-item-link">
                     Project Details
                     <MdKeyboardArrowRight className="dropdown-arrow-icon" />
                   </Link>
@@ -191,7 +192,7 @@ export default function NavbarLink() {
             {[FaInstagram, FaLinkedinIn, FaTwitter, FaFacebookF].map(
               (Icon, index) => (
                 <Link key={index} className="social-icon">
-                  <Icon size={19} />
+                  <Icon size={18} />
                 </Link>
               ),
             )}
@@ -202,7 +203,7 @@ export default function NavbarLink() {
             onClick={() => setIsMobileMenuOpen(true)}
             className="hamburger-btn"
           >
-            <CiMenuFries className="hamburger-icon" />
+            <RiMenu3Fill className="hamburger-icon" />
           </button>
         </div>
       </div>
@@ -307,7 +308,7 @@ export default function NavbarLink() {
                   </li>
                   <li>
                     <Link
-                      to="/uiux"
+                      to="/services"
                       onClick={closeMenu}
                       className="mobile-dropdown-link"
                     >
@@ -316,7 +317,7 @@ export default function NavbarLink() {
                   </li>
                   <li>
                     <Link
-                      to="/details"
+                      to="/services-details"
                       onClick={closeMenu}
                       className="mobile-dropdown-link"
                     >
@@ -365,6 +366,7 @@ export default function NavbarLink() {
           </ul>
         </div>
       </div>
+    </div>
     </div>
   );
 }

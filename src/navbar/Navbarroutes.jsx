@@ -3,7 +3,6 @@ import Layout from "./layout/Layout";
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Services from "./pages/services/Services";
-import ServicesDetails from "./pages/services/servicesDetails/ServicesDetails";
 import Blog from "./pages/blog/Blog";
 import Blogclassic from "./pages/blog/blogclassic/Blogclassic";
 import BlogDetails from "./pages/blog/blogdetails/BlogDetails";
@@ -16,6 +15,7 @@ import Projectdetail2 from "./pages/project/projectdetails/projectdetail2/Projec
 import Projectdetail3 from "./pages/project/projectdetails/projectdetail3/projectdetail3";
 import Projectdetails4 from "./pages/project/projectdetails/projectdetails4/projectdetails4";
 import HomeBlogDetails from "./pages/blog/Blogdetails/homeblogdetails/homeblogdetails";
+import ServicesDetails from "./pages/services/servicesDetails/ServicesDetails";
 
 export default function Navbarroutes() {
     const route = createBrowserRouter([
@@ -26,7 +26,7 @@ export default function Navbarroutes() {
                 { index: true, element: <Home /> },
                 { path: "about", element: <About /> },
                 { path: "services", element: <Services /> },
-                { path: "services/servicesdetails", element: <ServicesDetails /> },
+                { path: "services-details", element: <ServicesDetails/>},
                 { path: "blog", element: <Blog /> },
                 { path: "blog/blogclassic", element: <Blogclassic /> },
                 { path: "blog/blogdetails", element: <BlogDetails /> },
@@ -41,6 +41,7 @@ export default function Navbarroutes() {
                 { path: "project/projectdetails/projectdetails3", element: <Projectdetail3 /> },
                 { path: "project/projectdetails/projectdetails4", element: <Projectdetails4 /> },
                 { path: "contact", element: <Contact /> },
+                { path: "*", element: <div style={{textAlign: 'center', padding: '100px'}}><h2>404 - Page Not Found</h2><p>The page you are looking for does not exist.</p></div> }
             ]
         }
     ]);

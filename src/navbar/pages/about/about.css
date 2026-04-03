@@ -78,4 +78,5 @@
 
 .about-breadcrumb-item.current {
     color: #e60023; 
+    font-weight: 500;
 }
