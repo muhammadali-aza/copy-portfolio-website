@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './project4Hero.css'
+// import './project4Hero.css'
 import img1 from '../../../../../../assets/project_image/proect_4.webp';
 import img2 from '../../../../../../assets/project_image/project-detials-swiper-img-1.webp';
 import { CiCircleCheck } from "react-icons/ci";
