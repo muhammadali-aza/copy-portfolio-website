@@ -72,25 +72,25 @@ export default function Services() {
     const cardVariants = isLargeScreen ? lgCardVariants : smCardVariants;
 
     return (
-        <div className="bg-black py-16 px-4 md:px-8">
-            <div className="flex flex-col lg:flex-row gap-8 max-w-7xl mx-auto">
+        <div className="services-container">
+            <div className="services-wrapper">
                 {/* Left Column - Service Cards */}
-                <div className="w-full lg:w-1/2 flex flex-col gap-6">
+                <div className="services-left-column">
                     {servicesData.map((service, index) => (
                         <motion.div
                             key={index}
                             onMouseMove={(e) => handleMouseMove(e, index)}
                             onMouseLeave={() => handleMouseLeave(index)}
-                            className={`service-card bg-[#141414] rounded-2xl p-6  hover:bg-[#1a1a1a] transition-colors duration-300 ${borderState[index] || ''}`}
+                            className={`service-card ${borderState[index] || ''}`}
                             initial="hidden"
                             animate="visible"
                             custom={index}
                             variants={cardVariants}
                         >
-                            <h3 className="text-white font-bold text-xl md:text-2xl flex gap-5 mb-5  lg:px-[18px]">
+                            <h3 className="service-card-title">
                                 <span>{service.number}.</span> {service.title}
                             </h3>
-                            <p className="text-gray-400 text-sm md:text-base mb-5  lg:px-[18px] font-rubik leading-relaxed">
+                            <p className="service-card-description">
                                 {service.description}
                             </p>
                         </motion.div>
@@ -98,12 +98,12 @@ export default function Services() {
                 </div>
 
                 {/* Right Column - Image Container */}
-                <div className="w-full lg:w-1/2 flex justify-end">
-                    <div className="relative w-auto">
+                <div className="services-right-column">
+                    <div className="services-image-wrapper">
                         <img 
                             src={latestServicesImage}
                             alt="Latest Services" 
-                            className="w-full lg:w-[570px] h-auto object-cover rounded-2xl shadow-2xl"
+                            className="services-image"
                         />
                     </div>
                 </div>

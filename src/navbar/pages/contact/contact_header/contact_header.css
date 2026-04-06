@@ -32,7 +32,7 @@
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
 }
 
-.contact-icon-wrapper {
+.contacts-icons-wrapper {
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -46,7 +46,7 @@
     transition: all 0.4s ease;
 }
 
-.contact-icon {
+.contacts-icons {
     height: 50px;
     color: #ff0055;
 }

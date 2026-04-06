@@ -7,7 +7,8 @@
 /* Grid Layout */
 .experience-content {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* left = text, right = image */
+  grid-template-columns: 1fr 1fr;
+  /* left = text, right = image */
   gap: 2rem;
   position: relative;
 }
@@ -47,7 +48,7 @@
   color: red;
   font-weight: bold;
   font-size: 15px;
-margin-bottom: 4px;
+  margin-bottom: 4px;
   font-family: sans-serif;
 }
 
@@ -59,12 +60,28 @@ margin-bottom: 4px;
   font-family: sans-serif;
 }
 
+.role {
+  font-size: 24px;
+  font-family: Rajdhani;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.company {
+  font-size: 18px;
+  font-family: Rajdhani;
+  font-weight: 500;
+}
+
 /* Right column - Image */
 .experience-image-container {
   display: flex;
-  justify-content: center; /* horizontally center */
-  align-items: flex-end;   /* bottom alignment inside flex */
-  margin-top: auto;        /* push to bottom of grid row */
+  justify-content: center;
+  /* horizontally center */
+  align-items: flex-end;
+  /* bottom alignment inside flex */
+  margin-top: auto;
+  /* push to bottom of grid row */
 }
 
 .experience-image {
@@ -77,11 +94,14 @@ margin-bottom: 4px;
 /* Responsive - Stack on small screens */
 @media screen and (max-width: 1024px) {
   .experience-content {
-    grid-template-columns: 1fr; /* single column */
+    grid-template-columns: 1fr;
+    /* single column */
   }
 
   .experience-image-container {
-    margin-top: 2rem; /* spacing below text cards */
-    align-items: center; /* center image horizontally */
+    margin-top: 2rem;
+    /* spacing below text cards */
+    align-items: center;
+    /* center image horizontally */
   }
 }

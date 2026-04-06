@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 import { RiMenu3Fill } from "react-icons/ri";
 import { MdOutlineKeyboardArrowDown, MdKeyboardArrowRight, MdClose, MdPhone, } from "react-icons/md";
 import { FaInstagram, FaLinkedinIn, FaFacebookF, FaTwitter, } from "react-icons/fa6";
+import { FaLocationCrosshairs } from "react-icons/fa6";
 import Logo from "./pages/logo/Logo";
+import { IoMail } from "react-icons/io5";
 import logoSrc from "../assets/logo/white-logo-reeni (1).webp";
 import manImage from "../assets/man (1).png";
 import "./Navbarlink.css";
@@ -17,7 +19,7 @@ export default function NavbarLink() {
     blog: false,
     project: false,
   });
-
+ 
   // Scroll Handler - Shadow after 10px
   useEffect(() => {
     const handleScroll = () => {
@@ -192,7 +194,7 @@ export default function NavbarLink() {
             {[FaInstagram, FaLinkedinIn, FaTwitter, FaFacebookF].map(
               (Icon, index) => (
                 <Link key={index} className="social-icon">
-                  <Icon size={18} />
+                  <Icon className="navbar-social-icon" />
                 </Link>
               ),
             )}
@@ -245,110 +247,48 @@ export default function NavbarLink() {
 
           {/* Contact */}
           <div className="contact-section">
-            <p className="contact-label">Call Now</p>
-            <a href="tel:+92880098670" className="contact-link">
-              <div className="contact-icon">
-                <MdPhone />
-              </div>
-              <span>+92 (8800) - 98670</span>
-            </a>
+            <div className="contact-icon-box">
+              <MdPhone />
+            </div>
+            <div className="contact-details">
+              <p className="contact-label">Call Now</p>
+              <a href="tel:+92880098670" className="contact-value">
+                +92 (8800) - 98670
+              </a>
+            </div>
+
+            
+          </div>
+            <div className="contact-section">
+            <div className="contact-icon-box">
+            <IoMail />
+            </div>
+            <div className="contact-details">
+              <p className="contact-label">Mail Us</p>
+              <a href="#" className="contact-value">
+              hassandev691@gmail.com
+              </a>
+            </div>
+
+            
+          </div>
+
+           <div className="contact-section">
+            <div className="contact-icon-box">
+            <FaLocationCrosshairs />
+            </div>
+            <div className="contact-details">
+              <p className="contact-label">Location</p>
+              <a href="#" className="contact-value">
+              Karachi, Pakistan
+              </a>
+            </div>
+
+            
           </div>
         </div>
 
         <hr className="divider" />
-
-        {/* Navigation */}
-        <nav className="sidebar-nav">
-          <ul className="sidebar-nav-list">
-            <li>
-              <Link to="/" onClick={closeMenu} className="sidebar-nav-link">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/about"
-                onClick={closeMenu}
-                className="sidebar-nav-link"
-              >
-                About
-              </Link>
-            </li>
-
-            {/* Mobile Services Dropdown */}
-            <li>
-              <button
-                onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-                className={`mobile-dropdown-btn ${
-                  isMobileServicesOpen ? "active" : ""
-                }`}
-              >
-                Services
-                <MdOutlineKeyboardArrowDown
-                  className={`mobile-dropdown-arrow ${
-                    isMobileServicesOpen ? "open" : ""
-                  }`}
-                />
-              </button>
-
-              <div
-                className={`mobile-dropdown-menu ${
-                  isMobileServicesOpen ? "visible" : "hidden"
-                }`}
-              >
-                <ul className="mobile-dropdown-list">
-                  <li>
-                    <Link
-                      to="/services"
-                      onClick={closeMenu}
-                      className="mobile-dropdown-link"
-                    >
-                      Web Development
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/services"
-                      onClick={closeMenu}
-                      className="mobile-dropdown-link"
-                    >
-                      UI/UX Design
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/services-details"
-                      onClick={closeMenu}
-                      className="mobile-dropdown-link"
-                    >
-                      Service Details
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </li>
-
-            <li>
-              <Link
-                to="/project"
-                onClick={closeMenu}
-                className="sidebar-nav-link"
-              >
-                Project
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                to="/contact"
-                onClick={closeMenu}
-                className="sidebar-nav-link"
-              >
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </nav>
 
         {/* Footer */}
         <div className="sidebar-footer">

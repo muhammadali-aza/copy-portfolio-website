@@ -36,3 +36,24 @@ html,body {
 .font-rubik {
   font-family: 'Rubik', sans-serif !important;
 }
+
+/* For Chrome, Safari, and Edge */
+::-webkit-scrollbar {
+  width: 10px;
+  color: #fff;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3e3e3e; 
+  border-radius: 5px;
+  width: 20px;
+}
+
+/* For Firefox */
+* {
+scrollbar-color: #ffffff #3e3e3e
+}

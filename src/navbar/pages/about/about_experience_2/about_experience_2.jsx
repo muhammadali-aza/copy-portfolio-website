@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './about_experience_2.css';
-import img from '../../../../assets/expert-img-two.webp'
+import img from '../../../../assets/expert-img-two.webp';
 
 export default function About_experience_2() {
   const sectionRef = useRef(null);
@@ -28,13 +28,13 @@ export default function About_experience_2() {
       role: "experience",
       name: "Fatima Asrafy",
       designation: "UI/UX Designer",
-      description: "Duis aute irure dolor in reprehenderit..."
+      description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum desi dolore eu fugiat nulla pariatu Duis aute irure"
     },
     {
       role: "experience",
       name: "Fatima Asrafy",
       designation: "UI/UX Designer",
-      description: "Interested in working together? Let's bring your ideas to life!"
+      description: "Interested in working together? Let's bring your ideas to life! Contact me, and let's start building something."
     }
   ];
 
@@ -47,20 +47,27 @@ export default function About_experience_2() {
         
         <div className="experience_2image-wrapper">
           <div className="experience_2image-container">
-            <img src={img} alt="" className="experience_2-image" />
+            <img src={img} alt="Expert working" className="experience_2-image" />
           </div>
         </div>
 
         <div className="experience_2-content-wrapper">
-          <h2 className="experience_2-section-title">Experiences</h2>
+          <div className="experience_2-header-inline">
+            <h2 className="experience_2-section-title">Experiences</h2>
+            <div className="experience_2-decorative-line">
+              <span className="line-dot"></span>
+              <span className="line-bar"></span>
+              <span className="line-dot"></span>
+            </div>
+          </div>
 
           <div className="experience_2-experience-list">
             {experiences.map((exp, index) => (
               <div key={index} className="experience_2-item">
-                <span>{exp.role}</span>
-                <h3>{exp.name}</h3>
-                <p>{exp.designation}</p>
-                <p>{exp.description}</p>
+                <span className="experience_2-role">{exp.role}</span>
+                <h3 className="experience_2-name">{exp.name}</h3>
+                <p className="experience_2-designation">{exp.designation}</p>
+                <p className="experience_2-description">{exp.description}</p>
               </div>
             ))}
           </div>

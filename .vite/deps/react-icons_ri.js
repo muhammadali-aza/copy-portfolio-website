@@ -1,4 +1,4 @@
-import { t as GenIcon } from "./iconBase-DrFnXZP3.js";
+import { t as GenIcon } from "./iconBase-Cnfr9KUr.js";
 //#region node_modules/react-icons/ri/index.mjs
 function RiWindyLine(props) {
 	return GenIcon({

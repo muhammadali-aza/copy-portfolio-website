@@ -1,0 +1,119 @@
+/* Scroll to Top Button */
+.scroll-to-top-btn {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    z-index: 9999;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #111; /* ✅ base background always visible */
+    border: 2px solid #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.scroll-to-top-btn.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Wave Fill Container */
+.wave-fill {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+
+    /* ✅ FIX: thoda background hamesha visible */
+    transform: translateY(calc(80% - var(--scroll-percent)));
+
+    background-color: #FF014F;
+    transition: transform 0.15s ease-out;
+    z-index: 1;
+}
+
+/* Wave animation */
+.wave-fill::before {
+    content: "";
+    position: absolute;
+    width: 250%;
+    height: 200%;
+    top: -210%;
+    left: -75%;
+    background-color: #000;
+    border-radius: 43%;
+    animation: waveRotation 6s linear infinite;
+    z-index: 2;
+}
+
+.wave-fill::after {
+    content: "";
+    position: absolute;
+    width: 240%;
+    height: 170%;
+    top: -200%;
+    left: -70%;
+    background-color: rgba(0, 0, 0, 0.35);
+    border-radius: 40%;
+    animation: waveRotation 10s linear infinite;
+    z-index: 1;
+}
+
+@keyframes waveRotation {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Icon */
+.scroll-btn-icon {
+    position: relative;
+    z-index: 20;
+    color: #fff;
+    font-size: 20px;
+    pointer-events: none;
+    transition: transform 0.3s ease;
+}
+
+/* Hover */
+.scroll-to-top-btn:hover .scroll-btn-icon {
+    transform: translateY(-3px);
+}
+
+/* Active */
+.scroll-to-top-btn:active {
+    transform: scale(0.9);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .scroll-to-top-btn {
+        bottom: 24px;
+        right: 24px;
+        width: 48px;
+        height: 48px;
+    }
+
+    .scroll-btn-icon {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 480px) {
+    .scroll-to-top-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 42px;
+        height: 42px;
+    }
+}

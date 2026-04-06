@@ -12,7 +12,7 @@ export default function Portfolio_project() {
         title: "Noir - Creative Portfolio HTML Template",
         category: "Web App",
         img: img1,
-        link: '/project/projectdetails'
+        link: '/project/projectdetails/projectdetails1'
     },
     {
         title: "Personal Portfolio HTML5 Template",

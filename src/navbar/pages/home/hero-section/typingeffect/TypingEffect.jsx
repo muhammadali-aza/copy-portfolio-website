@@ -29,21 +29,15 @@ export default function TypeEffect() {
   }, [subIndex, index, reverse, words]);
 
   return (
-    <div className="flex" style={{ gap: 0 }}> {/* <- gap remove */}
+    <div className="flex items-center gap-0">
       {/* Text */}
-      <span className="text-[#FF014F] font-bold text-[54px] antialiased subpixel-antialiased leading-tight">
+      <span className="text-[#FF014F] font-bold text-[54px] sm:text-[32px] antialiased leading-tight">
         {words[index].substring(0, subIndex)}
       </span>
 
       {/* Cursor */}
-      <span 
-        className="inline-block w-[4px] bg-white animate-pulse"
-        style={{ 
-          height: "4.2em", 
-          verticalAlign: "middle",
-          display: "inline-block",
-          marginLeft: 0 // <- cursor bilkul text ke side
-        }}
+      <span
+        className="inline-block w-[4px] bg-white animate-pulse ml-0 h-[4.2em] sm:h-[2.5em]"
       ></span>
     </div>
   );

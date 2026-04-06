@@ -38,7 +38,7 @@ export default function Footer() {
                 </div>
 
                 {/* Contact Section */}
-                <div className="footer-section contact-section">
+                <div className="footer-section contact-sections">
                     <h3>Contact</h3>
                     <div className="contact-list">
                         <div className="contact-item">

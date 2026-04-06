@@ -1,7 +1,7 @@
 import React from 'react';
 import './Projectdetails.css';
 import { FaAngleRight } from "react-icons/fa6";
-import ProjectHero from './projecthero/ProjectHero';
+import Projectdetailshero from './projectdetailshero';
 
 export default function Projectdetails() {
   return (
@@ -9,7 +9,7 @@ export default function Projectdetails() {
       <section className="hero-container">
         <div className="hero-overlay"></div>
         <div className="hero-content">
-          <h1 className="hero-title">Digital Transformation Advisors</h1>
+          <h1 className="hero-title">MY PORTFOLIO OF INNOVATION</h1>
           <nav className="breadcrumb">
             <a href="/" className="breadcrumb-link">Home</a>
             <span><FaAngleRight className="breadcrumb-separator" /></span>
@@ -17,7 +17,7 @@ export default function Projectdetails() {
           </nav>
         </div>
       </section>
-      <ProjectHero />
+      <Projectdetailshero />
     </div>
   );
 } 

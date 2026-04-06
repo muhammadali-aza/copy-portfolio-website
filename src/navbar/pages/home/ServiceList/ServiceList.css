@@ -9,7 +9,7 @@
   grid-template-columns: 0.5fr 1.5fr 3fr 1fr;
   align-items: center;
   border-bottom: 1px solid #333;
-transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
   max-width: 1270px;
   margin: auto;
   height: 168px;
@@ -18,8 +18,9 @@ transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
 
 /* Active State (Pink Background) */
 .service-row.active {
-  background-color: #ff0055; /* Image wala pink color */
-  
+  background-color: #ff0055;
+  /* Image wala pink color */
+
 }
 
 .icon-circles {
@@ -59,7 +60,7 @@ transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
   margin: 0;
 }
 
-.service-count, 
+.service-count,
 .service-desc-section p {
   transition: color 0.3s ease;
 }
@@ -95,9 +96,11 @@ transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
     gap: 20px;
     text-align: center;
   }
+
   .service-desc-section p {
     margin: 0 auto;
   }
+
   .read-more {
     justify-content: center;
   }

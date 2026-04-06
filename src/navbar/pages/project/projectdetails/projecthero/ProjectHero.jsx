@@ -130,6 +130,7 @@ export default function ProjectHero() {
 
                     {/* Right Side: Project Details Card with Hover Effect */}
                     <aside className='project-sidebar'>
+                           <div className="sticky-wrapper">
                         <div
                             className={`details-card directional-card ${cardHoverClass}`}
                             onMouseMove={handleCardMouseMove}
@@ -155,6 +156,7 @@ export default function ProjectHero() {
                                 <span className='label'>Tags:</span>
                                 <span className='value'>Host Web Design</span>
                             </div>
+                        </div>
                         </div>
                     </aside>
 
