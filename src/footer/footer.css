@@ -11,7 +11,7 @@
 .footer-content {
     display: grid;
     grid-template-columns: 2fr 1fr 1.1fr;
-    gap: 100px;
+    gap: 95px;
     max-width: 1270px;
     margin: 0 auto;
     padding-bottom: 50px;
@@ -27,7 +27,7 @@
     margin-bottom: 33px;
     color: #ffffff;
 }
-
+ 
 /* --- Brand Section --- */
 .logofooter {
     width: 110px;
@@ -99,8 +99,8 @@
     margin-bottom: 12px;
 }
 
-.contact-icon {
-    height: 18px;
+.contact-icons {
+    font-size: 19px;
     color: #fff;
 }
 
@@ -165,8 +165,8 @@
 .contact-list {
     display: flex;
     flex-direction: column;
-    gap: 25px;
-    margin-bottom: 35px;
+    gap: 20px;
+    margin-bottom: 30px;
 }
 
 .contact-item {
@@ -175,14 +175,15 @@
     gap: 15px;
 }
 
-.icon-circle {
+.footer-icon-circles {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
     background-color: #1e1e1e;
     border-radius: 50%;
+    border: 2px solid #fff;
     font-size: 0.9rem;
     color: #ffffff;
 }
@@ -190,10 +191,10 @@
 .contact-item p {
     position: relative;
     margin: 0;
-    font-size: 15px;
+    font-size: 16px;
     font-family: Rubik;
     color: #dddddd;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .contact-item p::after {
@@ -292,20 +293,70 @@
     color: #ffffff;
 }
 
-/* --- Responsive Adjustments --- */
-@media screen and (max-width: 900px) {
+@media (max-width: 1200px) {
     .footer-content {
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
+        max-width: 940px;
+        margin: auto;
+        margin-top: 40px;
     }
     
-    /* Make the brand section span the full row on medium screens */
-    .brand-section {
-        grid-column: 1 / -1; 
+    .contact-icons {
+        width: 26px;
+        height: 16px;
+    }
+
+    .footer-icon-circles {
+        width: 37px;
+        height: 37px;
+        background-color: #121212; /* Matches the background */
+        border: 1.5px solid #282828; /* Thin, dark grey border as seen in image */
+        font-size: 20px; /* Makes the icon inside larger */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-bottom {
+      max-width: 940px;
+      margin: auto;  
+    }
+
+    .footer-content {
+        padding-bottom: 120px;
     }
 }
 
-@media screen and (max-width: 600px) {
+/* --- Responsive Adjustments --- */
+@media screen and (max-width: 992px) {
+    .footer-content {
+        max-width: 700px;
+        margin: auto;
+        grid-template-columns: 1.6fr 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        max-width: 520px;
+        margin: auto;
+    }
+
+    .footer-bottom {
+        max-width: 520px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .legal-links {
+        gap: 10px;
+    }
+}
+
+/* @media screen and (max-width: 600px) {
     .footer-content {
         grid-template-columns: 1fr;
     }
@@ -318,5 +369,44 @@
     
     .hero-headline {
         font-size: 2rem;
+    }
+} */
+
+@media (max-width: 575px) {
+    .footer-content {
+        max-width: 100%;
+        margin: auto;
+        padding: 0 17px;
+    }
+
+    .hero-headline {
+        font-size: 40px;
+    }
+
+    .social-links {
+        margin-bottom: 55px;
+    }
+
+    .footer-ic {
+        font-size: 15px;
+    }
+
+    .footer-bottom {
+        gap: 10px;
+    }
+
+    .footer-bottom-p {
+        display: flex;
+        justify-content: center;
+        gap: 3px;
+    }
+
+    .legal-links {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-legal-links {
+        font-size: 1px;
     }
 }

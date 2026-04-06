@@ -4,7 +4,7 @@ import { FiMail, FiMapPin, FiPhone } from 'react-icons/fi';
 import { FaInstagram, FaLinkedinIn, FaTwitter, FaFacebookF } from 'react-icons/fa';
 import logofooter from '../assets/logo/white-logo-reeni (1).webp'
 import { Link } from 'react-router-dom';
-
+ 
 export default function Footer() {
     return (
         <footer className="footer-container">
@@ -42,24 +42,24 @@ export default function Footer() {
                     <h3>Contact</h3>
                     <div className="contact-list">
                         <div className="contact-item">
-                            <span className="icon-circle"><FiMail className='contact-icon' /></span>
+                            <span className="footer-icon-circles"><FiMail className='contact-icons' /></span>
                             <p>example@gmail.com</p>
                         </div>
                         <div className="contact-item">
-                            <span className="icon-circle"><FiMapPin className='contact-icon' /></span>
+                            <span className="footer-icon-circles"><FiMapPin className='contact-icons' /></span>
                             <p>3891 Ranchview Dr. Richardson</p>
                         </div>
                         <div className="contact-item">
-                            <span className="icon-circle"><FiPhone className='contact-icon' /></span>
+                            <span className="footer-icon-circles"><FiPhone className='contact-icons' /></span>
                             <p>01245789321</p>
                         </div>
                     </div>
 
                     <div className="social-links">
-                        <a href="#instagram" className="social-btn"><FaInstagram /></a>
-                        <a href="#linkedin" className="social-btn"><FaLinkedinIn /></a>
-                        <a href="#twitter" className="social-btn"><FaTwitter /></a>
-                        <a href="#facebook" className="social-btn"><FaFacebookF /></a>
+                        <a href="#instagram" className="social-btn"><FaInstagram className='footer-ic' /></a>
+                        <a href="#linkedin" className="social-btn"><FaLinkedinIn className='footer-ic'/></a>
+                        <a href="#twitter" className="social-btn"><FaTwitter className='footer-ic'/></a>
+                        <a href="#facebook" className="social-btn"><FaFacebookF className='footer-ic'/></a>
                     </div>
                 </div>
             </div>
@@ -68,9 +68,9 @@ export default function Footer() {
             <div className="footer-bottom">
                 <p className='footer-bottom-p'>&copy; <span className='footer-bottom-span'>Inversweb 2025 </span>| All Rights Reserved</p>
                 <div className="legal-links">
-                    <Link to="/about">Terms & Condition</Link>
-                    <Link to="/about">Privacy Policy</Link>
-                    <Link to="/contact">Contact Us</Link>
+                    <Link to="/about" className='footer-legal-links'>Terms & Condition</Link>
+                    <Link to="/about" className='footer-legal-links'>Privacy Policy</Link>
+                    <Link to="/contact" className='footer-legal-links'>Contact Us</Link>
                 </div>
             </div>
         </footer>

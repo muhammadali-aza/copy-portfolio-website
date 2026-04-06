@@ -57,6 +57,7 @@ export default function Skill() {
     };
 
     return (
+        <div class="m">
         <div className="skill-container">
             <section className="skill-section">
                 {/* Section Title */}
@@ -113,6 +114,7 @@ export default function Skill() {
                     </motion.div>
                 </div>
             </section>
+            </div>
         </div>
     );
 }

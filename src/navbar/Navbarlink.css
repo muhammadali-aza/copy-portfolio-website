@@ -1,22 +1,12 @@
-
-
-/* Ye change Navbar ki main CSS file mein karein */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-image: url('../assets/banner-background-one.jpg');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: transparent;
   z-index: 999;
   transition: all 0.4s ease-in-out;
-  /* Sabse upar dikhne ke liye */
 }
 
-/* Jab page scroll hoga tab background image hata kar black bg dikhane ke liye */
 .navbar.shadow {
   background-image: none;
   background-color: black;
@@ -61,7 +51,6 @@
   gap: 26px;
 }
 
-/* Dropdown Container */
 .dropdown-item {
   position: relative;
 }
@@ -261,10 +250,15 @@
 }
 
 @media (max-width: 1200px) {
+  .logo-img {
+    width: 56px;
+  }
+
   .navbar-container {
-    max-width: 942px;
+    max-width: 1005px;
     margin: auto;
-    padding: 8px 0;
+    display: flex;
+    padding: 8px 85px 0 22px;
   }
 
   .nav-link,

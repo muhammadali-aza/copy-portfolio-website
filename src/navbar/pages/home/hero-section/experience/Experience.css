@@ -51,7 +51,7 @@
 }
 
 /* Right Stats Cards Container */
-.experience-stats {
+.experience-stat {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
@@ -61,7 +61,7 @@
 .stat-card {
   background-color: #181717;
   padding: 30px 20px;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -69,31 +69,33 @@
 }
 
 .stat-number {
-  font-size: 47px;
-  font-weight: bold;
+  font-size: 40px;
+  font-weight: 700;
   color: #fff;
   display: flex;
+  font-family: Rajdhani;
   justify-content: center;
 }
 
 .stat-label {
-  font-size: 15px;
+  font-size: 17px;
   color: #a4a3a3;
-  font-family: sans-serif;
+  font-weight: 400;
+  font-family: Rubik;
 }
 
 /* Service card for directional hover border */
-.service-card {
+.hero-service-card {
   position: relative;
   overflow: hidden;
 }
 
-.service-card::before {
+.hero-service-card::before {
   content: '';
   position: absolute;
   inset: 0;
   border: 2px solid transparent;
-  border-radius: 10px;
+  border-radius: 20px;
   pointer-events: none;
   transition: all 0.3s ease;
 }
@@ -127,20 +129,24 @@
 
 
 
-.service-card.left::before {
+.hero-service-card.left::before {
   border-left-color: #FF014F;
 }
 
-.service-card.right::before {
+.hero-service-card.right::before {
   border-right-color: #FF014F;
 }
 
-.service-card.top::before {
+.hero-service-card.top::before {
   border-top-color: #FF014F;
 }
 
-.service-card.bottom::before {
+.hero-service-card.bottom::before {
   border-bottom-color: #FF014F;
+}
+
+.hero-service-card {
+  height: 160px
 }
 
 
@@ -153,18 +159,51 @@
     margin-top: 91px;
   }
 
-  .experience-number {
-    font-size: 150px;
-    padding-left: 0;
+  .experience-main-card {
+    padding: 40px 31px;
   }
 
+  .experience-number {
+    font-size: 100px;
+    padding-left: 15px;
+  }
 
+  .experience-label {
+    font-size: 37px;
+  }
+
+  .experience-description {
+    max-width: 330px;
+    margin: 17px 15px;
+  }
+
+  .hero-service-card {
+    height: 160px;
+  }
+}
+
+@media (max-width: 992px) {
+  .experience-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 750px;
+    margin: auto;
+  }
+
+  .experience-label {
+    max-width: 200px;
+  }
+
+  .experience-description {
+    max-width: 550px;
+  }
 }
 @media (max-width: 768px) {
   .experience-container {
     grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 20px 15px;
+    gap: 27px;
+    max-width: 550px;
+    margin: auto;
   }
 
   .experience-main-card {
@@ -174,25 +213,45 @@
   }
 
   .experience-number {
-    font-size: 120px;
-    padding-left: 0;
+    font-size: 100px;
+    display: flex;
+    text-align: start;
+    margin-top: 8px;
+    margin-bottom: 50px;
+    padding: 0;
+  }
+
+  .stat-number {
+    font-size: 48px;
+    font-weight: 700;
+  }
+
+  .hero-service-card {
+    height: 142px;
   }
 
   .experience-label {
     font-size: 32px;
+    max-width: 100%;
+    display: flex;
+    text-align: start;
   }
 
   .experience-description {
-    margin: 20px 0;
+    margin: 5px 0;
+    display: flex;
+    text-align: start;
+    max-width: 450px
   }
 
-  .experience-stats {
-    grid-template-columns: 1fr;
+  .experience-stat {
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
 
   .stat-card {
-    padding: 20px 15px;
+    padding: 25px 15px;
+    
   }
 
   .stat-number {
@@ -200,6 +259,21 @@
   }
 
   .stat-label {
-    font-size: 14px;
+    font-size: 16px;
+    font-family: Rubik;
+  }
+}
+
+@media (max-width: 575px) {
+ .experience-container {
+  max-width: 580px
+ } 
+  .experience-stat {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .hero-service-card {
+    height: 155px;
   }
 }

@@ -10,14 +10,15 @@
   gap: 25px;
   text-align: center;
   justify-content: center;
+  margin-top: 380px;
 }
 
 .animated-card {
   padding: 38px;
-  border-radius: 10px;
+  border-radius: 20px;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  border: 1px solid #332429;
+  box-shadow: 0 4px 10px rgba(93, 25, 25, 0.1);
+  border: 1px solid #3f1a1a;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -75,5 +76,22 @@
   .main-section-grid {
         max-width: 945px;
         margin: auto;
+  }
+
+  .main-section-grid {
+    margin-top: 300px;
+    gap: 32px;
+  }
+
+  .animated-card {
+    padding: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-section-grid {
+    grid-template-columns: 1fr 1fr;
+    max-width: 510px;
+    margin: auto;
   }
 }

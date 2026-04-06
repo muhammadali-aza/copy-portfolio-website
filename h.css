@@ -1,21 +1,19 @@
 .hero-bg-image {
+    background-image: url('../../../../assets/banner-background-one.jpg');
+    background-size: contain;
+    background-position: 50%;
+    height: 100vh;
     background-repeat: no-repeat;
     width: 100%;
 }
 
-.bg {
-    background-image: url('../../../../assets/banner-background-one.jpg');
-    background-size: contain;
-    background-position: 50%;
-
-}
 
 .hero-grids {
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    max-width: 1273px;
-    margin: auto;
+    max-width: 1434px;
+    margin: 0 auto 300px auto;
     height: 100vh;
     align-items: center;
 }
@@ -30,7 +28,7 @@
     flex-direction: column;
     gap: 10px;
     margin-top: 100px;
-    /* padding-left: 80px; */
+    padding-left: 80px;
 }
 
 .hero-subtitle-wrapper {
@@ -110,7 +108,7 @@
     position: absolute;
     left: 78%;
     transform: translateX(-50%);
-    font-size: 56px;
+    font-size: 86px;
     font-weight: 800;
     font-family: 'Rajdhani', sans-serif;
     white-space: nowrap;

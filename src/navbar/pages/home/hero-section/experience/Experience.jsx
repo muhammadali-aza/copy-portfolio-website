@@ -136,16 +136,16 @@ export default function Experience() {
                 </h1>
                 <p className="experience-label">Years of Experience</p>
                 <p className="experience-description">
-                    Business consulting consultants provide expert advice and guidance to the businesses.
+                    Business consulting consultants provide expert advice and guida the a businesses to help theme their performance efficiency
                 </p>
             </div>
 
             {/* Right Stats Cards */}
-            <div className="experience-stats">
+            <div className="experience-stat">
                 {stats.map((item, index) => (
                     <div
                         key={index}
-                        className={`stat-card service-card ${borderState[index] || ''} ${isVisible ? 'animate-slide-up' : ''}`}
+                        className={`stat-card hero-service-card ${borderState[index] || ''} ${isVisible ? 'animate-slide-up' : ''}`}
                         style={{ animationDelay: `${index * 0.2}s` }}
                         onMouseMove={(e) => handleMouseMove(e, index)}
                         onMouseLeave={() => handleMouseLeave(index)}

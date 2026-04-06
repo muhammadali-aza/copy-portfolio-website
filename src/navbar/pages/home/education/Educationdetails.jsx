@@ -95,11 +95,11 @@ export default function Educationdetails() {
                             custom={index}
                             variants={cardVariants}
                         >
-                            <p className='service-cards-title'>{service.title}</p>
-                            <h3 className="service-cards-year">
+                            <p className='service-card-title'>{service.title}</p>
+                            <h3 className="service-card-year">
                                 <span>{service.year}.</span> 
                             </h3>
-                            <p className="service-cards-description">
+                            <p className="service-card-description">
                                 {service.description}
                             </p>
                         </motion.div>

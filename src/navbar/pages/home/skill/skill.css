@@ -1,9 +1,10 @@
-/* Skill Component Styles (skill.css)
-   Replace all Tailwind classes with equivalent CSS. */
+.m {
+  background: black;
+}
 
 .skill-container {
   width: 100%;
-  background: #0a0a0a;
+  /* background: #0a0a0a; */
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
@@ -17,18 +18,6 @@
 }
 
 
-@media (max-width: 1200px) {
-  .skill-container {
-    max-width: 1020px;
-    margin: auto;
-    padding-top: 4rem;
-  }
-
-  .skill-title {
-    font-size: 1.5rem;
-  }
-
-}
 
 
 .skill-section {
@@ -90,11 +79,6 @@
   margin-bottom: 2rem;
 }
 
-@media (min-width: 1024px) {
-  .skill-title {
-    font-size: 1.875rem;
-  }
-}
 
 .skill-title span {
   color: #fff;
@@ -155,4 +139,61 @@
   background: #FF014F;
   height: 100%;
   border-radius: 9999px;
+}
+
+
+
+@media (max-width: 1200px) {
+  .skill-container {
+    max-width: 1040px;
+    margin: auto;
+    padding-top: 4rem;
+  }
+
+  .skill-title {
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 992px) {
+  .skill-grid {
+    grid-template-columns: 1fr;
+    max-width: 770px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .skill-grid {
+    max-width: 590px;
+    margin: auto;
+  }
+
+  .skill-bar {
+    margin-bottom: 40px
+  }
+}
+
+@media (max-width: 575px) {
+  .skill-section {
+    max-width: 800px;
+    margin: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .skill-grid {
+    max-width: 538px;
+    margin: auto;
+    padding: 0;
+  }
+
+  .skill-card {
+    padding: 0;
+  }
+
+  .skill-bar {
+    margin-bottom: 29px
+  }
 }

@@ -6,21 +6,21 @@ export default function Contact_header() {
     const contactInfo = [
         {
             id: 1,
-            icon: <FaMapMarkerAlt className='contact-icon' />,
+            icon: <FaMapMarkerAlt className='' />,
             title: "Address",
             line1: "l-Razi Street, KAAC4185, Tabuk",
             line2: "Saudi Arabia"
         },
         {
             id: 2,
-            icon: <FaEnvelope className='contact-icon' />,
+            icon: <FaEnvelope className='' />,
             title: "E-Mail",
             line1: "hassandev691@gmail.com",
             line2: "hassandev691@gmail.com"
         },
         {
             id: 3,
-            icon: <FaPhoneAlt className='contact-icon' />,
+            icon: <FaPhoneAlt className='' />,
             title: "Call Me",
             line1: "+966 54 445 7046",
             line2: "+966 54 445 7046"
@@ -33,7 +33,7 @@ export default function Contact_header() {
                 <div className="contact-cards-grid">
                     {contactInfo.map((info) => (
                         <div className="contact-info-card" key={info.id}>
-                            <div className="contact-icon-wrapper">
+                            <div className="-wrapper">
                                 {info.icon}
                             </div>
                             <h3 className="contact-info-title">{info.title}</h3>
