@@ -4,6 +4,61 @@ import './ContactSection.css';
 
 export default function ContactSection() {
     const [contactHoverClass, setContactHoverClass] = useState('');
+    const [formData, setFormData] = useState({
+        name: '',
+        phone: '',
+        email: '',
+        subject: '',
+        message: ''
+    });
+    const [status, setStatus] = useState(null);
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setStatus('sending...');
+
+        try {
+            const data = {
+                name: formData.name,
+                phone: formData.phone,
+                email: formData.email,
+                subject: formData.subject,
+                message: formData.message,
+            };
+
+            const response = await fetch("https://portfolio-website-backend.railway.app/api/form/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+                setStatus('success');
+                setFormData({
+                    name: '',
+                    phone: '',
+                    email: '',
+                    subject: '',
+                    message: ''
+                });
+            } else {
+                setStatus('error');
+            }
+        } catch (error) {
+            console.error("Submission error:", error);
+            setStatus('error');
+        }
+    };
 
     const handleContactMouseMove = (e) => {
         const rect = e.currentTarget.getBoundingClientRect();
@@ -42,27 +97,66 @@ export default function ContactSection() {
                     </div>
 
                     {/* Right Form Content */}
-                    <form className="contact-form-section" onSubmit={(e) => e.preventDefault()}>
+                    <form className="contact-form-section" onSubmit={handleSubmit}>
                         {/* Input Grid */}
                         <div className="contact-grid-layout">
-                            <input type="text" placeholder="Your Name" className="contact-input-field" required />
-                            <input type="tel" placeholder="Phone Number" className="contact-input-field" required />
-                            <input type="email" placeholder="Your Email" className="contact-input-field" required />
-                            <input type="text" placeholder="Subject" className="contact-input-field" />
+                            <input
+                                type="text"
+                                name="name"
+                                value={formData.name}
+                                onChange={handleInputChange}
+                                placeholder="Your Name"
+                                className="contact-input-field"
+                                required
+                            />
+                            <input
+                                type="number"
+                                name="phone"
+                                value={formData.phone}
+                                onChange={handleInputChange}
+                                placeholder="Phone Number"
+                                className="contact-input-field"
+                                required
+                            />
+                            <input
+                                type="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleInputChange}
+                                placeholder="Your Email"
+                                className="contact-input-field"
+                                required
+                            />
+                            <input
+                                type="text"
+                                name="subject"
+                                value={formData.subject}
+                                onChange={handleInputChange}
+                                placeholder="Subject"
+                                className="contact-input-field"
+                            />
                         </div>
 
                         {/* Textarea */}
                         <textarea
+                            name="message"
+                            value={formData.message}
+                            onChange={handleInputChange}
                             placeholder="Your Message"
                             className="contact-input-field contact-textarea"
                             rows="6"
                         ></textarea>
 
                         {/* Submit Button */}
-                        <button className="contact-submit-btn">
-                            <span className="btn-text">Appointment Now</span>
-                            <span><FaArrowRight className="submit-icon-arrow"/></span>
+                        <button type="submit" className="contact-submit-btn" disabled={status === 'sending...'}>
+                            <span className="btn-text">
+                                {status === 'sending...' ? 'Sending...' : 'Appointment Now'}
+                            </span>
+                            <span><FaArrowRight className="submit-icon-arrow" /></span>
                         </button>
+
+                        {status === 'success' && <p className="status-success">Message sent successfully!</p>}
+                        {status === 'error' && <p className="status-error">Error sending message. Please try again.</p>}
                     </form>
                 </div>
             </div>

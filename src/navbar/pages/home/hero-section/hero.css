@@ -109,13 +109,12 @@
 .hero-float-text,
 .hero-float-text-bottom {
     position: absolute;
-    left: 79%;
+    left: 79.5%;
     transform: translateX(-50%);
     font-size: 90px;
     font-weight: 800;
     font-family: 'Rajdhani', sans-serif;
     white-space: nowrap;
-    letter-spacing: 2px;
     margin: 0;
 }
 
@@ -279,7 +278,7 @@
 
     .hero-float-text,
     .hero-float-text-bottom {
-        left: 50%;
+        left: 49%;
         font-size: 70px;
         text-align: center;
     }

@@ -1,4 +1,4 @@
-import { d as createMotionComponent, t as featureBundle, u as createDomVisualElement } from "./feature-bundle-DAewiyVT.js";
+import { d as createMotionComponent, t as featureBundle, u as createDomVisualElement } from "./feature-bundle-DbLkhcKC.js";
 //#region node_modules/framer-motion/dist/es/render/components/motion/create.mjs
 function createMotionComponentWithFeatures(Component, options) {
 	return createMotionComponent(Component, options, featureBundle, createDomVisualElement);
