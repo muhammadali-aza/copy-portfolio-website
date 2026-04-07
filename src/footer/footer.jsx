@@ -43,21 +43,21 @@ export default function Footer() {
                     <div className="contact-list">
                         <div className="contact-item">
                             <span className="footer-icon-circles"><FiMail className='contact-icons' /></span>
-                            <p>example@gmail.com</p>
+                            <p>hassandev691@gmail.com</p>
                         </div>
                         <div className="contact-item">
                             <span className="footer-icon-circles"><FiMapPin className='contact-icons' /></span>
-                            <p>3891 Ranchview Dr. Richardson</p>
+                            <p>Al-Razi Street, KAAC4185</p>
                         </div>
                         <div className="contact-item">
                             <span className="footer-icon-circles"><FiPhone className='contact-icons' /></span>
-                            <p>01245789321</p>
+                            <p>+966 506470794</p>
                         </div>
                     </div>
 
                     <div className="social-links">
                         <a href="#instagram" className="social-btn"><FaInstagram className='footer-ic' /></a>
-                        <a href="#linkedin" className="social-btn"><FaLinkedinIn className='footer-ic'/></a>
+                        <a href="https://linkedin.com/in/hassandev691" target="_blank" rel="noreferrer" className="social-btn"><FaLinkedinIn className='footer-ic'/></a>
                         <a href="#twitter" className="social-btn"><FaTwitter className='footer-ic'/></a>
                         <a href="#facebook" className="social-btn"><FaFacebookF className='footer-ic'/></a>
                     </div>

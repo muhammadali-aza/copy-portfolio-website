@@ -80,7 +80,7 @@
 
 .dropdown-arrow {
   transition: transform 0.3s ease;
-  font-size: 19px;
+  font-size: 18px;
 }
 
 .dropdown-arrow.open {

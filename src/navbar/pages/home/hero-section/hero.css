@@ -200,41 +200,6 @@
     }
 }
 
-@media (max-width: 1024px) {
-    
-
-    .hero-left-contents {
-        margin-top: 65px;
-    }
-
-    .hero-titles {
-        font-size: 28px;
-    }
-
-    .hero-subtitle {
-        font-size: 54px;
-    }
-
-    .hero-image {
-        width: 480px;
-        right: 22px;
-    }
-
-    .hero-float-text {
-        font-size: 70px;
-        top: 45%;
-    }
-
-    .hero-float-text-bottom {
-        font-size: 70px;
-        top: 100%;
-    }
-
-    .hero-left-contents {
-        padding-left: 43px;
-    }
-}
-
 @media (max-width: 992px) {
 
     .hero-grids {
@@ -267,7 +232,6 @@
         /* Ab choti screens par overflow nahi karega, "bahar" nahi nikalega */
         margin: 120px auto 0 165px;
         display: block;
-        left: 0;
     }
 
     .hero-right-content {
@@ -299,13 +263,14 @@
 
 @media (max-width: 768px) {
     .hero-image {
-        max-width: 490px;
-        margin: 125px auto 0 17px;
+        max-width: 480px;
+        margin: 125px auto;
+        display: block;
     }
 
     .hero-float-text,
     .hero-float-text-bottom {
-        padding-left: 20px;
+        padding-left: 45px;
     }
 
     .hero-float-text-bottom {
@@ -316,7 +281,13 @@
         padding-left: 60px;
         padding-right: 0px;
     }
-
+        .hero-description {
+            max-width: 500px;
+        }
+    
+        .hero-titles {
+            font-size: 24px;
+        }
     .hero-subtitle {
         font-size: 32px;
     }
@@ -335,21 +306,20 @@
         margin-top: 90px;
     }
 .hero-image {
-    width: 80%;
-    max-width: 280px;
-    min-width: 220px;
+    width: 280px;
     margin: 0 auto;
     display: block;
+    right: 0;
 }
     .hero-float-text,
     .hero-float-text-bottom {
         font-size: 48px;
-        left: 275px;
+        padding-left: 15px;
          transform: translateX(-50%);
     }
 
     .hero-float-text {
-        top: 19%;
+        top: 18%;
     }
 
     .hero-float-text-bottom {
@@ -363,6 +333,10 @@
     .hero-left-contents {
         padding-left: 0;
     }   
+
+    .hero-description {
+            max-width: 400px;
+        }
 }
 
 @media (max-width: 425px) {
@@ -373,4 +347,12 @@
     .hero-image {
         max-width: 320px;
     }
+    .hero-float-text,
+    .hero-float-text-bottom {
+        font-size: 46px;
+    }
+
+     .hero-description {
+            max-width: 270px;
+        }
 }

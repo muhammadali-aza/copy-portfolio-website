@@ -26,15 +26,27 @@ export default function About_experience_2() {
   const experiences = [
     {
       role: "experience",
-      name: "Fatima Asrafy",
-      designation: "UI/UX Designer",
-      description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum desi dolore eu fugiat nulla pariatu Duis aute irure"
+      name: "Cognita-Innovative Solutions",
+      designation: "FULL STACK LEAD ENGINEER",
+      description: "Overseeing the development of enterprise-grade web applications using Next.js, Laravel, and AWS. Responsible for technical architecture, mentoring engineers, and driving innovation across product development."
     },
     {
       role: "experience",
-      name: "Fatima Asrafy",
-      designation: "UI/UX Designer",
-      description: "Interested in working together? Let's bring your ideas to life! Contact me, and let's start building something."
+      name: "Jans Group",
+      designation: "SENIOR FULL STACK ENGINEER",
+      description: "Led the design and development of multi-tenant platforms. Worked on real-time dashboards, authentication flows, and database optimization, ensuring seamless integration between frontend and backend systems."
+    },
+     {
+      role: "experience",
+      name: "Microtech Industry",
+      designation: "SOFTWARE ENGINEER (FULL STACK)",
+      description: "Developed performance-driven web applications using React and Laravel. Focused on optimizing APIs, improving frontend responsiveness, and collaborating closely with the design team for better user experience."
+    },
+     {
+      role: "experience",
+      name: "Micro Data Tech",
+      designation: "JUNIOR FULL STACK DEVELOPER",
+      description: "Built and maintained internal tools and APIs using JavaScript, Node.js, and MySQL. Assisted senior developers in creating scalable architectures and learned deployment automation and version control best practices."
     }
   ];
 

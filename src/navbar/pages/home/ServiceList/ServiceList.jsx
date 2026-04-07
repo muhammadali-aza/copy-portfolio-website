@@ -1,31 +1,31 @@
 import React, { useState } from 'react';
 import './ServiceList.css';
-import { FaBuildingColumns } from "react-icons/fa6";
-import { CiCalendar } from "react-icons/ci";
-import { FaPenNib } from "react-icons/fa";
+import { FaCode } from "react-icons/fa";
+import { FaConnectdevelop } from "react-icons/fa6";
+import { SiWebmoney } from "react-icons/si";
 import { LiaAngleRightSolid } from "react-icons/lia";
 
 const services = [
   {
     id: 1,
-    title: "Ui/Visual Design",
-    count: "21 Done",
-    description: "My work is driven by the belief that thoughtful design and strategic planning can empower brands strategic planning can empower brands",
-    icon: <FaBuildingColumns />// Aap yahan FontAwesome ya Lucide icons use kar sakte hain
+    title: "Frontend",
+    count: "45+ Projects Done",
+    description: "Crafting interactive, responsive, and high-performance user interfaces with advanced animations and clean CSS.",
+    icon: <FaCode />// Aap yahan FontAwesome ya Lucide icons use kar sakte hain
   },
   {
     id: 2,
-    title: "Ui/Visual Design",
-    count: "21 Done",
-    description: "In this portfolio, you’ll find a curated selection of projects that highlight my skills in [Main Areas, e.g., responsive web design",
-    icon: <CiCalendar />
+    title: "Backend",
+    count: "30+ Systems Built",
+    description: "Designing scalable APIs, database schemas, and secure server-side logic for enterprise-grade applications.",
+    icon: <FaConnectdevelop />
   },
   { 
     id: 3,
-    title: "Motion Design",
-    count: "20 Done",
-    description: "Each project here showcases my commitment to excellence and adaptability, tailored to meet each client’s unique needs",
-    icon: <FaPenNib />
+    title: "Full Stack",
+    count: "5+ Years Exp",
+    description: "Leading development teams to deliver end-to-end products from initial concept to final cloud deployment.",
+    icon: <SiWebmoney />
   }
 ];
 

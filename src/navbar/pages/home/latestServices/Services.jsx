@@ -6,18 +6,28 @@ import './Services.css';
 const servicesData = [
     {
         number: '01',
-        title: 'A Portfolio of Creativity',
-        description: 'Business consulting consultants provide expert advice and guida the a businesses to help theme their performance efficiency'
+        title: 'Development',
+        description: 'Building high-performance applications with clean code. I focus on making the technical side seamless so your users have an enjoyable and special experience. Let’s build something great together.'
     },
     {
         number: '02',
-        title: 'Business Strategy',
-        description: 'My work is driven by the belief that thoughtful design and strategic planning can empower brands, transform businesses'
+        title: 'WebFlow',
+        description: 'Transforming ideas into stunning, interactive websites. I specialize in creating digital spaces that are visually special and easy to navigate. Ready to launch your site? Get in touch.'
     },
     {
         number: '03',
-        title: 'Digital Excellence',
-        description: 'Leverage cutting-edge technology to deliver exceptional digital solutions tailored to your needs.'
+        title: 'Design',
+        description: 'Crafting intuitive UIs that tell a story. Every pixel is placed with the goal of making your brand look unique and special. Reach out to start the design process.'
+    },
+     {
+        number: '04',
+        title: 'Devops',
+        description: 'Ensuring your project runs smoothly and scales without effort. I handle the complex architecture so you can focus on making your business special. Let’s talk about your infrastructure.'
+    },
+     {
+        number: '05',
+        title: 'Maintenac & Deployment',
+        description: 'Your project deserves to stay perfect even after launch. I provide dedicated support to keep everything enjoyable for your clients. Drop a message for a maintenance plan.'
     }
 ];
 

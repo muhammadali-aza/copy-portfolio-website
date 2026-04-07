@@ -104,12 +104,12 @@ export default function About_price_detils() {
 
             <p className="plan-duration">Per Month</p>
 
-            <div className="divider"></div>
+            <div className="dividers"></div>
 
             <ul className="features-list">
               {plan.features.map((feature, i) => (
                 <li key={i}>
-                  <FaCheckCircle className="check-icon" /> {feature}
+                  <FaCheckCircle className="check-icons" /> {feature}
                 </li>
               ))}
             </ul>

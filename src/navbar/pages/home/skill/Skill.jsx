@@ -11,10 +11,10 @@ export default function Skill() {
     ];
 
     const developmentSkills = [
-        { name: 'DEVELOPMENT', percentage: 90 },
-        { name: 'WEBFLOW', percentage: 75 },
-        { name: 'DEPLOYMENTS/DEVOPS', percentage: 85 },
-        { name: 'AI MODEL TRAINING', percentage: 90 },
+        { name: 'Python', percentage: 90 },
+        { name: 'AI', percentage: 80 },
+        { name: 'JavaScript', percentage: 80 },
+        { name: 'PHP', percentage: 90 },
     ];
 
     const SkillBar = ({ name, percentage, delay }) => {

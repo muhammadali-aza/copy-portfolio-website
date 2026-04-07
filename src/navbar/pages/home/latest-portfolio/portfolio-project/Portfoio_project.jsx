@@ -5,7 +5,7 @@ import img2 from '../../../../../assets/project_image/proect_2.webp';
 import img3 from '../../../../../assets/project_image/proect_3.webp';
 import img4 from '../../../../../assets/project_image/proect_4.webp';
 import { Link } from 'react-router-dom';
-
+ 
 export default function Portfolio_project() {
   const projects = [
     {
@@ -36,29 +36,29 @@ export default function Portfolio_project() {
     return (
         <div className="portfolio-containers">
             {projects.map((project, index) => (
-                <div key={index} className="project-wrapper">
-                    <div className="project-card">
-                        <div className="card-glow"></div>
-                        <p className="card-label">Personal Portfolio</p>
-                        <div className="image-container">
-                            {project.img ? (
-                                <img src={project.img} alt={project.title} className="project-image" />
-                            ) : null}
+                <Link key={index} to={project.link} className="project-link">
+                    <div className="project-wrapper">
+                        <div className="project-card">
+                            <div className="card-glow"></div>
+                            <p className="card-label">Personal Portfolio</p>
+                            <div className="image-container">
+                                {project.img ? (
+                                    <img src={project.img} alt={project.title} className="project-image" />
+                                ) : null}
+                            </div>
                         </div>
-                    </div>
 
-                    <div className="project-info">
-                        <div className="text-content">
-                            <h3 className="project-title">{project.title}</h3>
-                            <p className="project-category">{project.category}</p>
-                        </div>
-                        <div className="action-button">
-                            <Link to={project.link}>
+                        <div className="project-info">
+                            <div className="text-content">
+                                <h3 className="project-title">{project.title}</h3>
+                                <p className="project-category">{project.category}</p>
+                            </div>
+                            <div className="action-button">
                                 <FiArrowUpRight />
-                            </Link>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </Link>
             ))}
         </div>
     );

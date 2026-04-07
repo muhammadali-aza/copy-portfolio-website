@@ -31,14 +31,13 @@ export default function TypeEffect() {
   return (
     <div className="flex items-center gap-0">
       {/* Text */}
-      <span className="text-[#FF014F] font-bold text-[54px] lg:text-[47px] antialiased leading-tight">
+      <span className="text-[#FF014F] font-bold text-[54px] lg:text-[47px]  sm:text-[32px] antialiased leading-tight">
         {words[index].substring(0, subIndex)}
       </span>
 
       {/* Cursor */}
       <span
-        className="inline-block w-[4px] bg-white animate-pulse ml-0 sm:height-[5px]"
-        style={{ height: "4.2em" }}
+        className="inline-block w-[4px] bg-white animate-pulse ml-0 sm:height-[55px] lg:height-[67px]"
       ></span>
     </div>
   );

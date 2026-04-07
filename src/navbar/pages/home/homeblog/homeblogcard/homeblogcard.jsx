@@ -1,6 +1,7 @@
 import React from 'react';
 import './homeblogcard.css';
 import { FaUser, FaCalendarAlt, FaChevronRight } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import img1 from '../../../../../assets/blog-img-1.webp';
 import img2 from '../../../../../assets/blog-img-2.webp';
 import img3 from '../../../../../assets/blog-img-3.webp';
@@ -38,33 +39,35 @@ export default function Homeblogcard() {
         <section className="blog-section-wrapper">
             <div className="blog-grid-container">
                 {blogData.map((blog) => (
-                    <div key={blog.id} className="blog-card">
-                        
-                        {/* Image & Badge Wrapper */}
-                        <div className="blog-image-wrapper">
-                            <img src={blog.imgSrc} alt={blog.title} className="blog-image" />
+                    <Link key={blog.id} to={blog.link} className="blog-card-link">
+                        <div className="blog-card">
                             
-                            {/* Floating Author/Date Badge */}
-                            <div className="blog-badge">
-                                <span className="badge-item">
-                                    <FaUser className="badge-icon" /> {blog.author}
-                                </span>
-                                <span className="badge-item">
-                                    <FaCalendarAlt className="badge-icon" /> {blog.date}
+                            {/* Image & Badge Wrapper */}
+                            <div className="blog-image-wrapper">
+                                <img src={blog.imgSrc} alt={blog.title} className="blog-image" />
+                                
+                                {/* Floating Author/Date Badge */}
+                                <div className="blog-badge">
+                                    <span className="badge-item">
+                                        <FaUser className="badge-icon" /> {blog.author}
+                                    </span>
+                                    <span className="badge-item">
+                                        <FaCalendarAlt className="badge-icon" /> {blog.date}
+                                    </span>
+                                </div>
+                            </div>
+
+                            {/* Card Content */}
+                            <div className="blog-content">
+                                <h3 className="blogs-title">{blog.title}</h3>
+                                
+                                <span className="blog-read-more">
+                                    READ MORE <FaChevronRight className="read-more-icon" />
                                 </span>
                             </div>
-                        </div>
-
-                        {/* Card Content */}
-                        <div className="blog-content">
-                            <h3 className="blogs-title">{blog.title}</h3>
                             
-                            <a href={blog.link} className="blog-read-more">
-                                READ MORE <FaChevronRight className="read-more-icon" />
-                            </a>
                         </div>
-                        
-                    </div>
+                    </Link>
                 ))}
             </div>
         </section>

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { RiMenu3Fill } from "react-icons/ri";
 import { MdOutlineKeyboardArrowDown, MdKeyboardArrowRight, MdClose, MdPhone, } from "react-icons/md";
-import { FaInstagram, FaLinkedinIn, FaFacebookF, FaTwitter, } from "react-icons/fa6";
+import { FaInstagram, FaLinkedinIn, FaFacebookF, FaTwitter, FaGithub, } from "react-icons/fa6";
 import { FaLocationCrosshairs } from "react-icons/fa6";
 import Logo from "./pages/logo/Logo";
 import { IoMail } from "react-icons/io5";
@@ -19,6 +19,13 @@ export default function NavbarLink() {
     blog: false,
     project: false,
   });
+
+  const socialLinks = [
+    { Icon: FaInstagram, url: "https://instagram.com/yourprofile" },
+    { Icon: FaLinkedinIn, url: "https://linkedin.com/in/hassandev691" },
+    { Icon: FaTwitter, url: "https://twitter.com/yourprofile" },
+    { Icon: FaFacebookF, url: "https://facebook.com/yourprofile" },
+  ];
  
   // Scroll Handler - Shadow after 10px
   useEffect(() => {
@@ -191,13 +198,17 @@ export default function NavbarLink() {
         <div className="right-side">
           {/* Social Icons */}
           <div className="social-icons">
-            {[FaInstagram, FaLinkedinIn, FaTwitter, FaFacebookF].map(
-              (Icon, index) => (
-                <Link key={index} className="social-icon">
-                  <Icon className="navbar-social-icon" />
-                </Link>
-              ),
-            )}
+            {socialLinks.map(({ Icon, url }, index) => (
+              <a
+                key={index}
+                href={url}
+                className="social-icon"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Icon className="navbar-social-icon" />
+              </a>
+            ))}
           </div>
 
           {/* Hamburger */}
@@ -294,15 +305,18 @@ export default function NavbarLink() {
         <div className="sidebar-footer">
           <p className="footer-label">Find With Me</p>
           <ul className="footer-social-list">
-            {[FaInstagram, FaLinkedinIn, FaTwitter, FaFacebookF].map(
-              (Icon, i) => (
-                <li key={i}>
-                  <Link className="footer-social-link">
-                    <Icon size={18} />
-                  </Link>
-                </li>
-              ),
-            )}
+            {socialLinks.map(({ Icon, url }, i) => (
+              <li key={i}>
+                <a
+                  href={url}
+                  className="footer-social-link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Icon size={18} />
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

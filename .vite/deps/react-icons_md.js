@@ -1,4 +1,4 @@
-import { t as GenIcon } from "./iconBase-DrFnXZP3.js";
+import { t as GenIcon } from "./iconBase-Cnfr9KUr.js";
 //#region node_modules/react-icons/md/index.mjs
 function MdToggleOn(props) {
 	return GenIcon({

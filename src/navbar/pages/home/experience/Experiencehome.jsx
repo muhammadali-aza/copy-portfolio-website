@@ -7,14 +7,15 @@ const servicesData = [
         experience: 'experience',
         company: 'Cognita-Innovative Solutions',
         role: 'FULL STACK LEAD ENGINEER',
-        description: 'Verseeing the development of enterprise-grade web applications using Next.js, Laravel, and AWS. Responsible for technical architecture, mentoring engineers, and driving innovation across product development.'
+        description: 'Overseeing the development of enterprise-grade web applications using Next.js, Laravel, and AWS. Responsible for technical architecture, mentoring engineers, and driving innovation across product development.'
     },
     {
         experience: 'experience',
         company: 'Jans Group',
-        role: 'FULL STACK LEAD ENGINEER',
+        role: 'SENIOR FULL STACK ENGINEER',
         description: 'Led the design and development of multi-tenant platforms. Worked on real-time dashboards, authentication flows, and database optimization, ensuring seamless integration between frontend and backend systems.'
-    }
+    }, 
+    
 ];
 
 export default function Experiencehome() {

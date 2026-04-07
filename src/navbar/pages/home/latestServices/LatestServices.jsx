@@ -11,13 +11,12 @@ export default function LatestServices() {
 
                 {/* Main heading */}
                 <h2 className="education-heading">
-                    Inspiring The World One
-                    Project
+                   I like Making Things That Are Enjoyable And Special
                 </h2>
 
                 {/* Description paragraph */}
                 <p className="education-description">
-                Business consulting consultants provide expert advice and guida businesses to help them improve their performance, efficiency, and organizational
+             Let’s bring your vision to life. I love making things that are enjoyable and special—reach out today to start a conversation about your next big project
                 </p>
             </div>
             <Services />

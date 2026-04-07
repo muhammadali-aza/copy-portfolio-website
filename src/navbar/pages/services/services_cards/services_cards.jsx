@@ -3,12 +3,11 @@ import { motion } from 'framer-motion';
 import './services_cards.css';
 
 const servicesData = [
-    { id: '01.', title: 'Success Architects', description: 'Business consulting consultants provide expert advice and guida the a businesses to help theme their performance efficiency' },
-    { id: '04.', title: 'Ui/visual Design', description: "I'm proud of what I've accomplished and excited to share my journey with you. I'm proud of what I've accomplished and excited to." },
-    { id: '02.', title: 'Success Architects', description: 'App consulting consultants provide expert advice and guida the a businesses to help theme their performance efficiency' },
-    { id: '05.', title: 'Branding Design', description: "Interested in working together? Let's bring your ideas to life! Contact me, and let's start building something amazing." },
-    { id: '03.', title: 'Success Architects', description: 'I specialize in creating solutions that are not only visually engaging but also align with business goals. From [list services, e.g., branding' },
-    { id: '06.', title: 'Motion Design', description: 'Feel free to browse through my recent projects. Each one showcases my approach and dedication to detail, creativity, and.' },
+    { id: '01.', title: 'Development', description: 'Building high-performance applications with clean code. I focus on making the technical side seamless so your users have an enjoyable and special experience. Let’s build something great together.' },
+    { id: '04.', title: 'Devops', description: "Ensuring your project runs smoothly and scales without effort. I handle the complex architecture so you can focus on making your business special. Let’s talk about your infrastructure." },
+    { id: '02.', title: 'WebFlow', description: 'Transforming ideas into stunning, interactive websites. I specialize in creating digital spaces that are visually special and easy to navigate. Ready to launch your site? Get in touch.' },
+    { id: '05.', title: 'Maintenac & Deployment', description: "Your project deserves to stay perfect even after launch. I provide dedicated support to keep everything enjoyable for your clients. Drop a message for a maintenance plan." },
+    { id: '03.', title: 'Design', description: 'Crafting intuitive UIs that tell a story. Every pixel is placed with the goal of making your brand look unique and special. Reach out to start the design process.' }
 ];
 
 export default function Services_cards() {
