@@ -19,8 +19,7 @@ export default function ScrollToTopButton() {
             // Scroll percentage
             if (docHeight > 0) {
                 const percent = (scrollTop / docHeight) * 100;
-
-                // ✅ Minimum fill (15%) so background always visible
+                // Minimum fill (15%) so background always visible
                 setScrollCompletion(Math.max(percent, 15));
             }
         };

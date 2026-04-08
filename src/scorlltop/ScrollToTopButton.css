@@ -1,30 +1,33 @@
-/* Scroll to Top Button */
+/* Scroll to Top Button - COMPLETE FIX */
 .scroll-to-top-btn {
     position: fixed;
-    bottom: 10px;
-    right: 20px;
+    bottom: 18px;
+    right: 24px;
     z-index: 9999;
     width: 55px;
     height: 55px;
     border-radius: 50%;
-    background-color: #111; /* ✅ base background always visible */
-    border: 2px solid #333;
+    background-color: rgba(17, 17, 17, 0.98);
+    border: 2px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.35);
     cursor: pointer;
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-
+    touch-action: manipulation;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(20px);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    pointer-events: none;
 }
 
 .scroll-to-top-btn.visible {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+    pointer-events: auto;
 }
 
 /* Wave Fill Container */
@@ -34,51 +37,55 @@
     height: 100%;
     bottom: 0;
     left: 0;
-
-    /* ✅ FIX: thoda background hamesha visible */
-    transform: translateY(calc(80% - var(--scroll-percent)));
-
+    transform: translateY(calc(100% - var(--scroll-percent, 0%)));
     background-color: #FF014F;
     transition: transform 0.15s ease-out;
-    z-index: 1;
+    z-index: 0;
 }
+
+/* Rest of your styles remain the same... */
 
 /* Wave animation */
 .wave-fill::before {
     content: "";
     position: absolute;
-    width: 250%;
-    height: 200%;
-    top: -210%;
-    left: -75%;
-    background-color: #000;
-    border-radius: 43%;
+    width: 150%;
+    height: 150%;
+    bottom: -50%;
+    left: -25%;
+    background: linear-gradient(45deg, #FF014F, #FF6B6B);
+    border-radius: 38%;
     animation: waveRotation 6s linear infinite;
-    z-index: 2;
+    z-index: -2;
 }
 
 .wave-fill::after {
     content: "";
     position: absolute;
-    width: 240%;
-    height: 170%;
-    top: -200%;
-    left: -70%;
-    background-color: rgba(0, 0, 0, 0.35);
+    width: 150%;
+    height: 150%;
+    bottom: -50%;
+    left: -25%;
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 40%;
-    animation: waveRotation 10s linear infinite;
-    z-index: 1;
+    animation: waveRotation 10s linear infinite reverse;
+    z-index: -1;
 }
 
 @keyframes waveRotation {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 /* Icon */
 .scroll-btn-icon {
     position: relative;
-    z-index: 20;
+    z-index: 10;
     color: #fff;
     font-size: 20px;
     pointer-events: none;
@@ -95,10 +102,11 @@
     transform: scale(0.9);
 }
 
-/* Mobile */
+/* Mobile Responsive */
 @media (max-width: 768px) {
     .scroll-to-top-btn {
-        bottom: 24px;
+        bottom: 80px;
+        /* Move up to avoid chat button */
         right: 24px;
         width: 48px;
         height: 48px;
@@ -111,9 +119,11 @@
 
 @media (max-width: 480px) {
     .scroll-to-top-btn {
-        bottom: 20px;
+        bottom: 75px;
+        /* Adjust for mobile */
         right: 20px;
         width: 42px;
         height: 42px;
     }
 }
+

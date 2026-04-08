@@ -33,7 +33,6 @@ export default function Chat() {
               <div className="header-info">
                 <h3 className="chat-he">Let's chat with me? - Online</h3>
               </div>
-             
             </div>
 
             {/* Form Body */}
@@ -42,7 +41,7 @@ export default function Chat() {
                 Please fill out the form below to start chatting with me directly.
               </p>
               
-              <form className="chat-contact-form">
+              <form className="chat-contact-form" onSubmit={(e) => e.preventDefault()}>
                 <div className="form-inner-container">
                   <input type="text" placeholder="Your Name" className="form-field" required />
                   <input type="email" placeholder="Your Email" className="form-field" required />
@@ -67,7 +66,7 @@ export default function Chat() {
       >
         <div className="trigger-glow"></div>
         <div className={`trigger-icon-wrapper ${isOpen ? "bg-dark" : "bg-red"}`}>
-          {isOpen ? <X size={24} /> : <FaFacebookMessenger size={24} />}
+          {isOpen ? <X size={24} /> : <FaFacebookMessenger size={23} />}
         </div>
       </motion.button>
     </div>

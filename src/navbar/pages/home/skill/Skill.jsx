@@ -1,4 +1,4 @@
-
+import customline from '../../../../assets/custom-line.webp'
 import { motion } from 'framer-motion';
 import './skill.css';
 
@@ -27,12 +27,8 @@ export default function Skill() {
                 className="skill-bar"
             >
                 <div className="skill-bar-header">
-                    <span className="skill-bar-title">
-                        {name}
-                    </span>
-                    <span className="skill-bar-percentage">
-                        {percentage}%
-                    </span>
+                    <span className="skill-bar-title">{name}</span>
+                    {/* The percentage has been moved out of the header */}
                 </div>
                 <div className="skill-bar-bg">
                     <motion.div
@@ -41,7 +37,10 @@ export default function Skill() {
                         viewport={{ once: true, amount: 0.2 }}
                         transition={{ duration: 1.2, delay: delay + 0.2, ease: 'easeOut' }}
                         className="skill-bar-fill"
-                    />
+                    >
+                        {/* The percentage is now inside the fill bar to travel with it */}
+                        <span className="skill-bar-percentage">{percentage}%</span>
+                    </motion.div>
                 </div>
             </motion.div>
         );
@@ -57,63 +56,55 @@ export default function Skill() {
     };
 
     return (
-        <div class="m">
-        <div className="skill-container">
-            <section className="skill-section">
-                {/* Section Title */}
-                {/* Skills Grid */}
-                <div className="skill-grid">
-                    {/* Design Skills Column */}
-                    <motion.div
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, amount: 0.2 }}
-                        custom={0}
-                        variants={cardVariants}
-                    >
-                        <div className="skill-card">
-                            <h3 className="skill-title">
-                                Design Skills
-                            </h3>
-                            <div className="skill-list">
-                                {designSkills.map((skill, index) => (
-                                    <SkillBar
-                                        key={index}
-                                        name={skill.name}
-                                        percentage={skill.percentage}
-                                        delay={index * 0.1}
-                                    />
-                                ))}
-                            </div>
-                        </div>
-                    </motion.div>
+        <div className="m">
+            <div className="skill-container">
+                <section className="skill-section">
+                    <div className="skill-grid">
 
-                    {/* Development Skills Column */}
-                    <motion.div
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, amount: 0.2 }}
-                        custom={1}
-                        variants={cardVariants}
-                    >
-                        <div className="skill-card">
-                            <h3 className="skill-title">
-                                <span>Development</span> Skills
-                            </h3>
-                            <div className="skill-list">
-                                {developmentSkills.map((skill, index) => (
-                                    <SkillBar
-                                        key={index}
-                                        name={skill.name}
-                                        percentage={skill.percentage}
-                                        delay={index * 0.1}
-                                    />
-                                ))}
+                        {/* Design Skills Column */}
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.2 }}
+                            custom={0}
+                            variants={cardVariants}
+                        >
+                            <div className="skill-card">
+                                <h3 className="skill-title">
+                                    Design Skill
+                                    <img src={customline} alt="" className="skill-title-line" />
+                                </h3>
+                                <div className="skill-list">
+                                    {designSkills.map((skill, index) => (
+                                        <SkillBar key={index} name={skill.name} percentage={skill.percentage} delay={index * 0.1} />
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-                    </motion.div>
-                </div>
-            </section>
+                        </motion.div>
+
+                        {/* Development Skills Column */}
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.2 }}
+                            custom={1}
+                            variants={cardVariants}
+                        >
+                            <div className="skill-card">
+                                <h3 className="skill-title">
+                                    <span>Development</span> Skill
+                                    <img src={customline} alt="" className="skill-title-line" />
+                                </h3>
+                                <div className="skill-list">
+                                    {developmentSkills.map((skill, index) => (
+                                        <SkillBar key={index} name={skill.name} percentage={skill.percentage} delay={index * 0.1} />
+                                    ))}
+                                </div>
+                            </div>
+                        </motion.div>
+
+                    </div>
+                </section>
             </div>
         </div>
     );

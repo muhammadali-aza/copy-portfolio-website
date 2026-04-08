@@ -8,17 +8,17 @@ const servicesData = [
         year: 'Sep 2015 - Aug 2017',
         description: 'Focused study of computer science basics including programming, logic building, and web fundamentals. Completed several academic projects and gained strong analytical and problem-solving skills that built a solid foundation for higher studies in computer science.'
     },
-     {
-        title: "'BACHELOR'S DEGREE IN COMPUTER SCIENCE",
+    {
+        title: "BACHELOR'S DEGREE IN COMPUTER SCIENCE",
         year: 'Sep 2018 - Aug 2022',
         description: 'Comprehensive study of computer science fundamentals including algorithms, data structures, software engineering, and web development. Graduated with honors and completed multiple projects demonstrating practical application of theoretical concepts.'
     },
     {
-        title: "'BACHELOR'S DEGREE IN COMPUTER SCIENCE",
+        title: "BACHELOR'S DEGREE IN COMPUTER SCIENCE",
         year: 'Sep 2018 - Aug 2022',
         description: 'Comprehensive study of computer science fundamentals including algorithms, data structures, software engineering, and web development. Graduated with honors and completed multiple projects demonstrating practical application of theoretical concepts.'
     },
-     {
+    {
         title: 'INTERMEDIATE IN (ICS)',
         year: 'Sep 2015 - Aug 2017',
         description: 'Focused study of computer science basics including programming, logic building, and web fundamentals. Completed several academic projects and gained strong analytical and problem-solving skills that built a solid foundation for higher studies in computer science.'
@@ -27,77 +27,56 @@ const servicesData = [
 
 export default function Educationdetails() {
     const [borderState, setBorderState] = useState({});
-    const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 1024);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setIsLargeScreen(window.innerWidth >= 1024);
-        };
-
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
 
     const handleMouseMove = (e, index) => {
         const rect = e.currentTarget.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
-
         const horizontal = x < rect.width / 2 ? 'left' : 'right';
         const vertical = y < rect.height / 2 ? 'top' : 'bottom';
-
-        setBorderState((prevState) => ({ ...prevState, [index]: `${horizontal}-${vertical}` }));
+        setBorderState(prev => ({ ...prev, [index]: `${horizontal}-${vertical}` }));
     };
 
     const handleMouseLeave = (index) => {
-        setBorderState((prevState) => ({ ...prevState, [index]: '' }));
+        setBorderState(prev => ({ ...prev, [index]: '' }));
     };
 
-    // Variants for large screens - slide from left to right
-    const lgCardVariants = {
-        hidden: { opacity: 0, x: -123 },
-        visible: (i) => ({
-            opacity: 1,
-            x: 0,
-            transition: { delay: i * 0.15, duration: 0.6, ease: 'easeOut' },
-        }),
-    };
-
-    // Variants for small screens - slide from top
-    const smCardVariants = {
-        hidden: { opacity: 0, y: 30 },
+    // Bottom to current position animation
+    const cardVariants = {
+        hidden: { opacity: 0, y: 80 },
         visible: (i) => ({
             opacity: 1,
             y: 0,
-            transition: { delay: i * 0.15, duration: 0.6, ease: 'easeOut' },
+            transition: {
+                delay: i * 0.15,
+                duration: 0.7,
+                ease: [0.22, 1, 0.36, 1],
+            },
         }),
     };
 
-    const cardVariants = isLargeScreen ? lgCardVariants : smCardVariants;
-
     return (
-        <div className="education-container">
-            {/* Change this section in your return statement */}
-<div className="title-wrapper">
-    <h1 className='education-title'>Education</h1>
-</div>
+        <div className="education-container home-education-container">
+            <div className="title-wrapper">
+                <h1 className='education-title'>Education</h1>
+            </div>
             <div className="education-content-wrapper">
-                {/* Left Column - Service Cards */}
                 <div className="services-grid">
                     {servicesData.map((service, index) => (
                         <motion.div
                             key={index}
                             onMouseMove={(e) => handleMouseMove(e, index)}
                             onMouseLeave={() => handleMouseLeave(index)}
-                            className={`service-card ${borderState[index] || ''}`}
+                            className={`service-card home-service-card ${borderState[index] || ''}`}
                             initial="hidden"
-                            animate="visible"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.2 }}
                             custom={index}
                             variants={cardVariants}
                         >
                             <p className='home-services-card-title'>{service.title}</p>
                             <h3 className="home-services-card-year">
-                                <span>{service.year}.</span> 
+                                <span>{service.year}</span>
                             </h3>
                             <p className="home-service-card-description">
                                 {service.description}
@@ -107,5 +86,5 @@ export default function Educationdetails() {
                 </div>
             </div>
         </div>
-    )
+    );
 }

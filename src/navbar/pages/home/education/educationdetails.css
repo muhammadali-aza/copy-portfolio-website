@@ -55,7 +55,7 @@
 
 @media (min-width: 768px) {
   .education-container {
-    padding: 4rem 2rem;
+    padding: 4rem 2rem 0;
   }
 }
 
@@ -66,6 +66,10 @@
   }
 }
 
+
+.home-education-container {
+  padding: 2.5rem 0 2.5rem;
+}
 .education-content-wrapper {
   display: flex;
   flex-direction: column;
@@ -229,4 +233,8 @@
     text-align: center;
     /* Optional: center on mobile */
   }
+}
+
+.home-service-card {
+  padding: 1.2rem;
 }

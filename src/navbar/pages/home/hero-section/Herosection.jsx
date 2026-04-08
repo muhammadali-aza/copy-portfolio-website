@@ -20,170 +20,80 @@ import HomeBlog from "../homeblog/homeblog";
 import Homeblogcard from "../homeblog/homeblogcard/homeblogcard";
 import { motion } from 'framer-motion';
  
-export default function Herosection() {
-  const container = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.2
-    }
-  }
-};
+export default function herosection() {
+ return (
+  <>
+  <div className="bg-image">
+  <section className="home-hero-container">
+      <div className="home-hero-content">
+        <h4 className="home-hero-greeting">HELLO</h4>
+        <h1 className="home-hero-title">
+          i'm Jane Cooper a <br />
+          <TypeEffect />
+        </h1>
+        <p className="home-hero-description">
+          A personal portfolio is a collection of your work, achievements, and skills 
+          that highlights your abilities and professional growth. It serves as
+        </p>
+        <button className="home-hero-btn">
+         <span className="home-hero-btn-span">View Portfolio</span>  <span><FaArrowRight className="arrow"/></span>
+        </button>
+      </div>
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 40 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6 }
-  }
-};
-
-const slideLeft = {
-  hidden: { opacity: 0, x: -80 },
-  show: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.8 }
-  }
-};
-
-const imageAnim = {
-  hidden: { opacity: 0, y: 80, scale: 0.9 },
-  show: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: { duration: 0.8 }
-  }
-};
-  return (
-    <>
-    <div className="hero-bg-image">
-      <div className="bg">
-     <motion.div
-  className="hero-grids"
-  variants={container}
-  initial="hidden"
-  animate="show"
->
-
-  {/* LEFT SIDE */}
-  <motion.div className="hero-left-contents" variants={slideLeft}>
-    
-    <motion.h1
-      className="hero-titles hero-title-sm"
-      variants={fadeUp}
-    >
-      HELLO
-    </motion.h1>
-
-    <motion.div
-      className="hero-subtitle-wrapper"
-      variants={fadeUp}
-    >
-      <p className="hero-subtitle">i'm Jane Cooper a</p>
-      <TypeEffect />
-    </motion.div>
-
-    <motion.p
-      className="hero-description"
-      variants={fadeUp}
-    >
-      I am a Senior Full Stack Developer at heart and, i create features
-      that are best suited for the job at hand.
-    </motion.p>
-
-    <motion.div
-      className="hero-button-wrapper"
-      variants={fadeUp}
-    >
-      <motion.button
-        className="profile"
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-      >
-        <span>View Portfolio</span>
-        <FaArrowRight />
-      </motion.button>
-    </motion.div>
-
-  </motion.div>
-
-  {/* RIGHT SIDE */}
-  <motion.div
-    className="hero-right-content"
-    variants={imageAnim}
-  >
-    
-    <motion.p
-      className="hero-float-text"
-      variants={fadeUp}
-    >
-      WEB DESIGNER
-    </motion.p>
-
-    <motion.img
-      src={HeroSrc}
-      alt="Jane Cooper"
-      className="hero-image"
-      variants={imageAnim}
-    />
-
-    <motion.p
-      className="hero-float-text-bottom text-stroke"
-      variants={fadeUp}
-    >
-      WEB DESIGNER
-    </motion.p>
-
-  </motion.div>
-
-</motion.div>
-</div>
-  </div>
-      <ScrollAnimationWrapper>
+      <div className="home-hero-image-wrapper">
+        <div className="home-hero-bg-text">WEB DESIGNER</div>
+        <div className="home-hero-bg-text-bottom">WEB DESIGNER</div>
+        <img 
+          src={HeroSrc}
+          alt="Jane Cooper" 
+          className="home-hero-image" 
+        />
+      </div>
+    </section>
+    </div>
+ 
+      
         <MainSection />
-      </ScrollAnimationWrapper>
-      <ScrollAnimationWrapper>
+      
+      
         <Experience />
-      </ScrollAnimationWrapper>
-      <ScrollAnimationWrapper>
+      
+      
         <Skill />
-      </ScrollAnimationWrapper>
-      <ScrollAnimationWrapper>
+      
+      
         <Latestervices />
-      </ScrollAnimationWrapper>
-      <ScrollAnimationWrapper>
+      
+      
         <Education />
-      </ScrollAnimationWrapper>
-      <ScrollAnimationWrapper>
+      
+      
         <Experiencehome />
-      </ScrollAnimationWrapper>
-      <ScrollAnimationWrapper>
+      
+      
         <Support_company />
-      </ScrollAnimationWrapper>
-      <ScrollAnimationWrapper>
+      
+      
         <Latest_portfolio />
-      </ScrollAnimationWrapper>
-      <ScrollAnimationWrapper>
+      
+      
         <My_skill />
-      </ScrollAnimationWrapper>
-      <ScrollAnimationWrapper>
+      
+      
         <ServiceList />
-      </ScrollAnimationWrapper>
-      <ScrollAnimationWrapper>
+      
+      
         <Reviews />
-      </ScrollAnimationWrapper>
-       <ScrollAnimationWrapper>
+      
+       
         <ContactSection />
-      </ScrollAnimationWrapper>
-       <ScrollAnimationWrapper>
+      
+       
         <HomeBlog />
-      </ScrollAnimationWrapper>
-        <ScrollAnimationWrapper>
+      
+        
         <Homeblogcard />
-      </ScrollAnimationWrapper>
+      
     </>
   );
 }

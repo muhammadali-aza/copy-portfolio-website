@@ -3,7 +3,7 @@
     background-color: #000000; /* Deep Black */
     font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
     align-items: center;
-    margin-top: 120px;
+    margin-top: 90px;
     margin-bottom: 50px;
 }
 
@@ -15,9 +15,10 @@
 /* Chhota red text upar wala */
 .skill-subtitle {
     color: #f9004d; /* Pinkish Red shade */
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 1px;
-    font-weight: 700;
+    font-family: Rubik, sans-serif;
+    font-weight: 500;
     text-transform: uppercase;
     display: block;
     margin-bottom: 5px;

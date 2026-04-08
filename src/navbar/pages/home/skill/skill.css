@@ -9,19 +9,36 @@
   padding-bottom: 4rem;
 }
  
-
 @media (min-width: 1024px) {
   .skill-container {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 4rem;
+    padding-bottom: 0.7rem;
   }
 }
 
+.skill-title {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 1.4rem;
+}
 
+.skill-title span {
+  color: #fff;
+}
 
+.skill-title-line {
+  height: 10px;
+  width: 85px;
+  object-fit: contain;
+  opacity: 0.3;
+}
 
 .skill-section {
-  max-width: 1440px;
+  max-width: 1390px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1rem;
@@ -72,19 +89,6 @@
   }
 }
 
-.skill-title {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #fff;
-  margin-bottom: 2rem;
-}
-
-
-.skill-title span {
-  color: #fff;
-}
-
-
 .skill-bar {
   margin-bottom: 1.5rem;
 }
@@ -111,22 +115,13 @@
   }
 }
 
-.skill-bar-percentage {
-  font-size: 0.875rem;
-}
-
-@media (min-width: 1024px) {
-  .skill-bar-percentage {
-    font-size: 1rem;
-  }
-}
-
 .skill-bar-bg {
   width: 100%;
-  background: #2a2a2a;
+  background: #1a1a1a;
   border-radius: 9999px;
-  height: 0.5rem;
-  overflow: hidden;
+  height: 3px;
+  overflow: visible;
+  position: relative;
 }
 
 @media (min-width: 1024px) {
@@ -139,9 +134,24 @@
   background: #FF014F;
   height: 100%;
   border-radius: 9999px;
+  position: relative; /* Added to keep percentage inside */
 }
 
+.skill-bar-percentage {
+  position: absolute;
+  right: 0;
+  bottom: 22px; /* Adjust this slightly if it doesn't line up perfectly with the title */
+  font-size: 0.875rem;
+  color: #fff;
+  white-space: nowrap;
+}
 
+@media (min-width: 1024px) {
+  .skill-bar-percentage {
+    font-size: 1rem;
+    bottom: 20px; /* Responsive adjustment for alignment */
+  }
+}
 
 @media (max-width: 1200px) {
   .skill-container {
@@ -172,7 +182,7 @@
   }
 
   .skill-bar {
-    margin-bottom: 40px
+    margin-bottom: 40px;
   }
 }
 
@@ -194,6 +204,6 @@
   }
 
   .skill-bar {
-    margin-bottom: 29px
+    margin-bottom: 29px;
   }
 }

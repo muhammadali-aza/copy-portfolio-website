@@ -2,7 +2,7 @@
 .experience-container {
   max-width: 1300px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 40px 17px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 26px;
@@ -13,8 +13,8 @@
 
 /* Left Big Card */
 .experience-main-card {
-  background: linear-gradient(45deg, rgb(6, 6, 6), rgb(119, 19, 19));
-  padding: 50px 30px 30px;
+ background: linear-gradient(120deg, #1A1315 40%, #640D28 100%);
+  padding: 55px 50px 55px;
   border-radius: 12px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -26,17 +26,17 @@
 }
 
 .experience-number {
-  font-size: 160px;
+  font-size: 165px;
   font-weight: bold;
   color: #FF014F;
   line-height: 1;
-  padding-left: 30px;
-  font-family: sans-serif;
+  font-family:  sans-serif;
 }
 
 .experience-label {
-  font-size: 45px;
+  font-size: 48px;
   color: #fff;
+  font-family: Rajdhani;
   font-weight: bold;
   margin: 0;
 }
@@ -44,10 +44,10 @@
 .experience-description {
   font-size: 16px;
   color: #fff;
+  font-family: Rubik;
   line-height: 1.6;
   grid-column: 1 / -1;
-  margin: 35px 25px;
-  font-family: sans-serif;
+  margin-top: 25px;
 }
 
 /* Right Stats Cards Container */
@@ -59,7 +59,7 @@
  
 /* Each Stat Card */
 .stat-card {
-  background-color: #181717;
+  background-color: #141414;
   padding: 30px 20px;
   border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -88,6 +88,10 @@
 .hero-service-card {
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
 }
 
 .hero-service-card::before {
@@ -277,3 +281,6 @@
     height: 155px;
   }
 }
+
+
+

@@ -17,21 +17,21 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1309px;
-  margin: 0 auto;
-  padding: 19px 17px;
+  max-width: 1275px;
+  margin: auto;
+  padding: 19px 0;
 }
 
 .nav-list {
   display: flex;
   align-items: center;
-  gap: 9px;
+  gap: 6px;
 }
 
 .nav-link {
   display: flex;
   font-weight: bold;
-  padding: 5px 12px;
+  padding: 5px 15px;
 }
 
 .nav-link:hover {
@@ -80,7 +80,10 @@
 
 .dropdown-arrow {
   transition: transform 0.3s ease;
-  font-size: 18px;
+  font-size: 20px;
+  position: relative;
+  top: 2px;
+  right: 3px;
 }
 
 .dropdown-arrow.open {

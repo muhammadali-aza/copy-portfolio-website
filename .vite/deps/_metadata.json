@@ -2,7 +2,7 @@
   "hash": "0137c777",
   "configHash": "27d970b2",
   "lockfileHash": "97f37031",
-  "browserHash": "e0374735",
+  "browserHash": "47311315",
   "optimized": {
     "framer-motion": {
       "src": "../../node_modules/framer-motion/dist/es/index.mjs",
@@ -68,6 +68,12 @@
       "src": "../../node_modules/react-icons/go/index.mjs",
       "file": "react-icons_go.js",
       "fileHash": "974c0215",
+      "needsInterop": false
+    },
+    "react-icons/hi2": {
+      "src": "../../node_modules/react-icons/hi2/index.mjs",
+      "file": "react-icons_hi2.js",
+      "fileHash": "9ab0b254",
       "needsInterop": false
     },
     "react-icons/io5": {

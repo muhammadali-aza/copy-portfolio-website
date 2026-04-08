@@ -1,7 +1,7 @@
 /* Existing container ko update karein */
 .chat-container {
     position: fixed;
-    bottom: 15px;
+    bottom: 20px;
     /* Default position */
     right: 20px;
     z-index: 100;
@@ -184,12 +184,12 @@
     background-color: #FF014F;
     border-radius: 50%;
     filter: blur(8px);
-    opacity: 0.2;
+    opacity: 0;
 }
 
 .trigger-icon-wrapper {
-    width: 56px;
-    height: 56px;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -298,3 +298,4 @@
 .chat-container.scrolled {
     bottom: 80px;
 }
+

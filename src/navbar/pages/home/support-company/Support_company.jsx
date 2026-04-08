@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import './Support_company.css';
 import Logo1 from '../../../../assets/support_company_logo/company-logo-1.svg';
 import Logo2 from '../../../../assets/support_company_logo/company-logo-2.svg';
@@ -19,12 +20,33 @@ const logos = [
   { name: 'Company 8', src: Logo8 },
 ];
 
+const itemVariants = {
+  hidden: { opacity: 0, y: 80 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.1,
+      duration: 0.7,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  }),
+};
+
 export default function Support_company() {
   return (
     <div className="support-company-bg">
       <div className="support-company-grid">
-        {logos.map((logo) => (
-          <div className="support-company-cell" key={logo.name}>
+        {logos.map((logo, index) => (
+          <motion.div
+            className="support-company-cell"
+            key={logo.name}
+            custom={index}
+            variants={itemVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
             <img
               className="support-company-logo"
               src={logo.src}
@@ -32,7 +54,7 @@ export default function Support_company() {
               title={logo.name}
               loading="lazy"
             />
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

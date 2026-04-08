@@ -1,7 +1,7 @@
 /* Base service card */
 .service-card {
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 /* Create pseudo-elements for border effect */
@@ -68,13 +68,21 @@
 .services-left-column {
     width: 100%;
     display: flex;
-    flex-direction: column;
+    grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
 }
 
 @media (min-width: 1024px) {
     .services-left-column {
         width: 50%;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .services-left-column {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -85,6 +93,7 @@
     padding: 1.5rem;
     transition: all 0.3s ease;
     position: relative;
+    box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
@@ -173,6 +182,18 @@
     object-fit: cover;
     border-radius: 1rem;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    animation: servicesImageFadeIn 1s ease forwards;
+}
+
+@keyframes servicesImageFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (min-width: 1024px) {
@@ -180,3 +201,4 @@
         width: 570px;
     }
 }
+
