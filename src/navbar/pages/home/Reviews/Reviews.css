@@ -38,7 +38,7 @@
 .review-bg {
   opacity: 0.9;
   width: 62%;
-  height: 510px;
+  height: 505px;
 }
 
 /* Content */
@@ -49,7 +49,7 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  padding-top: 50px;
+  padding-top: 46px;
 }
 
 .review-text {

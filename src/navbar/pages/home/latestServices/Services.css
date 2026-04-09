@@ -79,10 +79,18 @@
 }
 
 
+
 @media (min-width: 1024px) {
     .services-left-column {
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 992px) {
+    .services-left-column {
+        display: grid;
+        grid-template-columns: 1fr;
     }
 }
 

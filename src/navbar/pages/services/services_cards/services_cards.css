@@ -3,6 +3,7 @@
     background-color: #000000;
     display: flex;
     justify-content: center;
+    padding-bottom: 10px;
 }
 
 .services_grid {
@@ -17,6 +18,7 @@
 @media (min-width: 768px) {
     .services_grid {
         grid-template-columns: repeat(2, 1fr);
+        padding-top: 115px;
     }
 }
 
@@ -25,7 +27,7 @@
     background-color: #121212;
     /* Deep dark gray like the image */
     border-radius: 20px;
-    padding: 31px 39px;
+    padding: 31px 41px;
     position: relative;
     transition: background-color 0.3s ease;
     border: 1px solid transparent;
@@ -40,8 +42,8 @@
 .services_card_header {
     display: flex;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 25px;
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
 .service_id {

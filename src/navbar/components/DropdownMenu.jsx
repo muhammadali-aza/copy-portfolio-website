@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import {
   MdOutlineKeyboardArrowDown,
   MdKeyboardArrowRight,
@@ -14,6 +14,7 @@ export default function DropdownMenu({
   onMouseEnter,
   onMouseLeave,
   items,
+  isActive,
 }) {
   return (
     <li
@@ -21,7 +22,7 @@ export default function DropdownMenu({
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      <div className={`dropdown-label ${isOpen ? "active" : ""}`}>
+      <div className={`dropdown-label ${isOpen ? "active" : ""} ${isActive ? "active-route" : ""}`}>
         {label}
         <MdOutlineKeyboardArrowDown
           className={`dropdown-arrow ${isOpen ? "open" : ""}`}
@@ -31,10 +32,10 @@ export default function DropdownMenu({
       <ul className={`dropdown-menu ${isOpen ? "visible" : "hidden"}`}>
         {items.map((item, idx) => (
           <li key={idx}>
-            <Link to={item.to} className="dropdown-item-link">
+            <NavLink to={item.to} className="dropdown-item-link">
               {item.label}
               <MdKeyboardArrowRight className="dropdown-arrow-icon" />
-            </Link>
+            </NavLink>
           </li>
         ))}
       </ul>

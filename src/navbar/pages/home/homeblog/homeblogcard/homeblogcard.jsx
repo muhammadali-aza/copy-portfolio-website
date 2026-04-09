@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import './homeblogcard.css';
 import { FaUser, FaCalendarAlt, FaChevronRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
@@ -6,7 +7,6 @@ import img1 from '../../../../../assets/blog-img-1.webp';
 import img2 from '../../../../../assets/blog-img-2.webp';
 import img3 from '../../../../../assets/blog-img-3.webp';
 
-// You can replace these placeholder image URLs with your actual image imports
 const blogData = [
     {
         id: 1,
@@ -34,40 +34,62 @@ const blogData = [
     }
 ];
 
+const itemVariants = {
+    hidden: { opacity: 0, y: 80 },
+    visible: (i) => ({
+        opacity: 1,
+        y: 0,
+        transition: {
+            delay: i * 0.1,
+            duration: 0.7,
+            ease: [0.22, 1, 0.36, 1],
+        },
+    }),
+};
+
 export default function Homeblogcard() {
     return (
         <section className="blog-section-wrapper">
             <div className="blog-grid-container">
-                {blogData.map((blog) => (
-                    <Link key={blog.id} to={blog.link} className="blog-card-link">
-                        <div className="blog-card">
-                            
-                            {/* Image & Badge Wrapper */}
-                            <div className="blog-image-wrapper">
-                                <img src={blog.imgSrc} alt={blog.title} className="blog-image" />
-                                
-                                {/* Floating Author/Date Badge */}
-                                <div className="blog-badge">
-                                    <span className="badge-item">
-                                        <FaUser className="badge-icon" /> {blog.author}
-                                    </span>
-                                    <span className="badge-item">
-                                        <FaCalendarAlt className="badge-icon" /> {blog.date}
+                {blogData.map((blog, index) => (
+                    <motion.div
+                        key={blog.id}
+                        custom={index}
+                        variants={itemVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.2 }}
+                    >
+                        <Link to={blog.link} className="blog-card-link">
+                            <div className="blog-card">
+
+                                {/* Image & Badge Wrapper */}
+                                <div className="blog-image-wrapper">
+                                    <img src={blog.imgSrc} alt={blog.title} className="blog-image" />
+
+                                    {/* Floating Author/Date Badge */}
+                                    <div className="blog-badge">
+                                        <span className="badge-item">
+                                            <FaUser className="badge-icon" /> {blog.author}
+                                        </span>
+                                        <span className="badge-item">
+                                            <FaCalendarAlt className="badge-icon" /> {blog.date}
+                                        </span>
+                                    </div>
+                                </div>
+
+                                {/* Card Content */}
+                                <div className="blog-content">
+                                    <h3 className="blogs-title">{blog.title}</h3>
+
+                                    <span className="blog-read-more">
+                                        READ MORE <FaChevronRight className="read-more-icon" />
                                     </span>
                                 </div>
-                            </div>
 
-                            {/* Card Content */}
-                            <div className="blog-content">
-                                <h3 className="blogs-title">{blog.title}</h3>
-                                
-                                <span className="blog-read-more">
-                                    READ MORE <FaChevronRight className="read-more-icon" />
-                                </span>
                             </div>
-                            
-                        </div>
-                    </Link>
+                        </Link>
+                    </motion.div>
                 ))}
             </div>
         </section>

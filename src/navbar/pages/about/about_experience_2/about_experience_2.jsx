@@ -36,18 +36,6 @@ export default function About_experience_2() {
       designation: "SENIOR FULL STACK ENGINEER",
       description: "Led the design and development of multi-tenant platforms. Worked on real-time dashboards, authentication flows, and database optimization, ensuring seamless integration between frontend and backend systems."
     },
-     {
-      role: "experience",
-      name: "Microtech Industry",
-      designation: "SOFTWARE ENGINEER (FULL STACK)",
-      description: "Developed performance-driven web applications using React and Laravel. Focused on optimizing APIs, improving frontend responsiveness, and collaborating closely with the design team for better user experience."
-    },
-     {
-      role: "experience",
-      name: "Micro Data Tech",
-      designation: "JUNIOR FULL STACK DEVELOPER",
-      description: "Built and maintained internal tools and APIs using JavaScript, Node.js, and MySQL. Assisted senior developers in creating scalable architectures and learned deployment automation and version control best practices."
-    }
   ];
 
   return (

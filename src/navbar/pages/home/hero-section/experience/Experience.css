@@ -8,8 +8,10 @@
   gap: 26px;
   align-items: start;
   font-family: Arial, sans-serif;
-  margin-top: 91px;
+  margin-top: 78px;
 }
+
+
 
 /* Left Big Card */
 .experience-main-card {
@@ -164,7 +166,7 @@
   }
 
   .experience-main-card {
-    padding: 40px 31px;
+    padding: 40px 43px;
   }
 
   .experience-number {
@@ -178,11 +180,15 @@
 
   .experience-description {
     max-width: 330px;
-    margin: 17px 15px;
+    margin: 15px 0;
   }
 
   .hero-service-card {
     height: 160px;
+  }
+
+  .stat-label {
+    font-size: 15px;
   }
 }
 
@@ -190,7 +196,7 @@
   .experience-container {
     grid-template-columns: 1fr;
     gap: 20px;
-    max-width: 750px;
+    max-width: 740px;
     margin: auto;
   }
 
@@ -201,12 +207,17 @@
   .experience-description {
     max-width: 550px;
   }
+
+    .experience-main-card {
+    padding: 40px 46px;
+  }
+
 }
 @media (max-width: 768px) {
   .experience-container {
     grid-template-columns: 1fr;
     gap: 27px;
-    max-width: 550px;
+    max-width: 540px;
     margin: auto;
   }
 
@@ -239,6 +250,7 @@
     max-width: 100%;
     display: flex;
     text-align: start;
+    margin-top: 30px;
   }
 
   .experience-description {

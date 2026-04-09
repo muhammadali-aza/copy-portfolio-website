@@ -1,3 +1,12 @@
+.bg-image {
+  background-image: url(../assets/banner-background-one.jpg);
+  background-repeat: no-repeat;
+  /* background-position: 4%; */
+  /* background-size: cover; */
+}
+
+
+
 .navbar {
   position: fixed;
   top: 0;
@@ -41,6 +50,12 @@
   border-radius: 5px;
 }
 
+.nav-link.active {
+  color: #FF014F;
+  background: #210D13;
+  border-radius: 5px;
+}
+
 .desktop-nav {
   display: flex;
   align-items: center;
@@ -69,6 +84,11 @@
 }
 
 .dropdown-label:hover {
+  color: #FF014F;
+  background: #210D13;
+}
+
+.dropdown-label.active-route {
   color: #FF014F;
   background: #210D13;
 }
@@ -115,7 +135,7 @@
 }
 
 .navbar-social-icon {
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .dropdown-menu.visible {
@@ -149,6 +169,11 @@
   background: #210D13;
   color: #FF014F;
   padding-left: 22px;
+}
+
+.dropdown-item-link.active {
+  background: #210D13;
+  color: #FF014F;
 }
 
 .dropdown-arrow-icon {
@@ -256,56 +281,195 @@
   color: #fff;
 }
 
-@media (max-width: 1200px) {
-  .logo-img {
-    width: 56px;
-  }
 
-  .navbar-container {
-    max-width: 1005px;
-    margin: auto;
-    display: flex;
-    padding: 8px 85px 0 22px;
-  }
-
-  .nav-link,
-  .dropdown-label {
-    display: none;
-  }
-
-  .hamburger-btn {
-    font-family: 10px;
-  }
-
-  .hamburger-btn {
-    width: 37px;
-    height: 37px;
-  }
-
+/* 1. Base Sidebar Styles (Common for both) */
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  width: 400px;
+  max-width: 90%;
+  height: 100vh;
+  background: #121212;
+  color: white;
+  z-index: 1000;
+  padding: 30px;
+  overflow-y: auto;
+  /* Cubic-bezier se transition bohot smooth lagti hai */
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    left 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    right 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media (max-width: 992px) {
-  .navbar-container {
-    max-width: 700px;
-    margin: auto;
-  }
+.mobile-show-box {
+  display: none;
 }
 
-@media (max-width: 768px) {
-  .navbar-container {
-    max-width: 520px;
-    margin: auto;
-  }
 
-  .right-side .social-icons {
-    display: none !important;
-  }
 
-  .logo-img {
-    width: 60px;
-    height: 49px;
-  }
+.mobile-sidebar {
+  background: #191919;
+  /* Slightly lighter dark for depth */
+  display: flex;
+  flex-direction: column;
 }
+
+/* Navigation List Styling */
+.mobile-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #333;
+  /* Top divider */
+}
+
+.mobile-nav-list li {
+  border-bottom: 1px solid #333;
+  /* Divider between items */
+  transition: 0.3s;
+}
+
+/* Footer / Find With Me Section */
+.sidebar-footer {
+  margin-top: 50px;
+}
+
+.footer-label {
+  font-size: 14px;
+  color: #c4cfde;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+/* Social Icons Circular Styling */
+.footer-social-list {
+  display: flex;
+  gap: 15px;
+}
+
+/* Note: Ensure your SocialIcons component renders icons inside 
+     elements styled like this to match the image circles */
+.footer-social-link {
+  width: 50px;
+  height: 50px;
+  background: #212428;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+  color: #ff014f;
+  transition: 0.4s;
+}
+
+.footer-social-link:hover {
+  background: #ff014f;
+  color: white;
+  transform: translateY(-5px);
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+/* Style for each Link in the sidebar */
+.sidebar-nav a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  color: #c4cfde;
+  /* Light grey text */
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #333;
+  /* Divider line from image */
+  transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.sidebar-nav a:hover {
+  color: #ff014f;
+}
+
+/* Dropdown icon styling */
+.sidebar-nav .has-dropdown svg {
+  font-size: 20px;
+  color: #878e99;
+}
+
+/* Divider line above "Find With Me" */
+.divider {
+  border: 0;
+  border-top: 1px solid #333;
+  margin: 30px 0;
+  display: block;
+}
+
+/* Navigation Links & Dropdown Triggers */
+.sidebar-nav a,
+.dropdown-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  color: #c4cfde;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #333;
+  cursor: pointer;
+  transition: 0.3s;
+  text-transform: uppercase;
+}
+
+.sidebar-nav a:hover,
+.dropdown-trigger:hover {
+  color: #ff014f;
+}
+
+/* Dropdown Animation Logic */
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+  background-color: transparent;
+}
+
+.nav-dropdown-wrapper.active .dropdown-content {
+  max-height: 200px;
+  /* Enough height for links */
+}
+
+/* Sub-links Styling (Indented like the image) */
+.dropdown-content a {
+  padding: 12px 0 12px 30px !important;
+  /* Move text to the right */
+  border-bottom: 1px solid #222 !important;
+  font-size: 13px;
+  color: #a0a0a0;
+}
+
+/* Arrow Rotation */
+.arrow-icon {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.nav-dropdown-wrapper.active .arrow-icon {
+  transform: rotate(180deg);
+  color: #ff014f;
+}
+
+/* Match active title color */
+.nav-dropdown-wrapper.active .dropdown-trigger {
+  color: #ff014f;
+}
+
 
 @media (max-width: 765px) {
   .navbar-container {
@@ -334,7 +498,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 1); /* Darker overlay */
+  background: rgba(0, 0, 0, 1);
+  /* Darker overlay */
   z-index: 999;
   transition: opacity 0.3s ease;
 }
@@ -352,11 +517,13 @@
 .mobile-sidebar {
   position: fixed;
   top: 0;
-  right: -400px; /* Right side se start hoga */
+  right: -400px;
+  /* Right side se start hoga */
   width: 400px;
   max-width: 90%;
   height: 100vh;
-  background: #121212; /* Dark background as per image */
+  background: #121212;
+  /* Dark background as per image */
   color: white;
   z-index: 1000;
   transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -365,7 +532,8 @@
 }
 
 .mobile-sidebar.visible {
-  right: 0; /* Slide in to right */
+  right: 0;
+  /* Slide in to right */
 }
 
 /* Header & Close Button */
@@ -377,7 +545,7 @@
 }
 
 .close-btn {
-  background: transparent; 
+  background: transparent;
   border: none;
   color: white;
   width: 40px;
@@ -446,9 +614,9 @@
 }
 
 /* Sidebar Content Spacing */
-.sidebar-content {
+/* .sidebar-content {
   padding-bottom: 30px;
-}
+} */
 
 /* Contact Item Layout */
 .contact-section {
@@ -478,7 +646,8 @@
 }
 
 .contact-label {
-  color: #ff014f; /* Pink label */
+  color: #ff014f;
+  /* Pink label */
   text-transform: uppercase;
   font-size: 15px;
   font-family: Rajdhani;
@@ -538,4 +707,168 @@
   background: #ff014f;
   color: white;
   transform: translateY(-5px);
+}
+
+
+@media (max-width: 1200px) {
+  .mobile-sidebar {
+    left: -450px;
+    /* Screen se bahar left side par */
+    right: auto;
+    /* Animation ko thoda fast ya slow yahan se control kar sakte hain */
+    transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 325px;
+    padding: 21px 21px 0;
+    padding-top: 30px;
+  }
+
+  .sidebar-header {
+    margin-bottom: 5px;
+  }
+
+  .mobile-sidebar.visible {
+    left: 0;
+    /* Smooth slide in from left */
+  }
+
+  .mobile-show-box {
+    display: block;
+  }
+
+  .sidebar-content {
+    display: none;
+  }
+
+  .sidebar-nav a, .dropdown-trigger {
+    padding: 12px 0;
+    font-family: Rubik;
+    font-weight: 500;
+    color: #9F9F9F;
+  }
+
+  .drop {
+    font-family: Rubik;
+    font-weight: 500;
+  }
+
+  .divider {
+    display: none;
+  }
+}
+
+.divider {
+  display: none;
+}
+
+.sidebar-footer {
+  margin-top: 0;
+}
+@media (max-width: 1200px) {
+  .logo-img {
+    width: 58px;
+  }
+
+  .navbar-container {
+    max-width: 990px;
+    margin: auto;
+    display: flex;
+    padding: 10px 20px 0 22px;
+  }
+
+  .nav-link,
+  .dropdown-label {
+    display: none;
+  }
+
+  .hamburger-btn {
+    font-family: 10px;
+  }
+
+  .hamburger-btn {
+    width: 37px;
+    height: 37px;
+  }
+
+  .mobile-sidebar {
+    left: 0;
+    right: auto;
+    transform: translateX(-100%);
+    /* 👈 fully left hide */
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .mobile-sidebar.visible {
+    transform: translateX(0);
+  }
+
+  .sidebar-nav {
+    margin-top: 0;
+  }
+
+  .arrow-icon-left {
+    font-size: 22px;
+  }
+  .mobile-overlay {
+    background: rgba(0, 0, 0, 0.8);
+     /* Thoda zyada opaque for mobile */
+  }
+
+  .sidebar-footer {
+    margin-top: 30px;
+  }
+
+  .footer-label {
+
+    margin-bottom: 10px;
+  }
+}
+
+
+
+@media (max-width: 992px) {
+  .logo-img {
+    width: 60px;
+  }
+
+
+  .social-icon {
+    width: 42px;
+  }
+
+  .navbar-container {
+    max-width: 740px;
+    margin: auto;
+    padding-top: 12px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .navbar-container {
+    max-width: 560px;
+    margin: auto;
+  }
+
+  .right-side .social-icons {
+    display: none !important;
+  }
+
+  .logo-img {
+    width: 118px;
+    height: 49px;
+  }
+}
+
+@media (max-width: 575px) {
+  .navbar-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 10px 13px;
+  }
+
+}
+
+
+.mobile-navs {
+  display: none;
 }

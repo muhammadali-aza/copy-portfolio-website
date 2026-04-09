@@ -3,12 +3,12 @@
     background-color: #000000; /* Deep Black */
     font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
     align-items: center;
-    margin-top: 90px;
+    margin-top: 128px;
     margin-bottom: 50px;
 }
 
 .skill-content {
-    max-width: 1270px;
+    max-width: 1275px;
     margin: auto;
 }
 
@@ -38,8 +38,9 @@
 @media (max-width: 768px) {
     .skill-titles {
         font-size: 36px;
+        font-family: Rajdhani;
     }
-    .skill-container {
+    .skill-containers {
         padding: 60px 20px;
     }
 }

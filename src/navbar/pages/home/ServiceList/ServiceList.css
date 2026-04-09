@@ -10,9 +10,9 @@
   align-items: center;
   border-bottom: 1px solid #333;
   transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s ease;
-  max-width: 1270px;
+  max-width: 1275px;
   margin: auto;
-  height: 148px;
+  height: 168px;
   gap: 128px;
 }
 

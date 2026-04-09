@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { RiMenu3Fill } from "react-icons/ri";
 import { FaInstagram, FaLinkedinIn, FaFacebookF, FaTwitter } from "react-icons/fa6";
 import Logo from "./pages/logo/Logo";
@@ -20,6 +20,8 @@ export default function NavbarLink() {
     blog: false,
     project: false,
   });
+
+  const location = useLocation();
 
   // Social Links Data
   const socialLinks = [
@@ -66,6 +68,7 @@ export default function NavbarLink() {
   };
 
   return (
+      <div className="bg-image">
     <div className="nav-bg-img">
       <div className={`navbar ${scrollPosition > 10 ? "shadow" : ""}`}>
         <div className="navbar-container">
@@ -79,7 +82,7 @@ export default function NavbarLink() {
           {/* Desktop Navigation */}
           <nav className="desktop-nav">
             <ul className="nav-list">
-              <NavItem to="/" label="Home" />
+              <NavItem to="/" label="Home" end={true} />
               <NavItem to="/about" label="About" />
 
               {/* Services Dropdown */}
@@ -89,6 +92,7 @@ export default function NavbarLink() {
                 onMouseEnter={() => handleMouseEnter("services")}
                 onMouseLeave={() => handleMouseLeave("services")}
                 items={dropdownMenus.services}
+                isActive={location.pathname.startsWith("/services")}
               />
 
               {/* Blog Dropdown */}
@@ -98,6 +102,7 @@ export default function NavbarLink() {
                 onMouseEnter={() => handleMouseEnter("blog")}
                 onMouseLeave={() => handleMouseLeave("blog")}
                 items={dropdownMenus.blog}
+                isActive={location.pathname.startsWith("/blog")}
               />
 
               {/* Project Dropdown */}
@@ -107,6 +112,7 @@ export default function NavbarLink() {
                 onMouseEnter={() => handleMouseEnter("project")}
                 onMouseLeave={() => handleMouseLeave("project")}
                 items={dropdownMenus.project}
+                isActive={location.pathname.startsWith("/project")}
               />
 
               <NavItem to="/contact" label="Contact" />
@@ -133,6 +139,7 @@ export default function NavbarLink() {
           socialLinks={socialLinks}
         />
       </div>
+    </div>
     </div>
   );
 }

@@ -42,7 +42,7 @@
     transition: transform 0.15s ease-out;
     z-index: 0;
 }
-
+ 
 /* Rest of your styles remain the same... */
 
 /* Wave animation */
@@ -53,7 +53,7 @@
     height: 150%;
     bottom: -50%;
     left: -25%;
-    background: linear-gradient(45deg, #FF014F, #FF6B6B);
+    background: linear-gradient(45deg, #FF014F, #FF614F);
     border-radius: 38%;
     animation: waveRotation 6s linear infinite;
     z-index: -2;
@@ -66,7 +66,7 @@
     height: 150%;
     bottom: -50%;
     left: -25%;
-    background: rgba(255, 255, 255, 0.2);
+    /* background: rgba(255, 255, 255, 0.2); */
     border-radius: 40%;
     animation: waveRotation 10s linear infinite reverse;
     z-index: -1;
@@ -105,7 +105,7 @@
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .scroll-to-top-btn {
-        bottom: 80px;
+        /* bottom: 80px; */
         /* Move up to avoid chat button */
         right: 24px;
         width: 48px;

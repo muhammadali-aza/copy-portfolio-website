@@ -57,7 +57,7 @@ export default function Skill() {
 
     return (
         <div className="m">
-            <div className="skill-container">
+            <div className="skill-container home-skill-container">
                 <section className="skill-section">
                     <div className="skill-grid">
 

@@ -1,22 +1,28 @@
 import { useState, useEffect, useRef } from 'react';
 import './Experience.css';
 
-function OdometerDigit({ digit, digitH, fontSize, color, index, triggerKey, spins = 2 }) {
+/* ---------------- ODOMETER DIGIT ---------------- */
+function OdometerDigit({ digit, digitH, index, triggerKey, spins = 2 }) {
   const innerRef = useRef(null);
 
   useEffect(() => {
     if (!innerRef.current) return;
-    const target = parseInt(digit);
 
+    const target = parseInt(digit);
     const nums = [];
+
     for (let s = 0; s < spins; s++) {
       for (let n = 0; n <= 9; n++) nums.push(n);
     }
     for (let n = 0; n <= target; n++) nums.push(n);
 
     innerRef.current.innerHTML = nums
-      .map(n => `<span style="height:${digitH}px;display:block;line-height:${digitH}px;">${n}</span>`)
+      .map(
+        n =>
+          `<span style="height:${digitH}px;display:block;line-height:${digitH}px;">${n}</span>`
+      )
       .join('');
+
     innerRef.current.style.transition = 'none';
     innerRef.current.style.transform = 'translateY(0)';
 
@@ -27,7 +33,7 @@ function OdometerDigit({ digit, digitH, fontSize, color, index, triggerKey, spin
     }, 80 + index * 100);
 
     return () => clearTimeout(timeout);
-  }, [triggerKey]);
+  }, [triggerKey, digitH]);
 
   return (
     <div style={{ overflow: 'hidden', height: digitH, display: 'inline-block' }}>
@@ -36,31 +42,49 @@ function OdometerDigit({ digit, digitH, fontSize, color, index, triggerKey, spin
   );
 }
 
+/* ---------------- ODOMETER ---------------- */
 function Odometer({ value, digitH, fontSize, color, fontFamily, triggerKey }) {
   const digits = value.replace(/[^0-9]/g, '');
   const totalDigits = digits.length;
 
   return (
-    <div style={{ display: 'flex', alignItems: 'flex-end', fontFamily, fontSize, fontWeight: 'bold', color, lineHeight: 1 }}>
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'flex-end',
+        fontFamily,
+        fontSize,
+        fontWeight: 'bold',
+        color,
+        lineHeight: 1,
+      }}
+    >
       {value.split('').map((char, i) => {
         if (/[0-9]/.test(char)) {
           const digitIndex = value.slice(0, i).replace(/[^0-9]/g, '').length;
           const spins = totalDigits - digitIndex;
+
           return (
             <OdometerDigit
               key={i}
               digit={char}
               digitH={digitH}
-              fontSize={fontSize}
-              color={color}
               index={digitIndex}
               triggerKey={triggerKey}
               spins={spins}
             />
           );
         }
+
         return (
-          <span key={i} style={{ display: 'inline-block', height: digitH, lineHeight: `${digitH}px` }}>
+          <span
+            key={i}
+            style={{
+              display: 'inline-block',
+              height: digitH,
+              lineHeight: `${digitH}px`,
+            }}
+          >
             {char}
           </span>
         );
@@ -69,6 +93,7 @@ function Odometer({ value, digitH, fontSize, color, fontFamily, triggerKey }) {
   );
 }
 
+/* ---------------- DATA ---------------- */
 const stats = [
   { number: "20k+", label: "Our Projects Completed" },
   { number: "10k+", label: "Our Natural Products" },
@@ -76,17 +101,44 @@ const stats = [
   { number: "1,000+", label: "Our Satisfied Clients" },
 ];
 
+/* ---------------- MAIN COMPONENT ---------------- */
 export default function Experience() {
   const [borderState, setBorderState] = useState({});
   const [isVisible, setIsVisible] = useState(false);
   const [triggerKey, setTriggerKey] = useState(0);
+  const [digitHeightMain, setDigitHeightMain] = useState(165); // Main experience number
+  const [digitHeightStats, setDigitHeightStats] = useState(40); // Stats numbers
   const containerRef = useRef(null);
 
+  /* 🔥 RESPONSIVE HEIGHT */
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 1200) {
+        setDigitHeightMain(100); // main card number
+        setDigitHeightStats(48); // right-side stats number
+      }
+       else {
+        setDigitHeightMain(165); // main card number
+        setDigitHeightStats(40); // right-side stats number
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  /* 👇 BORDER EFFECT */
   const handleMouseMove = (e, index) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
-    const classes = [(x < rect.width / 2 ? 'left' : 'right'), (y < rect.height / 2 ? 'top' : 'bottom')].join(' ');
+
+    const classes = [
+      x < rect.width / 2 ? 'left' : 'right',
+      y < rect.height / 2 ? 'top' : 'bottom',
+    ].join(' ');
+
     setBorderState(prev => ({ ...prev, [index]: classes }));
   };
 
@@ -94,6 +146,7 @@ export default function Experience() {
     setBorderState(prev => ({ ...prev, [index]: '' }));
   };
 
+  /* 👇 INTERSECTION OBSERVER */
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -104,6 +157,7 @@ export default function Experience() {
       },
       { threshold: 0.3 }
     );
+
     if (containerRef.current) observer.observe(containerRef.current);
     return () => observer.disconnect();
   }, []);
@@ -111,24 +165,23 @@ export default function Experience() {
   return (
     <div ref={containerRef} className="experience-container">
 
-      {/* Main Experience Card */}
+      {/* MAIN CARD */}
       <div className="experience-main-card">
-        {/* ✅ digitH:165 matches your CSS .experience-number font-size */}
         <Odometer
           value="25"
-          digitH={165}
-          fontSize="165px"
+          digitH={digitHeightMain}
+          fontSize={`${digitHeightMain}px`}
           color="#FF014F"
           fontFamily="sans-serif"
           triggerKey={triggerKey}
         />
         <p className="experience-label">Years of Experience</p>
         <p className="experience-description">
-          Business consulting consultants provide expert advice and guida the a businesses to help theme their performance efficiency
+         Business consulting consultants provide expert advice and guida the a businesses to help theme their performance efficiency
         </p>
       </div>
 
-      {/* Stats Cards */}
+      {/* STATS */}
       <div className="experience-stat">
         {stats.map((item, index) => (
           <div
@@ -139,11 +192,10 @@ export default function Experience() {
             onMouseLeave={() => handleMouseLeave(index)}
           >
             <div className="stat-number">
-              {/* ✅ digitH:40 matches your CSS .stat-number font-size, Rajdhani font applied */}
               <Odometer
                 value={item.number}
-                digitH={40}
-                fontSize="40px"
+                digitH={digitHeightStats}
+                fontSize={`${digitHeightStats}px`} // 👈 responsive
                 color="#fff"
                 fontFamily="Rajdhani"
                 triggerKey={triggerKey}

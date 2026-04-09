@@ -34,7 +34,7 @@ const AnimatedCard = ({ card, index }) => {
         {card.count}
       </p>
     </div>
-  );
+  ); 
 };
 
 export default function MainSection() {

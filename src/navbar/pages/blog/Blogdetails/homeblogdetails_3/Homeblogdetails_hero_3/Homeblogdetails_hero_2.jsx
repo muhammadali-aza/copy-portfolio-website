@@ -186,7 +186,7 @@ export default function Homeblogdetails_hero_3() {
 
                     {/* Search Widget with mouse effect */}
                     <div 
-                        className={`blog-widget directional-card ${searchWidgetHoverClass}`}
+                        className={`blog-widget directional-cards ${searchWidgetHoverClass}`}
                         onMouseMove={(e) => handleCardMouseMove(e, setSearchWidgetHoverClass)}
                         onMouseLeave={() => handleCardMouseLeave(setSearchWidgetHoverClass)}
                     >
@@ -204,7 +204,7 @@ export default function Homeblogdetails_hero_3() {
 
                     {/* Category Widget with mouse effect */}
                     <div 
-                        className={`blog-widget directional-card ${categoryWidgetHoverClass}`}
+                        className={`blog-widget directional-cards ${categoryWidgetHoverClass}`}
                         onMouseMove={(e) => handleCardMouseMove(e, setCategoryWidgetHoverClass)}
                         onMouseLeave={() => handleCardMouseLeave(setCategoryWidgetHoverClass)}
                     >
@@ -231,7 +231,7 @@ export default function Homeblogdetails_hero_3() {
 
                     {/* Recent Post Widget with mouse effect */}
                     <div 
-                        className={`blog-widget directional-card ${recentPostWidgetHoverClass}`}
+                        className={`blog-widget directional-cards ${recentPostWidgetHoverClass}`}
                         onMouseMove={(e) => handleCardMouseMove(e, setRecentPostWidgetHoverClass)}
                         onMouseLeave={() => handleCardMouseLeave(setRecentPostWidgetHoverClass)}
                     >
@@ -326,7 +326,7 @@ export default function Homeblogdetails_hero_3() {
 
                     {/* About Me Card with mouse effect */}
                     <div 
-                        className={`sidebar-card directional-card ${aboutMeCardHoverClass}`}
+                        className={`sidebar-card directional-cards ${aboutMeCardHoverClass}`}
                         onMouseMove={(e) => handleCardMouseMove(e, setAboutMeCardHoverClass)}
                         onMouseLeave={() => handleCardMouseLeave(setAboutMeCardHoverClass)}
                     >
@@ -356,7 +356,7 @@ export default function Homeblogdetails_hero_3() {
 
                     {/* Tags Card with mouse effect */}
                     <div 
-                        className={`sidebar-card directional-card ${tagsCardHoverClass}`}
+                        className={`sidebar-card directional-cards ${tagsCardHoverClass}`}
                         onMouseMove={(e) => handleCardMouseMove(e, setTagsCardHoverClass)}
                         onMouseLeave={() => handleCardMouseLeave(setTagsCardHoverClass)}
                     >
@@ -383,7 +383,7 @@ export default function Homeblogdetails_hero_3() {
                  <div className="blog-form-container">
             <div className="form-container"> {/* Outer dark background */}
             <form
-                className={`blog-appointment-card directional-card ${blogFormHoverClass}`}
+                className={`blog-appointment-card directional-cards ${blogFormHoverClass}`}
                 onMouseMove={handleBlogFormMouseMove}
                 onMouseLeave={handleBlogFormMouseLeave}
                 onSubmit={handleSubmit}

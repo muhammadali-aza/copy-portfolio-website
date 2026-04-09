@@ -30,6 +30,7 @@
 @media (min-width: 768px) {
   .experience_2-container {
     flex-direction: row;
+    padding-top: 4.5rem;
   }
 }
 
@@ -45,7 +46,7 @@
 }
 
 .experience_2image-container {
-  border-radius: 30px;
+  border-radius: 20px;
   overflow: hidden;
   border: 1px solid #1f2937;
 }

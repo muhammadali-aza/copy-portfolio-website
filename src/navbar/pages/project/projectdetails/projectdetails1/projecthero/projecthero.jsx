@@ -16,6 +16,15 @@ export default function Projecthero() {
     // State to track hover direction for the card
     const [cardHoverClass, setCardHoverClass] = useState('');
     const [formHoverClass, setFormHoverClass] = useState('');
+    const [formData, setFormData] = useState({
+        name: '',
+        phone: '',
+        email: '',
+        subject: '',
+        message: ''
+    });
+    const [loading, setLoading] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState(null);
 
     const handleCardMouseMove = (e) => {
         const rect = e.currentTarget.getBoundingClientRect();
@@ -53,6 +62,55 @@ export default function Projecthero() {
 
     const handleFormMouseLeave = () => {
         setFormHoverClass('');
+    };
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setLoading(true);
+        setSubmitStatus(null);
+
+        try {
+            const response = await fetch('http://localhost:5000/api/form', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    email: formData.email,
+                    subject: formData.subject,
+                    message: formData.message
+                })
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                setSubmitStatus('success');
+                setFormData({
+                    name: '',
+                    phone: '',
+                    email: '',
+                    subject: '',
+                    message: ''
+                });
+                setTimeout(() => setSubmitStatus(null), 3000);
+            } else {
+                setSubmitStatus('error');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            setSubmitStatus('error');
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -107,21 +165,57 @@ export default function Projecthero() {
                                 className={`appointment-card directional-card ${formHoverClass}`}
                                 onMouseMove={handleFormMouseMove}
                                 onMouseLeave={handleFormMouseLeave}
+                                onSubmit={handleSubmit}
                             >
                                 <div className="input-grid">
-                                    <input type="text" placeholder="Your Name" className="form-input" />
-                                    <input type="number" placeholder="Phone Number" className="form-input" />
-                                    <input type="email" placeholder="Your Email" className="form-input" />
-                                    <input type="text" placeholder="Subject" className="form-input" />
+                                    <input 
+                                        type="text" 
+                                        name="name"
+                                        placeholder="Your Name" 
+                                        className="form-input"
+                                        value={formData.name}
+                                        onChange={handleInputChange}
+                                    />
+                                    <input 
+                                        type="number" 
+                                        name="phone"
+                                        placeholder="Phone Number" 
+                                        className="form-input"
+                                        value={formData.phone}
+                                        onChange={handleInputChange}
+                                    />
+                                    <input 
+                                        type="email" 
+                                        name="email"
+                                        placeholder="Your Email" 
+                                        className="form-input"
+                                        value={formData.email}
+                                        onChange={handleInputChange}
+                                        required
+                                    />
+                                    <input 
+                                        type="text" 
+                                        name="subject"
+                                        placeholder="Subject" 
+                                        className="form-input"
+                                        value={formData.subject}
+                                        onChange={handleInputChange}
+                                    />
                                 </div>
 
                                 <textarea
+                                    name="message"
                                     placeholder="Your Message"
                                     className="form-textarea"
+                                    value={formData.message}
+                                    onChange={handleInputChange}
                                 ></textarea>
 
-                                <button type="submit" className="submit-btn">
-                                    Appointment Now <FaArrowRight className="btn-icon" />
+                                {submitStatus === 'success' && <p style={{color: 'green'}}>Form submitted successfully!</p>}
+                                {submitStatus === 'error' && <p style={{color: 'red'}}>Error sending message. Please try again.</p>}
+
+                                <button type="submit" className="submit-btn" disabled={loading}>
+                                    {loading ? 'Sending...' : 'Appointment Now'} <FaArrowRight className="btn-icon" />
                                 </button>
                             </form>
                         </div>

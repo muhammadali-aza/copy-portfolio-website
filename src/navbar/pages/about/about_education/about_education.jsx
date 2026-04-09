@@ -24,7 +24,7 @@ const servicesData = [
     }
 ];
 
-export default function About_education() {
+export default function() {
     const [borderState, setBorderState] = useState({});
     const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 1024);
 

@@ -1,16 +1,16 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 /**
  * NavItem Component
  * Renders a simple navigation link
  * Used for Home, About, Contact links in desktop navigation
  */
-export default function NavItem({ to, label }) {
+export default function NavItem({ to, label, end }) {
   return (
     <li>
-      <Link to={to} className="nav-link">
+      <NavLink to={to} end={end} className="nav-link">
         {label}
-      </Link>
+      </NavLink>
     </li>
   );
 }

@@ -18,7 +18,7 @@ const servicesData = [
         number: '03',
         title: 'Design',
         description: 'Crafting intuitive UIs that tell a story. Every pixel is placed with the goal of making your brand look unique and special. Reach out to start the design process.'
-    },
+    }, 
     {
         number: '04',
         title: 'Devops',

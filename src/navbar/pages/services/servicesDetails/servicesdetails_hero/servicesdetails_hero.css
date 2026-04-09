@@ -1,7 +1,7 @@
 .services-hero-container {
     max-width: 1280px;
     margin: auto;
-    margin-top: 108px;
+    margin-top: 117px;
     display: flex;
     gap: 30px;
     align-items: flex-start;
@@ -32,7 +32,7 @@
 .services-hero-sidebar {
     flex: 1 1 31%;
     background-color: #111111;
-    padding: 35px 40px;
+    padding: 35px 32px 39px 40px;
     border-radius: 15px;
     color: #fff;
     font-family: inherit;
@@ -76,16 +76,16 @@
     display: flex;
     align-items: center;
     color: #ffffff;
-    margin-top: 12px;
+    margin-top: 0px;
 }
 
 .title-dot {
     display: inline-block;
-    width: 6px;
-    height: 6px;
+    width: 4px;
+    height: 4px;
     background-color: #ff0055;
     border-radius: 50%;
-    margin-left: 6px;
+    margin-left: 16px;
     margin-bottom: 4px;
 }
 
