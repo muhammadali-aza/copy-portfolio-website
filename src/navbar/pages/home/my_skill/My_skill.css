@@ -35,6 +35,13 @@
 }
 
 /* Responsive adjustment mobile ke liye */
+@media (max-width: 1200px) {
+    .skill-containers {
+        max-width: 940px;
+        margin: auto;
+    }
+}
+
 @media (max-width: 768px) {
     .skill-titles {
         font-size: 36px;

@@ -47,6 +47,7 @@
 @media (max-width: 1200px) {
   .support-company-grid {
     max-width: 937px;
+    margin-bottom: 10px;
   }
 
   .support-company-logo {
@@ -78,6 +79,10 @@
 @media (max-width: 575px) {
   .support-company-grid {
     grid-template-columns: 1fr;
-    max-width: 533px;
+    width: 90%; /* Centers the grid with some breathing room on the sides */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: none !important;
+    min-width: 0 !important;
   }
 }

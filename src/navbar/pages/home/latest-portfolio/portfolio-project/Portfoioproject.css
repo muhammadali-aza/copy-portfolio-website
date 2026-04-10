@@ -140,12 +140,75 @@
 
 .action-button:hover {
     background-color: #FF014F !important;
-    border-color: #FF014F;
-    
-    
+    border-color: #FF014F;  
 }
 
 .project-link:hover .action-button {
     background-color: black;
     color: #fff;
+}
+
+@media (max-width: 1200px) {
+   .portfolio-containers {
+    max-width: 950px;
+    gap: 19px;
+   }   
+
+   .project-card {
+    height: 380px;
+    width: 464px;
+   }
+}
+
+@media (max-width: 992px) {
+    .portfolio-containers {
+        max-width: 700px;
+    }
+
+    .project-card {
+        height: 280px;
+        width: auto;
+    }
+
+    .card-label {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-containers {
+        max-width: 520px;
+    }
+
+    .project-card {
+        height: 210px;
+        width: 245px;
+    }
+
+    .portfolio-description {
+        max-width: 400px;
+        align-items: center;
+    }
+}
+
+@media (max-width: 575px) {
+    .portfolio-containers {
+        display: grid;
+        grid-template-columns: 1fr; /* Sirf 1 column */
+        gap: 30px; /* Thoda gap kam kar dein mobile ke liye */
+        padding: 0 20px; /* Sides se thoda margin taaki chipke nahi */
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .project-card {
+        width: 100% !important; /* Fixed width ko khatam karein */
+        height: auto; /* Height ko content ke hisaab se adjust hone dein */
+        aspect-ratio: 4/3; /* Shape barkarar rakhega */
+    }
+
+    .portfolio-description {
+        max-width: 90%;
+        text-align: center;
+    }
 }
