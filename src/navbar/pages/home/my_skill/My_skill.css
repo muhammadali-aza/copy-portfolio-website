@@ -82,3 +82,17 @@
         padding: 60px 20px;
     }
 }
+
+@media (max-width: 576px) {
+    .skill-containers {
+        max-width: 580px;
+        padding: 60px 14px;
+    }
+
+    
+ .service-container {
+    max-width: 580px;
+        padding: 0px 14px;
+
+ }
+}
