@@ -2,6 +2,7 @@
 .experience-containers {
   max-width: 1270px;
   margin: 0 auto;
+  margin-top: 24px;
 }
 
 /* Grid Layout */
@@ -40,7 +41,6 @@
 
 .experience-card-title {
   font-size: 1.25rem;
-  margin-bottom: 0.75rem;
   color: #fff;
 }
 

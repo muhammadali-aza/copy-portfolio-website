@@ -32,20 +32,21 @@ export default function Experiencehome() {
     return (
         <div className="experience-containers">
             <div className="experience-content">
-                <h1 className="experience-heading">Experiences</h1>
-                
-                {/* Left Column - Text Cards */}
-                <div className="experience-cards">
-                    {servicesData.map((service, index) => (
-                        <div key={index} className="experience-card">
-                            <h3 className="experience-card-title">
-                                <p className="experience-card-number">{service.experience}.</p>
-                                <p className='role'> {service.role}</p>
+                {/* Left Column - Heading and Text Cards */}
+                <div className="experience-left">
+                    <h1 className="experience-heading">Experiences</h1>
+                    <div className="experience-cards">
+                        {servicesData.map((service, index) => (
+                            <div key={index} className="experience-card">
+                                <h3 className="experience-card-title">
+                                    <p className="experience-card-number">{service.experience}.</p>
+                                    <p className='role'> {service.role}</p>
                                     <p className='company'>{service.company}</p>
-                            </h3>
-                            <p className="experience-card-description">{service.description}</p>
-                        </div>
-                    ))}
+                                </h3>
+                                <p className="experience-card-description">{service.description}</p>
+                            </div>
+                        ))}
+                    </div>
                 </div>
 
                 {/* Right Column - Image */}

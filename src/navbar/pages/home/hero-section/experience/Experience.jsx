@@ -195,9 +195,9 @@ export default function Experience() {
               <Odometer
                 value={item.number}
                 digitH={digitHeightStats}
-                fontSize={`${digitHeightStats}px`} // 👈 responsive
+                fontSize={`${digitHeightStats}px`}
                 color="#fff"
-                fontFamily="Rajdhani"
+                fontFamily="sans-serif"
                 triggerKey={triggerKey}
               />
             </div>

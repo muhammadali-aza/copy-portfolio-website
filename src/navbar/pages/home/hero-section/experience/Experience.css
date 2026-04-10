@@ -41,6 +41,7 @@
   font-family: Rajdhani;
   font-weight: bold;
   margin: 0;
+  padding-right: 62px;
 }
 
 .experience-description {
@@ -75,7 +76,7 @@
   font-weight: 700;
   color: #fff;
   display: flex;
-  font-family: Rajdhani;
+  font-family: sans-serif;
   justify-content: center;
 }
 
