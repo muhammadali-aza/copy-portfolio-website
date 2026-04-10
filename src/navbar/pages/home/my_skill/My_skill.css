@@ -37,14 +37,45 @@
 /* Responsive adjustment mobile ke liye */
 @media (max-width: 1200px) {
     .skill-containers {
-        max-width: 940px;
+        max-width: 980px;
+        margin: auto;
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+
+    .service-container {
+        max-width: 980px;
         margin: auto;
     }
 }
 
+@media (max-width: 992px) {
+ .skill-containers {
+    max-width: 730px;
+    margin: auto;
+    margin-top: 45px;
+    margin-bottom: 48px;
+ } 
+
+ .service-container {
+    max-width: 730px;
+ }
+}
+
 @media (max-width: 768px) {
+     .skill-containers {
+    max-width: 570px;
+    margin: auto;
+    margin-top: 45px;
+    margin-bottom: 0px;
+ } 
+
+ .service-container {
+    max-width: 570px;
+ }
+
     .skill-titles {
-        font-size: 36px;
+        font-size: 32px;
         font-family: Rajdhani;
     }
     .skill-containers {
