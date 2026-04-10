@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./TypingEffect.css";
 
 export default function TypeEffect() {
   const words = ["Web Designer.", "AI Developer.", "Team Lead."];
@@ -29,16 +30,14 @@ export default function TypeEffect() {
   }, [subIndex, index, reverse, words]);
 
   return (
-    <div className="flex items-center gap-0">
+    <div className="type-container">
       {/* Text */}
-      <span className="text-[#FF014F] font-bold text-[54px] lg:text-[47px]  sm:text-[32px] antialiased leading-tight">
+      <span className="type-text">
         {words[index].substring(0, subIndex)}
       </span>
 
       {/* Cursor */}
-      <span
-        className="inline-block w-[4px] bg-white animate-pulse ml-0 sm:height-[55px] lg:height-[67px]"
-      ></span>
+      <span className="type-cursor"></span>
     </div>
   );
 }

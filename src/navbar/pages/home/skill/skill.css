@@ -189,12 +189,21 @@
   .skill-card {
     padding: 0rem 2rem 0;
   }
+
+  .skill-bar {
+    margin-bottom: 1.8rem;
+  }
 }
 
 @media (max-width: 768px) {
   .skill-grid {
     max-width: 570px;
     margin: auto;
+    margin-top: 3px;
+  }
+
+  .skill-title {
+    gap: 19px;
   }
 
   .skill-bar {
@@ -212,11 +221,13 @@
     margin: auto;
     padding-left: 0;
     padding-right: 0;
+    margin-top: 40px;
   }
 
   
   .home-skill-container {
-    padding: 0.92rem;
+    padding: 0.90rem;
+    padding-right: 8px;
   }
 
   .skill-grid {

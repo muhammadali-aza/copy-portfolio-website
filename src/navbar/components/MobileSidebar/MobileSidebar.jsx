@@ -23,7 +23,6 @@ export default function MobileSidebar({ isOpen, onClose, socialLinks }) {
         className={`mobile-overlay ${isOpen ? "visible" : "hidden"}`}
         onClick={onClose}
       />
-z1
       {/* Sidebar Container */}
       <div
         className={`mobile-sidebar ${isOpen ? "visible" : "hidden"}`}

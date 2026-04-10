@@ -10,7 +10,7 @@ export default function LatestServices() {
                 </p>
 
                 {/* Main heading */}
-                <h2 className="education-heading">
+                <h2 className="education-headings">
                    I like Making Things That Are Enjoyable And Special
                 </h2>
 

@@ -175,7 +175,7 @@ export default function Experience() {
           fontFamily="sans-serif"
           triggerKey={triggerKey}
         />
-        <p className="experience-label">Years of Experience</p>
+        <p className="experience-label">Years Of Experience</p>
         <p className="experience-description">
          Business consulting consultants provide expert advice and guida the a businesses to help theme their performance efficiency
         </p>

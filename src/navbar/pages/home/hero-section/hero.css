@@ -268,6 +268,7 @@
     }
 
     .home-hero-btn-span {
+        
         font-weight: 500;
     }
 }
@@ -297,7 +298,7 @@
 
 @media (max-width: 575px) {
     .home-hero-image {
-        width: 250px;
+        width: 280px;
     }
 
     .home-hero-bg-text,
@@ -306,12 +307,65 @@
     }
 
     .home-hero-container {
-        padding: 130px 75px 0 0px;
+        padding: 120px 75px 0 0px;
     }
 
     .home-hero-content {
-        padding-left: 0;
-        max-width: 470px;
-        margin: auto;
+       padding-left: 15px;
+        max-width: 543px;
+        margin: 0 0px 0 0px;
+    }
+
+    .home-hero-bg-text {
+        top: 31%;
+    }
+    
+    .home-hero-bg-text-bottom {
+        top: 85%;
+    }
+
+    .home-hero-bg-text, .home-hero-bg-text-bottom {
+        left: 49.8%;
+    }
+
+    .home-hero-greeting {
+        margin-top: 30px;
+        font-size: 25px;
+    }
+
+    .home-hero-bg-text, .home-hero-bg-text-bottom {
+        font-size: 46px;
+    }
+
+    .home-hero-image {
+        /* Aap jitna size fix rakhna chahte hain wo yahan likhein */
+        width: 265px !important; 
+        min-width: 265px; /* Ye image ko chota hone se rokega */
+        max-width: 265px; /* Ye image ko bada hone se rokega */
+        height: auto;
+        margin: 0 auto; /* Center karne ke liye */
+    }
+
+    .home-hero-image-wrapper {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .home-hero-description {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 311px) {
+    .home-hero-title {
+        font-size: 25px;
+    }
+
+    
+    .home-hero-content {
+       padding-left: 15px;
+        max-width: 663px;
+        margin: 0 0px 0 0px;
     }
 }

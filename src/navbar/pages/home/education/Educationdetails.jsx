@@ -67,7 +67,7 @@ export default function Educationdetails() {
                             key={index}
                             onMouseMove={(e) => handleMouseMove(e, index)}
                             onMouseLeave={() => handleMouseLeave(index)}
-                            className={`service-card home-service-card ${borderState[index] || ''}`}
+                            className={`service-card home-ed home-service-card ${borderState[index] || ''}`}
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true, amount: 0.2 }}

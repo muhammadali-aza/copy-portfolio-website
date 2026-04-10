@@ -103,7 +103,7 @@
 /* Service Card Styles */
 .service-card {
   background-color: #141414;
-  border-radius: 1rem;
+  border-radius: 20px;
   padding: 1.5rem;
   transition-property: background-color;
   transition-duration: 300ms;
@@ -230,8 +230,9 @@
 @media (max-width: 768px) {
   .education-title {
     font-size: 1.8rem;
+    margin-top: 27px;
     /* Smaller for mobile */
-    text-align: center;
+    /* text-align: center; */
     /* Optional: center on mobile */
   }
 }
@@ -243,6 +244,93 @@
 
 @media (max-width: 1200px) {
     .education-container {
-        padding: 4.9rem 2rem 0;
+        padding: 1.5rem 2rem 0;
+        max-width: 1010px;
+        margin: auto;
     }
+    
+    .home-ed {
+      padding: 50px 40px;
+    }
+
+    .home-services-card-year {
+      line-height: 1.5;
+    }
+
+    .services-grid {
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 992px) {
+  .education-container {
+    max-width: 770px;
+    margin: auto;
+  }
+
+  .services-grid {
+    margin-bottom: 70px;
+  }
+
+  .home-services-card-title {
+    font-size: 16px;
+    font-family: Rubik;
+    font-weight: 400;
+  }
+
+  .home-services-card-year span {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .home-service-card-description {
+    color: #9A9A9A;
+    font-size: 16px;
+    font-family: Rubik;
+    font-weight: 400;
+    margin-top: 21px;
+  }
+}
+
+@media (max-width: 768px) {
+  .education-content-wrapper {
+    display: block; /* Removed grid from parent wrapper */
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr 1fr; /* Two columns for cards */
+  }
+
+  .education-container {
+    padding: 0.9rem 2rem 0;
+    max-width: 580px;
+  }
+
+  .services-wrapper {
+    margin-bottom: 40px;
+  }
+  .home-services-card-year span {
+    line-height: 2;
+  }
+
+  .home-ed {
+    padding: 33px 22px;
+  }
+
+  .home-service-card-description {
+    margin-top: 10px;
+  }
+}
+
+
+@media (max-width: 575px) {
+  .education-container {
+    padding: 1.2rem 0rem 0;
+    padding-left: 0.5rem !important;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr; /* Single column for mobile */
+  }
 }
