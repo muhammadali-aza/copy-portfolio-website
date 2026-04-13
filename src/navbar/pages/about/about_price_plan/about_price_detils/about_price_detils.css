@@ -130,15 +130,7 @@
   font-size: 0.9rem;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .pricing-grid {
-    grid-template-columns: 1fr;
-  }
-  .pricing-card.featured {
-    padding: 40px;
-  }
-}
+
 
 /* Directional Hover Effect */
 .directional-effect {
@@ -172,4 +164,28 @@
 
 .directional-effect.hover-bottom::before {
   border-bottom-color: #ff0050;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .pricing-grid {
+    max-width: 940px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 992px) {
+  .pricing-grid {
+    grid-template-columns: 1fr 1fr;
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 530px;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
 }

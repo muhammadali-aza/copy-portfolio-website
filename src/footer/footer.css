@@ -334,6 +334,10 @@
         grid-template-columns: 1.6fr 1fr;
         gap: 30px;
     }
+
+    .footer-bottom {
+        max-width: 710px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -404,6 +408,8 @@
     .legal-links {
         display: flex;
         justify-content: center;
+        flex-direction: column;
+        text-align: center;
     }
 
     .footer-legal-links {

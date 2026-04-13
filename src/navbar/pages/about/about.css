@@ -70,3 +70,9 @@
     color: #e60023; 
     font-weight: 500;
 }
+
+@media (max-width: 992px) {
+    .about-page-header {
+        height: 230px;
+    }
+}

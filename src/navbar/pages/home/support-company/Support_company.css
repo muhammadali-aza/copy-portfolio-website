@@ -59,19 +59,31 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 992px) {
   .support-company-grid {
-    grid-template-columns: repeat(2, 1fr);
-    margin-top: 0;
-    max-width: 500px;
+   max-width: 700px;
+    margin-bottom: 10px;
+    margin-top: 10px;
   }
 
   .support-company-cell {
-    height: 90px;
+    height: 150px;
   }
 
   .support-company-logo {
     max-width: 130px;
+  }
+}
+
+@media (max-width: 768px) {
+  .support-company-grid {
+    grid-template-columns: 1fr 1fr;
+    max-width: 505px;
+    margin-top: 0;
+  }
+
+  .support-company-cell {
+    height: 92px;
   }
 }
 

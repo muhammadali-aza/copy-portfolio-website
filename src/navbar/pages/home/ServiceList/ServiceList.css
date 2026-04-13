@@ -92,7 +92,7 @@
 @media (max-width: 1200px) {
   
     .service-row {
-        gap: 58px;
+        gap: 40px;
     }
 
     .service-title-section h3 {
@@ -156,5 +156,5 @@
 }
 
 @media (max-width: 576px) {
-  .
+  
 }

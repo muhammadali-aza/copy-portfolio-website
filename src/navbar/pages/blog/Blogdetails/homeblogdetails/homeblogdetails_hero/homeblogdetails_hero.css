@@ -920,3 +920,118 @@ body {
 .directional-cards.bottom { border-bottom: 1px solid #ff005033; }
 .directional-cards.left { border-left: 1px solid #ff005033; }
 .directional-cards.right { border-right: 1px solid #ff005033; }
+
+
+@media (max-width: 1200px) {
+  .blog-hero-container {
+    max-width: 950px;
+  }
+
+  .main-column {
+    margin-top: -350px;
+  }
+
+  .portfolio-container {
+    max-width: 950px;
+  }
+
+  .showcase-image {
+    width: 170px;
+    height: 50%;
+    min-height: 160px;
+  }
+
+  .comments-wrapper {
+    max-width: 950px;
+  }
+}
+
+@media (max-width: 992px) {
+  .blog-hero-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+  }
+
+ .main-column {
+    margin-top: 0;
+  } 
+
+  
+  .portfolio-container {
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .comments-wrapper {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-hero-container {
+    max-width: 510px;
+  }
+
+  .portfolio-container {
+    max-width: 510px;
+  }
+
+  .showcase-image-wrapper {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .showcase-image {
+    width: 100%;
+    height: 100%;
+    min-height: 160px;
+  }
+
+  .comments-wrapper {
+    max-width: 510px;
+  }
+
+  .form-container {
+    max-width: 570px;
+    margin: auto;
+  }
+
+  .blog-appointment-card {
+    padding: 0 25px;
+  }
+
+  .form-title {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 575px) {
+  .blog-hero-container {
+    /* padding-left: 0.9rem;
+    padding-right: 0.9rem; */
+    max-width: 700px;
+  }
+
+  .keywords-list {
+    flex-wrap: wrap;
+  }
+
+  .comment-item {
+    display: block;
+    flex-direction: column;
+  }
+
+  .comment-content {
+    margin-top: 40px;
+  }
+
+}
+
+@media (max-width: 400px) {
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+}

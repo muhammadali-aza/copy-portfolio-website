@@ -328,6 +328,8 @@
   .education-container {
     padding: 1.2rem 0rem 0;
     padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    max-width: 560px;
   }
   
   .services-grid {

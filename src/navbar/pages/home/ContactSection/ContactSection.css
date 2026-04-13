@@ -32,10 +32,11 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     position: relative;
     z-index: 2;
     margin-left: 3px;
+    margin-top: 18px;
 }
 
 .contact-subheading {
@@ -193,12 +194,28 @@
 }
 
 /* --- Responsive Design --- */
+@media (max-width: 1200px) {
+    .contact-wrapper {
+        max-width: 940px;
+        margin: 110px auto 0;
+    }
+}
+
 @media (max-width: 992px) {
+    .contact-wrapper {
+        max-width: 700px;
+    }
+
     .contact-main-card {
         flex-direction: column;
         /* Stacks text on top of form for tablets */
-        padding: 40px;
+        padding: 20px 35px;
         gap: 40px;
+    }
+
+    .contact-grid-layout {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
     }
 
     .contact-heading {
@@ -207,17 +224,37 @@
 }
 
 @media (max-width: 768px) {
+    .contact-wrapper {
+        max-width: 500px;
+        margin-top: 45px;
+    }
+
     .contact-grid-layout {
         grid-template-columns: 1fr;
-        /* Single column inputs on mobile */
         gap: 15px;
     }
 
     .contact-main-card {
-        padding: 30px 20px;
+        padding: 15px 15px;
     }
 
     .contact-heading {
         font-size: 32px;
+    }
+
+    .contact-description {
+        max-width: 98%;
+    }
+}
+
+@media (max-width: 575px) {
+    .contact-wrapper {
+        max-width: 580px;
+        padding: 20px 14px;
+        margin-top: 55px;
+    }
+
+    .contact-submit-btn {
+        font-size: 15px;
     }
 }

@@ -28,13 +28,14 @@
   line-height: 1.2;
   margin-bottom: 15px;
 }
-
 .portfolio-description {
-  color: #a0a0a0; /* Muted gray text */
+  color: #a0a0a0;
   font-size: 16px;
   line-height: 1.6;
-  width: 600px;
-  margin: 0 auto;
+  /* width: 600px; <--- Isse hata kar niche wala use karein */
+  /* max-width: 00px;  */
+  /* width: 90%; Taaki mobile par screen se touch na ho */
+  /* margin: 0 auto; */
   font-family: sans-serif;
 }
 
@@ -46,5 +47,23 @@
   
   .portfolio-description {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 575px) {
+  .portfolio-section {
+    max-width: 200px;
+    margin: auto;
+    margin-top: 40px;
+  }
+
+  .portfolio-title {
+    font-size: 28px;
+  }
+  .portfolio-description {
+    /* width: 100%; */
+    /* max-width: 100%; */
+    /* padding: 0 20px; Padding kam karein taaki text ke liye jagah bache */
+    /* box-sizing: border-box; */
   }
 }

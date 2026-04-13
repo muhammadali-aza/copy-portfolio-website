@@ -172,20 +172,54 @@
 
 
 /* --- Responsive Design --- */
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
     .blog-grid-container {
-        grid-template-columns: repeat(2, 1fr);
-        /* 2 columns on tablets */
+        max-width: 930px;
+    }
+
+    .blog-card {
+        height: 408px;
+    }
+
+    .blog-content {
+        padding: 23px 18px 22px;
+    }
+
+    .blogs-title {
+        margin-bottom: 15px;
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 992px) {
     .blog-grid-container {
-        grid-template-columns: 1fr;
-        /* 1 column on mobile */
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-grid-container {
+        max-width: 500px;
     }
 
     .blog-image-wrapper {
         height: 200px;
     }
+}
+
+@media (max-width: 575px) {
+    .blog-grid-container {
+        grid-template-columns: 1fr;
+        max-width: 540px;
+    }
+
+    .blog-image-wrapper {
+        height: auto;
+    }
+
+    .blog-card {
+        height:auto;
+        padding: 0 10px;
+    }
+
 }

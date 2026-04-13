@@ -92,7 +92,7 @@ export default function ContactSection() {
                         <span className="contact-subheading">GET IN TOUCH</span>
                         <h2 className="contact-heading">Elevate your brand<br />with Me</h2>
                         <p className="contact-description">
-                            ished fact that a reader will be distrol acted bioiiy desig ished fact that a reader will acted ished fact that a reader will be distrol acted
+                          It is an established fact that a reader can become distracted by the layout and design of content. When the structure is unclear or overly complex, it takes attention away from the main message, making it harder for the reader to stay focused and understand the intended information, reducing overall readability and user engagement.
                         </p>
                     </div>
 

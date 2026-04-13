@@ -32,9 +32,26 @@
 }
 
 /* Mobile Responsiveness */
+@media (max-width: 1200px) {
+  .about-price_plan-title {
+    margin-bottom: 55px;
+  }
+}
+
 @media (max-width: 768px) {
   .about-price_plan-title {
     font-size: 32px;
   }
+}
 
+@media (max-width: 992px) {
+  .about-price_plan-section {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-price_plan-section {
+    margin-top: 60px;
+  }
 }
